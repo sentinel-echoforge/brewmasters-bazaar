@@ -375,3 +375,84 @@ Player IP changes (moved, traveling, VPN):
 | 3 - Covered Wagon | Canvas roof, barrel rack visible, spice jars hanging |
 | 4 - Grand Caravan | Ornate wood carvings, multiple cauldrons, lanterns lit at night |
 | 5 - Legendary Yatai | Full kitchen on wheels, steam effects, glowing ingredients, mythical decorations |
+
+---
+
+## 10. TRADING SYSTEM (Dragon Nest-inspired, Async)
+
+Two parallel systems. Players choose based on what they need.
+
+### 10a. Marketplace (Sell for Crowns)
+Like Dragon Nest's Trading House. List items → others buy with Crowns.
+
+```
+═══ MARKETPLACE ═══
+SELLING:
+🧵 Saffron ×3 — 50c each — JamuMaster (🇮🇩)
+🍶 Golden Mead ×5 — 30c each — MeadLord (🇬🇧)
+🫚 Ginger Root ×10 — 8c each — SpiceLord (🇯🇵)
+
+BUYING (Want Ads):
+🌸 Sakura Blossom — offering 40c — CaliBrewer (🇺🇸)
+🐉 Dragon Pepper — offering 200c — BrewKing99 (🇫🇷)
+```
+
+**Rules:**
+- Max 10 active listings per player
+- Listings expire after 24 hours
+- 5% transaction fee (gold sink)
+- Price floor: 50% of base tier cost (no dumping)
+- Price cap: 10x base tier cost (no gouging)
+- Buy instantly or post a Want Ad
+
+### 10b. Trade Board (Barter — Ingredient/Drink Swaps)
+Like Dragon Nest's Direct Trade but async. No Crowns involved — pure barter.
+
+```
+═══ TRADE BOARD ═══
+🔄 JamuMaster (🇮🇩) offers: 5× Pandan → wants: 3× Lavender
+🔄 BrewKing99 (🇫🇷) offers: 2× Yuzu Mead → wants: 1× Saffron
+🔄 CaliBrewer (🇺🇸) offers: 10× Apple → wants: 5× Torch Ginger
+🔄 SpiceLord (🇯🇵) offers: 3× Shiso → wants: ANY legendary ingredient
+
+[Accept] — instant swap, both inventories updated
+```
+
+**Rules:**
+- Max 5 active trade offers per player
+- Offers expire after 12 hours
+- No fee (bartering is free — encourages trading over hoarding)
+- Can offer ingredients OR brewed drinks
+- "Wants: ANY [tier]" wildcard allowed (e.g. "want any Tier 4 ingredient")
+- Counter-offers: click someone's trade → propose different quantities
+- Both parties get notified when trade completes (Town Crier: "A trade caravan has arrived!")
+
+### 10c. When to Use Which
+
+| Situation | Use |
+|-----------|-----|
+| Need Crowns to upgrade cart | Marketplace (sell for money) |
+| Have excess of one ingredient, need another | Trade Board (barter) |
+| Nobody selling what you need for Crowns | Post a Want Ad on Marketplace |
+| Want a specific rare ingredient from another region | Trade Board offer |
+| Selling brewed drinks in bulk | Marketplace |
+| Swapping recipes' worth of ingredients with a trade partner | Trade Board |
+
+### 10d. Trade Discovery (Emergent Gameplay)
+
+The combination of geolocation + trading creates natural trade routes:
+```
+Japanese player: "I have unlimited Yuzu but no Lavender"
+French player: "I have unlimited Lavender but no Yuzu"
+→ Both post on Trade Board → natural swap → both unlock cross-regional recipes
+→ Neither could have done it alone → cooperation without real-time interaction
+```
+
+This is the invisible multiplayer working as designed — players help each other without ever meeting.
+
+### 10e. Anti-Manipulation
+
+- **Hoarding cap:** Max 50 of any single ingredient in inventory
+- **Trade cooldown:** After completing 5 trades in 1 hour, 30 min cooldown
+- **Self-trade prevention:** Can't trade with yourself (same player token)
+- **Expired listing cleanup:** Server purges expired listings every hour
