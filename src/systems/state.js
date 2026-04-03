@@ -73,6 +73,9 @@ const state = {
   merchantStockData: null,
   merchantDialogueData: null,
   
+  // Visual effects data
+  visualEffects: [],
+  
   // Scene view management
   currentView: 'cart', // 'cart' | 'foraging'
   

@@ -2,6 +2,9 @@
 
 import state from '../systems/state.js';
 import { openEncyclopedia } from './encyclopedia-ui.js';
+import { getRecipeHint as getHintData } from '../systems/hints.js';
+import { getMilestoneProgress, getNextMilestone } from '../systems/milestones.js';
+import { onJournalOpen } from '../systems/audio.js';
 
 const journalOverlay = document.getElementById('journal-overlay');
 const journalRecipes = document.getElementById('journal-recipes');
@@ -17,6 +20,7 @@ export function initJournal() {
 }
 
 function openJournal() {
+  try { onJournalOpen(); } catch (e) { /* audio not loaded */ }
   renderJournal();
   journalOverlay.style.display = 'flex';
 }
@@ -37,7 +41,23 @@ function renderJournal() {
   const discovered = state.discoveredRecipes.size;
   const total = state.recipes.length;
   
-  let html = `<p style="text-align:center;color:#a08c6a;margin-bottom:12px">📖 ${discovered} / ${total} recipes discovered</p>`;
+  // Milestone progress bar
+  const nextMs = getNextMilestone();
+  let milestoneHtml = '';
+  if (nextMs) {
+    const pct = Math.round(nextMs.progress * 100);
+    milestoneHtml = `
+      <div style="background:rgba(50,38,20,0.6);border:1px solid #3a2a18;border-radius:6px;padding:8px 12px;margin-bottom:12px">
+        <div style="color:#c8b896;font-size:0.85rem;margin-bottom:4px">Next: <b style="color:#d4a44c">${nextMs.title}</b> — ${nextMs.remaining} more recipes</div>
+        <div style="height:6px;background:#2a2a1a;border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${pct}%;background:linear-gradient(90deg,#6b4c2a,#d4a44c);transition:width 0.5s"></div>
+        </div>
+        <div style="color:#f0d060;font-size:0.8rem;margin-top:2px">Reward: +${nextMs.reward} 👑</div>
+      </div>
+    `;
+  }
+  
+  let html = `<p style="text-align:center;color:#a08c6a;margin-bottom:12px">📖 ${discovered} / ${total} recipes discovered</p>${milestoneHtml}`;
   
   for (const recipe of allRecipes) {
     const isDiscovered = state.discoveredRecipes.has(recipe.id);
@@ -66,8 +86,9 @@ function renderJournal() {
     } else {
       // Show silhouette — clearer if player has experimented with similar ingredients
       const clarity = getRecipeClarity(recipe);
-      const blur = clarity > 0.5 ? '0px' : clarity > 0.3 ? '1px' : '2px';
-      const hint = getRecipeHint(recipe, clarity);
+      const hintInfo = getHintData(recipe);
+      const blur = hintInfo.hintLevel >= 2 ? '0px' : hintInfo.hintLevel >= 1 ? '1px' : clarity > 0.3 ? '1px' : '2px';
+      const hint = hintInfo.hintText || getRecipeHintLegacy(recipe, clarity);
       
       html += `
         <div class="journal-recipe undiscovered" style="filter:blur(${blur})">
@@ -107,7 +128,7 @@ function getRecipeClarity(recipe) {
   return known / recipe.ingredients.length;
 }
 
-function getRecipeHint(recipe, clarity) {
+function getRecipeHintLegacy(recipe, clarity) {
   if (clarity > 0.5) {
     return `Something with ${recipe.ingredients.length} ingredients... ${recipe.family ? `(${recipe.family})` : ''}`;
   }

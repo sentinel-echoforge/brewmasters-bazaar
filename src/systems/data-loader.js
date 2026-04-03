@@ -4,7 +4,7 @@
 import state from './state.js';
 
 export async function loadGameData() {
-  const [ingredients, recipes, customers, bases, gameConfig, regions, equipment, merchantStock, merchants] = await Promise.all([
+  const [ingredients, recipes, customers, bases, gameConfig, regions, equipment, merchantStock, merchants, visualEffects] = await Promise.all([
     fetch('/data/ingredients.json').then(r => r.json()),
     fetch('/data/recipes.json').then(r => r.json()),
     fetch('/data/customers.json').then(r => r.json()),
@@ -14,6 +14,7 @@ export async function loadGameData() {
     fetch('/data/equipment.json').then(r => r.json()),
     fetch('/data/merchant-stock.json').then(r => r.json()),
     fetch('/data/merchants.json').then(r => r.json()),
+    fetch('/data/visual-effects.json').then(r => r.json()).catch(() => []),
   ]);
   
   state.ingredients = ingredients;
@@ -26,6 +27,7 @@ export async function loadGameData() {
   state.equipmentData = equipment;
   state.merchantStockData = merchantStock;
   state.merchantDialogueData = merchants;
+  state.visualEffects = visualEffects;
   
   // Set starter ingredients: tier 1 + basic tier 2
   const starterIds = new Set();

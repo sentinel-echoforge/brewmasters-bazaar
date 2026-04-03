@@ -11,13 +11,19 @@ import { initMerchant, checkMerchantRestock, isMerchantAvailable } from './syste
 import { updateForageNodes, updateGardenPlots } from './systems/garden.js';
 import { updateBarrels } from './systems/barrel-aging.js';
 import { reapplyEquipmentEffects } from './systems/progression.js';
-import { initScene, setCauldronColor, spawnBubbles, spawnSteam, spawnSparkles, spawnCustomerMesh, removeCustomerMesh, updateCartVisuals } from './scene/scene.js';
+import { initScene, setCauldronColor, spawnBubbles, spawnSteam, spawnSparkles, spawnCoinScatter, spawnCustomerMesh, removeCustomerMesh, updateCartVisuals } from './scene/scene.js';
 import { initForagingScene, updateForagingScene, activateForagingScene, deactivateForagingScene, isForagingActive, resizeForagingScene } from './scene/foraging-scene.js';
 import { showHud, updateHud } from './ui/hud.js';
 import { showShelf, renderShelf, setIngredientClickHandler } from './ui/shelf.js';
 import { showCauldron, renderCauldron, setCauldronHandlers } from './ui/cauldron-ui.js';
 import { showCustomerPanel, renderCustomers, setServeHandler } from './ui/customer-ui.js';
 import { initJournal } from './ui/journal.js';
+// Week 4 imports
+import { startMusic, onIngredientAdded, onBrewStart, onBrewComplete, onCoinEarned, onCustomerArrive, onCustomerReact, onHotStreak, onButtonClick, onCrierAnnounce } from './systems/audio.js';
+import { recordFailedAttempt } from './systems/hints.js';
+import { checkMilestones } from './systems/milestones.js';
+import { checkIncomingPortal, createPortal, updatePortal, activatePortal, isPortalHit, showPortalWelcome } from './ui/portal.js';
+import { initSettings } from './ui/settings-ui.js';
 import { initResult, showResult } from './ui/result.js';
 import { notify } from './ui/notifications.js';
 import { initMerchantUI, openMerchantUI } from './ui/merchant-ui.js';
@@ -47,10 +53,22 @@ let gameStarted = false;
 let customerMeshes = new Map(); // customerId -> THREE mesh
 let forageCanvas = null;
 
+// Check for incoming portal BEFORE anything else
+const portalData = checkIncomingPortal();
+
 // Load data immediately, then check for existing session
 loadGameData().then(async () => {
   console.log('📦 Game data loaded!');
   initScene();
+  
+  // If incoming portal player, skip name entry
+  if (portalData && portalData.isPortal) {
+    state.playerName = portalData.username;
+    state.cartName = `${portalData.username}'s Cart`;
+    console.log(`🌀 Portal arrival: ${portalData.username}`);
+    startGame(true); // pass isPortal flag
+    return;
+  }
   
   // Try to restore session from server
   const restored = await initMultiplayer();
@@ -81,7 +99,7 @@ cartInput.addEventListener('keydown', (e) => {
 });
 
 // ═══ START GAME ═══
-async function startGame() {
+async function startGame(isPortal = false) {
   introOverlay.style.display = 'none';
   gameStarted = true;
   
@@ -122,10 +140,30 @@ async function startGame() {
   initCrierUI();
   initCommissionUI();
   
+  // Week 4: Settings, Portal, Audio
+  initSettings();
+  
+  // Create portal in scene
+  if (state.scene) {
+    createPortal(state.scene);
+  }
+  
+  // Start background music (lazy-loaded, non-blocking)
+  // First user interaction will unlock audio context
+  document.addEventListener('click', function unlockAudio() {
+    startMusic();
+    document.removeEventListener('click', unlockAudio);
+  }, { once: true });
+  
+  // Portal welcome message
+  if (isPortal) {
+    setTimeout(() => showPortalWelcome(state.playerName), 1500);
+  }
+  
   // Set up multiplayer callbacks
   setMultiplayerCallbacks({
     onEconomy: (data) => { /* economy updates handled in state */ },
-    onCrier: (announcements) => { updateCrier(announcements); },
+    onCrier: (announcements) => { updateCrier(announcements); onCrierAnnounce(); },
     onCommission: (commission) => {
       if (commission && commission.definition) {
         showCommissionAlert(commission);
@@ -139,8 +177,8 @@ async function startGame() {
   // Set up interaction handlers
   setupHandlers();
   
-  // Start game loop
-  gameLoop();
+  // Start game loop (requestAnimationFrame-based)
+  requestAnimationFrame(gameLoop);
   
   // Spawn first customer quickly
   setTimeout(() => {
@@ -148,6 +186,7 @@ async function startGame() {
     if (customer) {
       const mesh = spawnCustomerMesh();
       customerMeshes.set(customer.id, mesh);
+      onCustomerArrive();
     }
     renderCustomers();
   }, 3000);
@@ -249,6 +288,9 @@ function setupHandlers() {
     // Visual feedback — change cauldron color based on ingredients
     updateCauldronVisuals();
     
+    // Audio
+    onIngredientAdded();
+    
     renderShelf();
     renderCauldron();
     notify(`Added ${getIngredientName(ingredientId)} to cauldron`);
@@ -331,6 +373,26 @@ function setupHandlers() {
   document.getElementById('commission-btn')?.addEventListener('click', () => {
     openCommission(() => { updateHud(); });
   });
+  
+  // Portal click detection on game canvas
+  const gameCanvas = document.getElementById('game-canvas');
+  gameCanvas?.addEventListener('click', (e) => {
+    if (state.currentView !== 'cart' || !state.camera || !state.scene) return;
+    
+    const rect = gameCanvas.getBoundingClientRect();
+    import('three').then(({ Raycaster, Vector2 }) => {
+      const mouse = new Vector2(
+        ((e.clientX - rect.left) / rect.width) * 2 - 1,
+        -((e.clientY - rect.top) / rect.height) * 2 + 1
+      );
+      const raycaster = new Raycaster();
+      raycaster.setFromCamera(mouse, state.camera);
+      const intersects = raycaster.intersectObjects(state.scene.children, true);
+      if (isPortalHit(intersects)) {
+        activatePortal();
+      }
+    });
+  });
 }
 
 // ═══ BREWING ═══
@@ -353,6 +415,9 @@ function doBrew() {
   const brewTimes = state.gameConfig?.brewing?.brewTimeSeconds || {};
   const baseTime = (brewTimes[state.selectedMethod] || 5) * 1000;
   const brewTime = Math.round(baseTime * (state.brewSpeedMultiplier || 1.0));
+  
+  // Audio: brew start
+  onBrewStart();
   
   // Show brewing animation
   const brewingOverlay = document.getElementById('brewing-overlay');
@@ -401,6 +466,22 @@ function doBrew() {
       spawnSteam(6);
     }
     
+    // Audio: brew complete
+    onBrewComplete(result.isNew, result.nearMiss);
+    
+    // Hints: record failed attempt
+    if (!result.isNew && !result.recipe?.id?.startsWith('mystery') === false) {
+      recordFailedAttempt(state.selectedBase, [...state.cauldronSlots], state.selectedMethod);
+    }
+    if (result.nearMiss || (result.recipe && result.recipe.id === 'mystery_slop')) {
+      recordFailedAttempt(state.selectedBase, [...state.cauldronSlots], state.selectedMethod);
+    }
+    
+    // Milestones: check after discovery
+    if (result.isNew) {
+      checkMilestones();
+    }
+    
     // Show result
     showResult(result, () => {
       // Reset cauldron after dismiss
@@ -440,6 +521,10 @@ function doServe(customerId, drinkIndex) {
   notify(qualityMessages[result.quality] || `+${result.payment} crowns`, 
     result.quality === 'perfect' ? 'gold' : '');
   
+  // Audio
+  onCoinEarned(result.payment);
+  onCustomerReact(result.quality);
+  
   // Notify server of sell
   if (result.customer?.data?.id) {
     onSellDrink(result.recipeId || 'unknown', result.customer.id);
@@ -447,6 +532,9 @@ function doServe(customerId, drinkIndex) {
   
   // Auto-save on serve
   queueSave();
+  
+  // Coin scatter particles on sale
+  if (result.payment > 5) spawnCoinScatter(Math.min(result.payment / 5, 12));
   
   // Floating feedback
   showServeFeedback(result.reaction, result.payment);
@@ -475,8 +563,17 @@ function showServeFeedback(emoji, payment) {
 }
 
 // ═══ GAME LOOP ═══
-function gameLoop() {
+let lastGameTick = 0;
+const GAME_TICK_INTERVAL = 1000; // 1 second for game logic
+
+function gameLoop(timestamp) {
   if (!gameStarted) return;
+  
+  requestAnimationFrame(gameLoop);
+  
+  // Throttle game logic to ~1Hz (animations run at render framerate in scene.js)
+  if (timestamp - lastGameTick < GAME_TICK_INTERVAL) return;
+  lastGameTick = timestamp;
   
   // Update customers (even in foraging view — they wait!)
   updateCustomers();
@@ -506,8 +603,12 @@ function gameLoop() {
         state.lastCustomerSpawn = now;
         const mesh = spawnCustomerMesh();
         customerMeshes.set(customer.id, mesh);
+        onCustomerArrive();
       }
     }
+    
+    // Update portal animation
+    if (state.scene) updatePortal(1.0, state.scene);
     
     // Clean up meshes for departed customers
     const activeIds = new Set(state.customerQueue.map(c => c.id));
@@ -523,9 +624,6 @@ function gameLoop() {
   }
   
   updateHud();
-  
-  // Continue loop
-  setTimeout(gameLoop, 1000);
 }
 
 // ═══ HELPERS ═══

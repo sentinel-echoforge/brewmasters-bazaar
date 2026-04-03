@@ -457,9 +457,14 @@ function buildDecorations() {
   lanternLight.position.set(0, 0, 0);
   lanternGroup.add(lanternLight);
   
-  // Animate lantern flicker
+  // Animate lantern flicker — more realistic with noise
   animationCallbacks.push((t) => {
-    lanternLight.intensity = 0.4 + Math.sin(t * 8) * 0.1 + Math.sin(t * 13) * 0.05;
+    const flicker = Math.sin(t * 8) * 0.08 + Math.sin(t * 13) * 0.05 + Math.sin(t * 23) * 0.03;
+    const random = (Math.random() - 0.5) * 0.04;
+    lanternLight.intensity = Math.max(0.2, 0.45 + flicker + random);
+    // Slight color temperature shift
+    const warmth = 0.5 + Math.sin(t * 5) * 0.1;
+    lanternLight.color.setHSL(0.08 + warmth * 0.02, 0.9, 0.5 + warmth * 0.1);
   });
   
   scene.add(lanternGroup);
@@ -544,6 +549,8 @@ export function spawnSteam(count = 5) {
   }
 }
 
+export function getScene() { return scene; }
+
 export function spawnSparkles(count = 12) {
   const sparkGeo = new THREE.OctahedronGeometry(0.04, 0);
   for (let i = 0; i < count; i++) {
@@ -570,6 +577,46 @@ export function spawnSparkles(count = 12) {
       spark.rotation.y += 0.1;
       if (spark.material.opacity <= 0) {
         scene.remove(spark);
+        animationCallbacks = animationCallbacks.filter(c => c !== cb);
+      }
+    };
+    animationCallbacks.push(cb);
+  }
+}
+
+// ═══ COIN SCATTER EFFECT ═══
+export function spawnCoinScatter(count = 8) {
+  const coinGeo = new THREE.CylinderGeometry(0.06, 0.06, 0.02, 6);
+  for (let i = 0; i < count; i++) {
+    const coinMat = new THREE.MeshStandardMaterial({
+      color: 0xFFD700, emissive: 0xDDAA00, emissiveIntensity: 0.5,
+      metalness: 0.8, roughness: 0.2, transparent: true, opacity: 0.9,
+    });
+    const coin = new THREE.Mesh(coinGeo, coinMat);
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 1.5 + Math.random() * 2;
+    coin.position.set(
+      3.2 + Math.cos(angle) * 0.3,
+      1.5 + Math.random() * 0.5,
+      (Math.random() - 0.5) * 1
+    );
+    coin.rotation.x = Math.random() * Math.PI;
+    scene.add(coin);
+    
+    const vx = Math.cos(angle) * speed * 0.02;
+    const vz = Math.sin(angle) * speed * 0.02;
+    let vy = 0.06 + Math.random() * 0.03;
+    
+    const cb = (t) => {
+      coin.position.x += vx;
+      coin.position.z += vz;
+      coin.position.y += vy;
+      vy -= 0.003; // gravity
+      coin.rotation.x += 0.1;
+      coin.rotation.z += 0.05;
+      coin.material.opacity -= 0.012;
+      if (coin.material.opacity <= 0 || coin.position.y < 0) {
+        scene.remove(coin);
         animationCallbacks = animationCallbacks.filter(c => c !== cb);
       }
     };

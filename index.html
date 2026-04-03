@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brewmaster's Bazaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Brewmaster's Bazaar — Cozy Medieval Brewing Game</title>
+  <meta name="description" content="Discover secret recipes, brew legendary drinks, and outsell rival brewers in a living medieval economy. Free browser game for Vibe Jam 2026.">
+  <meta property="og:title" content="Brewmaster's Bazaar">
+  <meta property="og:description" content="Discover secret recipes, brew legendary drinks, and outsell rival brewers in a living medieval economy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/og-image.png">
+  <meta property="og:url" content="https://brewmastersbazaar.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brewmaster's Bazaar">
+  <meta name="twitter:description" content="Cozy medieval brewing game. Free to play. No login.">
+  <meta name="twitter:image" content="/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -405,6 +417,84 @@
       pointer-events: none;
     }
 
+    /* ═══ MOBILE RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      #hud-inner { flex-wrap: wrap; gap: 6px; padding: 4px 8px; }
+      .hud-section { gap: 6px; flex-wrap: wrap; }
+      #hud-multiplayer { flex-wrap: wrap; gap: 4px; padding: 2px 8px; }
+      .hud-btn { font-size: 0.75rem; padding: 3px 8px; }
+      .mp-btn { font-size: 0.7rem !important; padding: 2px 6px !important; }
+      #cart-name-display { font-size: 1rem; }
+      #crown-display { font-size: 1rem; }
+
+      /* Shelf panel — bottom-left on mobile */
+      #shelf-panel {
+        left: 4px; top: auto; bottom: 160px; width: 170px;
+        max-height: 40vh; overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .ingredient-btn { padding: 8px 6px; font-size: 0.85rem; min-height: 36px; }
+
+      /* Cauldron panel — full width bottom */
+      #cauldron-panel {
+        width: calc(100vw - 24px); max-width: 100%;
+        bottom: 4px; left: 12px; transform: none;
+      }
+      .base-selector { flex-wrap: wrap; }
+      .method-selector { flex-wrap: wrap; }
+      .ingredient-slots { flex-wrap: wrap; }
+      .ingredient-slot { width: 70px; height: 44px; }
+      #brew-btn { padding: 12px 30px; font-size: 1.1rem; }
+
+      /* Customer panel — top right, narrower */
+      #customer-panel {
+        right: 4px; top: 100px; width: 180px;
+      }
+      .customer-card { padding: 8px; }
+      .serve-btn { min-height: 36px; padding: 8px; }
+
+      /* Overlay panels — full width on mobile */
+      .overlay-panel { width: calc(100vw - 20px); max-width: 100%; }
+      #journal-book { width: calc(100vw - 20px); padding: 16px; }
+      #merchant-panel { width: calc(100vw - 20px); }
+      #barrel-panel { width: calc(100vw - 20px); }
+      #equipment-panel { width: calc(100vw - 20px); }
+      .encyclopedia-card { width: calc(100vw - 20px); }
+
+      /* Garden panel on mobile */
+      #garden-panel { width: 180px; }
+    }
+
+    @media (max-width: 430px) {
+      #hud { padding: 4px 8px; }
+      .hud-btn { font-size: 0.7rem; padding: 2px 6px; }
+      #shelf-panel { width: 150px; font-size: 0.8rem; }
+      #customer-panel { width: 160px; top: 90px; }
+      #cauldron-panel { left: 4px; width: calc(100vw - 8px); }
+      .ingredient-slot { width: 60px; height: 40px; font-size: 0.7rem; }
+      .base-btn { padding: 4px 8px; font-size: 0.75rem; }
+      .method-btn { padding: 6px 10px; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 375px) {
+      #shelf-panel { width: 130px; bottom: 140px; }
+      #customer-panel { width: 140px; }
+      .ingredient-btn { padding: 6px 4px; font-size: 0.8rem; }
+      .hud-section { gap: 4px; }
+      #hud-multiplayer { gap: 2px; }
+    }
+
+    /* Touch-friendly: larger tap targets */
+    @media (hover: none) and (pointer: coarse) {
+      .ingredient-btn { min-height: 40px; }
+      .serve-btn { min-height: 40px; }
+      .hud-btn { min-height: 32px; }
+      .base-btn, .method-btn { min-height: 36px; }
+      #brew-btn { min-height: 44px; }
+      .close-btn { min-width: 32px; min-height: 32px; }
+      .merchant-buy-btn { min-height: 36px; padding: 6px 14px; }
+    }
+
     /* ═══ MULTIPLAYER HUD ═══ */
     .mp-btn { font-size: 0.8rem !important; padding: 3px 8px !important; }
 
@@ -738,5 +828,26 @@
   <div id="tooltip"></div>
 
   <script type="module" src="/src/main.js"></script>
+  
+  <!-- Vibe Jam 2026 Portal (required for submission) -->
+  <a href="https://jam.pieter.com" target="_blank" style="
+    font-family: 'helvetica neue', sans-serif;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10000;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(99,102,241,0.4);
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  " onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'">
+    🕹️ Vibe Jam 2026
+  </a>
 </body>
 </html>
