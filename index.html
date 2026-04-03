@@ -5,13 +5,333 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brewmaster's Bazaar</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: #1a1a2e; font-family: 'Georgia', serif; }
-    #game-canvas { width: 100vw; height: 100vh; display: block; }
+    body { overflow: hidden; background: #1a1a2e; font-family: 'Crimson Text', Georgia, serif; color: #f0e6d0; }
+    #game-canvas { width: 100vw; height: 100vh; display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+
+    /* ═══ INTRO OVERLAY ═══ */
+    #intro-overlay {
+      position: fixed; inset: 0; z-index: 100;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: radial-gradient(ellipse at center, rgba(26,26,46,0.85) 0%, rgba(10,10,20,0.95) 100%);
+    }
+    #intro-overlay h1 {
+      font-family: 'MedievalSharp', cursive; font-size: 3rem; color: #d4a44c;
+      text-shadow: 0 2px 8px rgba(212,164,76,0.4); margin-bottom: 0.5rem;
+    }
+    #intro-overlay .subtitle { color: #a08c6a; font-style: italic; margin-bottom: 2rem; font-size: 1.1rem; }
+    #intro-overlay .prompt { color: #c8b896; font-size: 1.2rem; margin-bottom: 0.8rem; }
+    #intro-overlay input {
+      background: rgba(44,32,18,0.8); border: 2px solid #6b4c2a; border-radius: 6px;
+      color: #f0e6d0; font-family: 'Crimson Text', serif; font-size: 1.3rem;
+      padding: 0.6rem 1.2rem; text-align: center; outline: none; width: 280px;
+    }
+    #intro-overlay input:focus { border-color: #d4a44c; box-shadow: 0 0 12px rgba(212,164,76,0.3); }
+    #intro-overlay .hint { color: #7a6b52; font-size: 0.85rem; margin-top: 0.5rem; }
+
+    /* ═══ HUD ═══ */
+    #hud {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      display: none; padding: 10px 20px;
+      background: linear-gradient(180deg, rgba(20,15,8,0.9) 0%, rgba(20,15,8,0) 100%);
+    }
+    #hud-inner { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; }
+    .hud-section { display: flex; align-items: center; gap: 12px; }
+    #cart-name-display { font-family: 'MedievalSharp', cursive; font-size: 1.3rem; color: #d4a44c; }
+    #crown-display { font-size: 1.2rem; color: #f0d060; font-weight: 600; }
+    #streak-display { font-size: 1rem; color: #ff6b35; display: none; }
+    #reputation-display { font-size: 1rem; color: #88cc88; }
+    .hud-btn {
+      background: rgba(44,32,18,0.8); border: 1px solid #6b4c2a; border-radius: 4px;
+      color: #c8b896; padding: 4px 12px; cursor: pointer; font-family: inherit; font-size: 0.9rem;
+    }
+    .hud-btn:hover { border-color: #d4a44c; color: #d4a44c; }
+
+    /* ═══ GAME UI PANELS ═══ */
+    .panel {
+      position: fixed; z-index: 40;
+      background: rgba(30,22,12,0.92); border: 2px solid #4a3520;
+      border-radius: 8px; padding: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    /* SHELF PANEL — left side */
+    #shelf-panel {
+      left: 12px; top: 60px; bottom: 12px; width: 200px;
+      display: none; overflow-y: auto;
+    }
+    #shelf-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; font-size: 1.1rem; }
+    .shelf-tier-label { color: #8a7a60; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 4px; }
+    .ingredient-btn {
+      display: flex; align-items: center; gap: 6px; width: 100%;
+      background: rgba(60,45,25,0.6); border: 1px solid #3a2a18; border-radius: 4px;
+      color: #d8c8a8; padding: 6px 8px; margin-bottom: 3px; cursor: pointer;
+      font-family: inherit; font-size: 0.9rem; text-align: left; transition: all 0.15s;
+    }
+    .ingredient-btn:hover { border-color: #d4a44c; background: rgba(80,60,30,0.6); }
+    .ingredient-btn.disabled { opacity: 0.4; cursor: not-allowed; }
+    .ingredient-btn .cost { margin-left: auto; color: #f0d060; font-size: 0.8rem; }
+
+    /* CAULDRON PANEL — bottom center */
+    #cauldron-panel {
+      bottom: 12px; left: 50%; transform: translateX(-50%); width: 440px;
+      display: none;
+    }
+    #cauldron-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; text-align: center; }
+    
+    .base-selector { display: flex; gap: 6px; margin-bottom: 10px; justify-content: center; }
+    .base-btn {
+      background: rgba(60,45,25,0.6); border: 2px solid #3a2a18; border-radius: 6px;
+      color: #c8b896; padding: 6px 12px; cursor: pointer; font-family: inherit; font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+    .base-btn:hover { border-color: #8a7040; }
+    .base-btn.selected { border-color: #d4a44c; background: rgba(100,80,40,0.6); color: #f0e6d0; }
+
+    .ingredient-slots { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
+    .ingredient-slot {
+      width: 80px; height: 50px; border: 2px dashed #4a3520; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; color: #6a5a40; background: rgba(40,30,15,0.5);
+      cursor: pointer; position: relative;
+    }
+    .ingredient-slot.filled { border-style: solid; border-color: #6b4c2a; color: #d8c8a8; background: rgba(60,45,25,0.7); }
+    .ingredient-slot .remove-btn {
+      position: absolute; top: -6px; right: -6px; width: 16px; height: 16px;
+      background: #8b3a3a; border: none; border-radius: 50%; color: #fff;
+      font-size: 10px; cursor: pointer; display: none; line-height: 16px; text-align: center;
+    }
+    .ingredient-slot.filled .remove-btn { display: block; }
+
+    .method-selector { display: flex; gap: 6px; margin-bottom: 10px; justify-content: center; }
+    .method-btn {
+      background: rgba(60,45,25,0.6); border: 2px solid #3a2a18; border-radius: 6px;
+      color: #c8b896; padding: 8px 16px; cursor: pointer; font-family: inherit; font-size: 0.9rem;
+      transition: all 0.15s;
+    }
+    .method-btn:hover { border-color: #8a7040; }
+    .method-btn.selected { border-color: #d4a44c; background: rgba(100,80,40,0.6); color: #f0e6d0; }
+
+    #brew-btn {
+      display: block; margin: 0 auto; padding: 10px 40px;
+      background: linear-gradient(180deg, #8b5e2a 0%, #6b3a1f 100%);
+      border: 2px solid #d4a44c; border-radius: 8px;
+      color: #f0e6d0; font-family: 'MedievalSharp', cursive; font-size: 1.3rem;
+      cursor: pointer; transition: all 0.2s; text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    #brew-btn:hover { background: linear-gradient(180deg, #a0702f 0%, #804520 100%); transform: scale(1.05); }
+    #brew-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+    #brew-cost { text-align: center; color: #f0d060; font-size: 0.85rem; margin-bottom: 6px; }
+
+    /* CUSTOMER PANEL — right side */
+    #customer-panel {
+      right: 12px; top: 60px; width: 220px;
+      display: none;
+    }
+    #customer-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; }
+    .customer-card {
+      background: rgba(50,38,20,0.8); border: 1px solid #4a3520; border-radius: 6px;
+      padding: 10px; margin-bottom: 8px; position: relative;
+    }
+    .customer-card .emoji { font-size: 1.5rem; }
+    .customer-card .name { font-weight: 600; color: #d8c8a8; }
+    .customer-card .speech {
+      font-style: italic; color: #a8987a; font-size: 0.85rem; margin-top: 4px;
+      border-left: 2px solid #4a3520; padding-left: 8px;
+    }
+    .customer-card .patience-bar {
+      height: 3px; background: #3a5a3a; border-radius: 2px; margin-top: 6px; overflow: hidden;
+    }
+    .customer-card .patience-fill { height: 100%; background: #88cc66; transition: width 1s linear; }
+    .serve-btn {
+      display: block; width: 100%; margin-top: 6px; padding: 5px;
+      background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px;
+      color: #a8d888; cursor: pointer; font-family: inherit; font-size: 0.85rem;
+    }
+    .serve-btn:hover { background: rgba(70,100,50,0.6); border-color: #6a9a4a; }
+    .serve-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* RESULT OVERLAY */
+    #result-overlay {
+      position: fixed; inset: 0; z-index: 80; display: none;
+      background: rgba(10,8,4,0.7);
+      align-items: center; justify-content: center;
+    }
+    #result-card {
+      background: rgba(40,30,15,0.95); border: 3px solid #d4a44c; border-radius: 12px;
+      padding: 30px 40px; text-align: center; max-width: 400px;
+      box-shadow: 0 0 40px rgba(212,164,76,0.3);
+    }
+    #result-card h2 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 4px; }
+    #result-card .stars { font-size: 1.3rem; margin-bottom: 8px; }
+    #result-card .lore { font-style: italic; color: #a8987a; margin-bottom: 8px; font-size: 0.95rem; }
+    #result-card .near-miss { color: #e8a030; font-weight: 600; margin-bottom: 8px; }
+    #result-card .discovery { color: #88dd66; font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+    #result-dismiss {
+      margin-top: 12px; padding: 8px 30px;
+      background: rgba(60,45,25,0.8); border: 1px solid #6b4c2a; border-radius: 6px;
+      color: #d8c8a8; cursor: pointer; font-family: inherit; font-size: 1rem;
+    }
+
+    /* JOURNAL OVERLAY */
+    #journal-overlay {
+      position: fixed; inset: 0; z-index: 90; display: none;
+      background: rgba(10,8,4,0.85);
+      align-items: center; justify-content: center;
+    }
+    #journal-book {
+      background: rgba(35,28,15,0.98); border: 3px solid #6b4c2a; border-radius: 12px;
+      padding: 24px 30px; width: 600px; max-height: 80vh; overflow-y: auto;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+    #journal-book h2 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 16px; text-align: center; }
+    .journal-recipe {
+      background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 6px;
+      padding: 10px 14px; margin-bottom: 8px;
+    }
+    .journal-recipe.undiscovered { opacity: 0.5; filter: blur(1px); }
+    .journal-recipe .recipe-name { font-weight: 600; color: #d8c8a8; }
+    .journal-recipe .recipe-stars { color: #f0d060; }
+    .journal-recipe .recipe-lore { font-style: italic; color: #8a7a60; font-size: 0.85rem; margin-top: 2px; }
+    .journal-recipe .recipe-details { color: #a08c6a; font-size: 0.85rem; margin-top: 4px; }
+    #journal-close {
+      display: block; margin: 16px auto 0; padding: 8px 30px;
+      background: rgba(60,45,25,0.8); border: 1px solid #6b4c2a; border-radius: 6px;
+      color: #d8c8a8; cursor: pointer; font-family: inherit; font-size: 1rem;
+    }
+
+    /* NOTIFICATIONS */
+    #notifications {
+      position: fixed; top: 50px; left: 50%; transform: translateX(-50%); z-index: 70;
+      display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: none;
+    }
+    .notification {
+      background: rgba(30,22,12,0.95); border: 1px solid #6b4c2a; border-radius: 6px;
+      padding: 8px 20px; color: #f0e6d0; font-size: 0.95rem;
+      animation: notifSlide 0.3s ease-out;
+      white-space: nowrap;
+    }
+    .notification.gold { border-color: #d4a44c; color: #f0d060; }
+    .notification.discovery { border-color: #88dd66; color: #88dd66; }
+    .notification.streak { border-color: #ff6b35; color: #ff6b35; }
+    @keyframes notifSlide { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* BREWING ANIMATION OVERLAY */
+    #brewing-overlay {
+      position: fixed; inset: 0; z-index: 60; display: none;
+      align-items: center; justify-content: center; pointer-events: none;
+    }
+    #brewing-text {
+      font-family: 'MedievalSharp', cursive; font-size: 1.5rem; color: #d4a44c;
+      text-shadow: 0 0 20px rgba(212,164,76,0.6);
+      animation: brewPulse 1s ease-in-out infinite;
+    }
+    @keyframes brewPulse { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+
+    /* SERVE FEEDBACK */
+    .serve-feedback {
+      position: fixed; z-index: 75; font-size: 1.5rem;
+      animation: serveFeedback 1.5s ease-out forwards; pointer-events: none;
+    }
+    @keyframes serveFeedback {
+      0% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-60px); }
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(30,22,12,0.5); }
+    ::-webkit-scrollbar-thumb { background: #4a3520; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b4c2a; }
+
+    /* Tooltip */
+    #tooltip {
+      position: fixed; z-index: 95; display: none;
+      background: rgba(20,15,8,0.95); border: 1px solid #6b4c2a; border-radius: 4px;
+      padding: 6px 10px; color: #d8c8a8; font-size: 0.8rem; max-width: 200px;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
   <canvas id="game-canvas"></canvas>
+
+  <!-- INTRO -->
+  <div id="intro-overlay">
+    <h1>🍺 Brewmaster's Bazaar</h1>
+    <p class="subtitle">Discover recipes. Brew legends. Outsell the realm.</p>
+    <div id="intro-name">
+      <p class="prompt">What's your name, brewer?</p>
+      <input id="name-input" type="text" placeholder="Enter your name..." maxlength="20" autofocus>
+      <p class="hint">Press Enter</p>
+    </div>
+    <div id="intro-cart" style="display:none">
+      <p class="prompt">And what shall we call your cart?</p>
+      <input id="cart-input" type="text" placeholder="Name your cart..." maxlength="25">
+      <p class="hint">Press Enter</p>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hud-inner">
+      <div class="hud-section">
+        <span id="cart-name-display"></span>
+      </div>
+      <div class="hud-section">
+        <span id="crown-display">👑 50</span>
+        <span id="reputation-display">⭐ 0</span>
+        <span id="streak-display">🔥 Hot Streak!</span>
+      </div>
+      <div class="hud-section">
+        <button class="hud-btn" id="journal-btn">📖 Journal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHELF -->
+  <div id="shelf-panel" class="panel"></div>
+
+  <!-- CAULDRON -->
+  <div id="cauldron-panel" class="panel"></div>
+
+  <!-- CUSTOMERS -->
+  <div id="customer-panel" class="panel"></div>
+
+  <!-- RESULT -->
+  <div id="result-overlay">
+    <div id="result-card">
+      <h2 id="result-name"></h2>
+      <div id="result-stars" class="stars"></div>
+      <div id="result-discovery" class="discovery"></div>
+      <div id="result-lore" class="lore"></div>
+      <div id="result-nearmiss" class="near-miss"></div>
+      <button id="result-dismiss">Continue</button>
+    </div>
+  </div>
+
+  <!-- JOURNAL -->
+  <div id="journal-overlay">
+    <div id="journal-book">
+      <h2>📖 Recipe Journal</h2>
+      <div id="journal-recipes"></div>
+      <button id="journal-close">Close</button>
+    </div>
+  </div>
+
+  <!-- BREWING ANIMATION -->
+  <div id="brewing-overlay">
+    <div id="brewing-text">Brewing...</div>
+  </div>
+
+  <!-- NOTIFICATIONS -->
+  <div id="notifications"></div>
+
+  <!-- TOOLTIP -->
+  <div id="tooltip"></div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
