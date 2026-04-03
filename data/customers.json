@@ -1,0 +1,122 @@
+[
+  {
+    "id": "peasant",
+    "name": "Thirsty Peasant",
+    "emoji": "👨‍🌾",
+    "preferences": ["sweet", "warm", "earthy"],
+    "dislikes": ["exotic", "complex"],
+    "tipMultiplier": 0.8,
+    "patience": 30,
+    "dialogue": {
+      "enter": ["A drink, please!", "Something simple for a working man."],
+      "happy": ["That hit the spot!", "I'll tell my friends about this place!"],
+      "neutral": ["It's... fine.", "I've had worse."],
+      "unhappy": ["What IS this?", "I asked for a drink, not a potion."]
+    }
+  },
+  {
+    "id": "merchant_customer",
+    "name": "Traveling Merchant",
+    "emoji": "🧳",
+    "preferences": ["exotic", "complex", "aromatic"],
+    "dislikes": ["neutral", "thin"],
+    "tipMultiplier": 1.5,
+    "patience": 20,
+    "dialogue": {
+      "enter": ["I've tasted drinks across seven kingdoms.", "Impress me, brewmaster."],
+      "happy": ["Magnificent! Worth every coin.", "I shall speak of this in the next town."],
+      "neutral": ["Passable. I've had better in the east.", "Hmm. Not bad."],
+      "unhappy": ["I've traveled too far for THIS.", "My camel makes better drinks."]
+    }
+  },
+  {
+    "id": "noble",
+    "name": "Minor Noble",
+    "emoji": "👑",
+    "preferences": ["golden", "perfumy", "luxurious", "smooth"],
+    "dislikes": ["earthy", "smoky", "dark"],
+    "tipMultiplier": 2.0,
+    "patience": 15,
+    "dialogue": {
+      "enter": ["I expect nothing but the finest.", "Do you know who I am?"],
+      "happy": ["Exquisite! You shall be my personal brewmaster.", "Finally, someone with taste."],
+      "neutral": ["It will do. Barely.", "I suppose not everyone can afford saffron."],
+      "unhappy": ["Guards! Seize this... this SWILL.", "I've had servants flogged for less."]
+    }
+  },
+  {
+    "id": "scholar",
+    "name": "Curious Scholar",
+    "emoji": "📚",
+    "preferences": ["complex", "mysterious", "transformative", "deep"],
+    "dislikes": ["sweet", "simple"],
+    "tipMultiplier": 1.2,
+    "patience": 40,
+    "dialogue": {
+      "enter": ["I'm researching ancient brewing methods.", "What's your most unusual creation?"],
+      "happy": ["Fascinating composition! May I take notes?", "The flavor profile is... remarkable."],
+      "neutral": ["Interesting, but predictable.", "I've read about better recipes."],
+      "unhappy": ["This contradicts everything I've studied.", "Back to the books, I suppose."]
+    }
+  },
+  {
+    "id": "bard",
+    "name": "Wandering Bard",
+    "emoji": "🎵",
+    "preferences": ["floral", "bright", "ethereal", "magical"],
+    "dislikes": ["bitter", "dark", "umami"],
+    "tipMultiplier": 1.0,
+    "patience": 25,
+    "dialogue": {
+      "enter": ["A drink to inspire my next ballad!", "Something with color, please!"],
+      "happy": ["This tastes like a sunset sounds! *strums lute*", "I shall compose an ode to your cauldron!"],
+      "neutral": ["Hmm. Two verses, maybe.", "It lacks... poetry."],
+      "unhappy": ["My lute weeps.", "Even my worst song is better than this drink."]
+    }
+  },
+  {
+    "id": "warrior",
+    "name": "Retired Warrior",
+    "emoji": "⚔️",
+    "preferences": ["fiery", "smoky", "warm", "intense"],
+    "dislikes": ["floral", "delicate", "calming"],
+    "tipMultiplier": 1.3,
+    "patience": 20,
+    "dialogue": {
+      "enter": ["Something STRONG.", "I didn't survive three wars for weak drinks."],
+      "happy": ["NOW that's a drink! *slams table*", "Reminds me of dragon's breath. In a good way."],
+      "neutral": ["It'll do for peacetime.", "Needs more fire."],
+      "unhappy": ["Is this water?", "I've been poisoned in battle. This is worse."]
+    }
+  },
+  {
+    "id": "herbalist",
+    "name": "Village Herbalist",
+    "emoji": "🌿",
+    "preferences": ["herbal", "calming", "aromatic", "fresh"],
+    "dislikes": ["fiery", "volatile", "dramatic"],
+    "tipMultiplier": 1.1,
+    "patience": 35,
+    "dialogue": {
+      "enter": ["Something with healing properties, dear.", "What herbs did you use?"],
+      "happy": ["Beautiful balance! I taste chamomile... and is that elderflower?", "Nature's finest, in a cup."],
+      "neutral": ["Pleasant enough. The proportions need work.", "Almost medicinal. Almost."],
+      "unhappy": ["This would make my patients sicker.", "Too harsh. Nature is gentle."]
+    }
+  },
+  {
+    "id": "food_critic",
+    "name": "Royal Food Critic",
+    "emoji": "🧐",
+    "preferences": ["complex", "rich", "creamy", "intoxicating"],
+    "dislikes": ["neutral", "starchy", "thin"],
+    "tipMultiplier": 2.5,
+    "patience": 10,
+    "dialogue": {
+      "enter": ["I have exactly thirty seconds.", "This review determines your future."],
+      "happy": ["Three stars. Perhaps... three and a half.", "You may quote me: 'transcendent.'"],
+      "neutral": ["One star. Adequate technique, no soul.", "I've had this exact drink. In a better tavern."],
+      "unhappy": ["Zero stars. I'm writing about this.", "The kingdom shall hear of this atrocity."]
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {"id":"honey","name":"Honey","emoji":"🍯","tier":1,"source":"pantry","tags":["sweet","golden","viscous","warm"],"description":"Rich, floral sweetness","region":"global"},
+  {"id":"grain","name":"Grain","emoji":"🌾","tier":1,"source":"pantry","tags":["earthy","dry","starchy","neutral"],"description":"Clean, bready base","region":"global"},
+  {"id":"spring_water","name":"Spring Water","emoji":"💧","tier":1,"source":"pantry","tags":["clean","neutral","thin","cool"],"description":"Pure, mineral","region":"global"},
+  {"id":"wild_herbs","name":"Wild Herbs","emoji":"🌿","tier":1,"source":"pantry","tags":["herbal","green","aromatic","fresh"],"description":"Bright, green, aromatic","region":"global"},
+
+  {"id":"apple","name":"Apple","emoji":"🍎","tier":2,"source":"garden","tags":["fruity","crisp","tart","bright"],"description":"Crisp tartness, autumn","region":"global"},
+  {"id":"berries","name":"Berries","emoji":"🫐","tier":2,"source":"garden","tags":["sweet","fruity","tart","red"],"description":"Sweet-tart burst, jammy","region":"global"},
+  {"id":"citrus_peel","name":"Citrus Peel","emoji":"🍋","tier":2,"source":"garden","tags":["bright","zesty","bitter","aromatic"],"description":"Zesty, bitter oils","region":"global"},
+  {"id":"chamomile","name":"Chamomile","emoji":"🌸","tier":2,"source":"garden","tags":["floral","calming","delicate","light"],"description":"Gentle, calming floral","region":"global"},
+
+  {"id":"wild_mushroom","name":"Wild Mushroom","emoji":"🍄","tier":3,"source":"forest","tags":["earthy","umami","dark","mysterious"],"description":"Deep umami, forest floor","region":"global"},
+  {"id":"ginger","name":"Ginger Root","emoji":"🫚","tier":3,"source":"forest","tags":["spicy","warm","sharp","aromatic"],"description":"Sharp warm heat that builds","region":"global"},
+  {"id":"roasted_acorn","name":"Roasted Acorn","emoji":"🌰","tier":3,"source":"forest","tags":["nutty","smoky","toasty","warm"],"description":"Nutty, smoky, surprisingly sweet","region":"global"},
+  {"id":"sour_cherry","name":"Sour Cherry","emoji":"🍒","tier":3,"source":"forest","tags":["tart","deep","fruity","complex"],"description":"Tart, deep red, complex","region":"global"},
+
+  {"id":"cinnamon","name":"Cinnamon Bark","emoji":"🪵","tier":4,"source":"merchant","tags":["warm","sweet","woody","spicy"],"description":"Warm, sweet, woody","region":"global"},
+  {"id":"juniper","name":"Juniper Berry","emoji":"🌲","tier":4,"source":"merchant","tags":["piney","bitter","aromatic","dry"],"description":"Piney, gin-forward, crisp","region":"global"},
+  {"id":"elderflower","name":"Elderflower","emoji":"🌺","tier":4,"source":"merchant","tags":["floral","delicate","perfumy","sweet"],"description":"Perfumy, delicate, ethereal","region":"global"},
+  {"id":"vanilla","name":"Vanilla Pod","emoji":"🫛","tier":4,"source":"merchant","tags":["rich","creamy","sweet","smooth"],"description":"Rich, creamy, round","region":"global"},
+  {"id":"long_pepper","name":"Long Pepper","emoji":"🌶️","tier":4,"source":"merchant","tags":["spicy","complex","warm","lingering"],"description":"Slow-building heat that evolves","region":"global"},
+
+  {"id":"saffron","name":"Saffron Thread","emoji":"🧵","tier":5,"source":"exotic","tags":["exotic","earthy","golden","complex"],"description":"Worth-its-weight golden luxury","region":"global"},
+  {"id":"tonka_bean","name":"Tonka Bean","emoji":"🫒","tier":5,"source":"exotic","tags":["rich","almond","cherry","intoxicating"],"description":"Almond + cherry + tobacco (banned IRL!)","region":"global"},
+  {"id":"lemongrass","name":"Lemongrass","emoji":"🌿","tier":5,"source":"exotic","tags":["bright","citrusy","aromatic","clean"],"description":"Bright, citrusy, Southeast Asian","region":"southeast_asian"},
+  {"id":"truffle_honey","name":"Truffle Honey","emoji":"🍯","tier":5,"source":"exotic","tags":["funky","luxurious","earthy","divisive"],"description":"Funky, luxurious, polarizing","region":"global"},
+  {"id":"charcoal","name":"Charcoal","emoji":"🌑","tier":5,"source":"exotic","tags":["smoky","dramatic","dark","neutral"],"description":"Turns drinks JET BLACK","region":"global"},
+
+  {"id":"dragon_pepper","name":"Dragon Pepper","emoji":"🐉","tier":6,"source":"legendary","tags":["fiery","volatile","intense","alive"],"description":"Almost alive with heat. Handle with care.","region":"legendary"},
+  {"id":"moonberry","name":"Moonberry","emoji":"🌙","tier":6,"source":"legendary","tags":["ethereal","cool","luminous","magical"],"description":"Glows faint blue. Otherworldly.","region":"legendary"},
+  {"id":"starfruit","name":"Starfruit","emoji":"⭐","tier":6,"source":"legendary","tags":["cosmic","bright","sweet","otherworldly"],"description":"Cosmic sweetness from another realm.","region":"legendary"},
+  {"id":"ancient_yeast","name":"Ancient Yeast","emoji":"🧬","tier":6,"source":"legendary","tags":["alive","transformative","deep","unpredictable"],"description":"Thousands of years old. Transforms anything.","region":"legendary"},
+  {"id":"phoenix_honey","name":"Phoenix Honey","emoji":"🔥","tier":6,"source":"legendary","tags":["fiery","golden","sweet","mythical"],"description":"Collected from volcanic beehives.","region":"legendary"}
+]
