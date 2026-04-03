@@ -264,3 +264,37 @@ New player begins with:
 - Recipe Journal: empty (all undiscovered)
 
 First 60 seconds should yield first recipe discovery (Honey Water or Herb Tea) and first sale (~8-15c). Player should feel immediate progress.
+
+---
+
+## 8. CLARIFICATIONS
+
+### Region Identity (Permanent)
+- Region is set ONCE on first play via IP geolocation, saved server-side
+- **Never changes** even if player physically moves countries
+- A Japanese player who moves to NYC is still a "Japanese brewmaster" — garden still grows yuzu
+- Export distances calculated from CURRENT IP, not origin
+- This creates a unique advantage: relocated players can sell exotic drinks locally where nobody else has those ingredients
+- Mirrors real life — a Japanese chef in NYC has an authenticity advantage that locals don't
+
+### Export vs Marketplace
+- **Drinks** → Export Board (NPC system). Distance + scarcity markup applied automatically.
+- **Raw ingredients** → Player Marketplace ONLY (peer-to-peer). Players set their own prices. No NPC export for raw ingredients.
+- Scarcity for ingredients emerges naturally — only Japanese players grow free yuzu, so marketplace price reflects real supply/demand.
+
+### Physical Relocation Scenario
+```
+Scenario: Japanese player moves to New York
+
+BEFORE (playing from Tokyo):
+  - Garden: Yuzu, Shiso, Sakura (free)
+  - Export Yuzu Mead to Americas: high distance bonus (+80%)
+  - Local competition: many other Japanese players have yuzu
+
+AFTER (playing from NYC):  
+  - Garden: STILL Yuzu, Shiso, Sakura (permanent region)
+  - Export Yuzu Mead to Americas: LOW distance bonus (you're already there)
+  - BUT: Sell locally to NPC customers → you're the ONLY local seller of yuzu drinks
+  - Local NPC customers pay SCARCITY premium (exotic ingredient in this region)
+  - Net effect: different advantage, not lost advantage
+```
