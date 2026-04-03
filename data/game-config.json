@@ -1,0 +1,137 @@
+{
+  "brewing": {
+    "baseSlots": ["grain", "honey", "fruit", "none"],
+    "flavorSlotsLevel1": 2,
+    "flavorSlotsLevel3": 3,
+    "brewTimeSeconds": {
+      "boil": 5,
+      "ferment": 10,
+      "distill": 15
+    },
+    "barrelAgeMinutes": {
+      "short": 30,
+      "medium": 60,
+      "long": 120
+    },
+    "failResult": {
+      "name": "Mystery Slop",
+      "sellPrice": 1,
+      "sellableTo": ["peasant"],
+      "dialogue": ["I... think this is alive?", "Is this a drink or a weapon?", "My donkey makes better drinks."]
+    },
+    "nearMissThreshold": 0.7,
+    "nearMissMessages": [
+      "Almost! Try a different base...",
+      "The flavors are close, but something's off...",
+      "You're onto something! Experiment with the method.",
+      "A chef would say: this needs more sweetness.",
+      "The ingredients are right, but the technique isn't."
+    ]
+  },
+  "customers": {
+    "arrivalIntervalSeconds": {
+      "level1": 30,
+      "level2": 25,
+      "level3": 20,
+      "level4": 15,
+      "level5": 12
+    },
+    "maxQueueSize": 3,
+    "charityCustomer": {
+      "enabled": true,
+      "triggerWhenGoldBelow": 5,
+      "buysAnythingFor": 5,
+      "name": "Kindly Stranger",
+      "emoji": "🤲",
+      "dialogue": "Everyone deserves a second chance. I'll take whatever you have."
+    },
+    "freshnessBonus": 1.2,
+    "hotStreakThreshold": 3,
+    "hotStreakMultiplier": 2.0
+  },
+  "hints": {
+    "hintProgressionLevels": 3,
+    "failedAttemptsForHint1": 3,
+    "failedAttemptsForHint2": 6,
+    "failedAttemptsForHint3": 10,
+    "hintFormats": {
+      "level1": "A {family} brew...",
+      "level2": "Uses {ingredient1}...",
+      "level3": "{ingredient1} + ??? — try {method}"
+    }
+  },
+  "tutorial": {
+    "enabled": true,
+    "firstBrewGuide": {
+      "npc": "omar",
+      "dialogue": [
+        "Welcome, traveler! Every brewmaster starts the same way.",
+        "Try mixing some honey with water — just a simple boil.",
+        "Go on, drag them to the cauldron!"
+      ],
+      "suggestedRecipe": {
+        "base": "honey",
+        "ingredients": [],
+        "method": "boil"
+      }
+    }
+  },
+  "progression": {
+    "levels": {
+      "1": {"name": "Handcart", "cost": 0, "recipesRequired": 0, "customersRequired": 0, "regionsRequired": 0},
+      "2": {"name": "Donkey Cart", "cost": 500, "recipesRequired": 15, "customersRequired": 0, "regionsRequired": 0},
+      "3": {"name": "Covered Wagon", "cost": 2500, "recipesRequired": 40, "customersRequired": 50, "regionsRequired": 0},
+      "4": {"name": "Grand Caravan", "cost": 10000, "recipesRequired": 75, "customersRequired": 0, "regionsRequired": 3},
+      "5": {"name": "Legendary Yatai", "cost": 25000, "recipesRequired": 100, "customersRequired": 0, "regionsRequired": 0, "legendaryBrewRequired": true, "royalCommissionWinRequired": true}
+    }
+  },
+  "economy": {
+    "startingGold": 50,
+    "transactionFee": 0.05,
+    "merchantRestockMinutes": 150,
+    "merchantInflationPerBuy": 0.05,
+    "exportDeliveryMinutes": {"sameRegion": 10, "adjacent": 20, "far": 30, "opposite": 45},
+    "exportSpoilageChance": {"sameRegion": 0, "adjacent": 0, "far": 0.05, "opposite": 0.10},
+    "legendaryExpiryHours": 24,
+    "maxInventoryPerItem": 50,
+    "marketplace": {
+      "maxListings": 10,
+      "listingExpiryHours": 24,
+      "priceFloorMultiplier": 0.5,
+      "priceCeilingMultiplier": 10
+    },
+    "tradeBoard": {
+      "maxOffers": 5,
+      "offerExpiryHours": 12,
+      "cooldownAfterTrades": 5,
+      "cooldownMinutes": 30
+    }
+  },
+  "geolocation": {
+    "apiUrl": "https://ipapi.co/json/",
+    "regionLock": false,
+    "regions": {
+      "japan_korea": {"gardenIngredients": ["yuzu", "shiso", "sakura_blossom"], "ambientMusic": "shamisen"},
+      "indonesia_sea": {"gardenIngredients": ["pandan", "butterfly_pea_flower", "torch_ginger"], "ambientMusic": "gamelan"},
+      "india_south_asia": {"gardenIngredients": ["turmeric", "cardamom", "saffron"], "ambientMusic": "sitar"},
+      "north_africa_middle_east": {"gardenIngredients": ["preserved_lemon", "medjool_date", "orange_blossom_water"], "ambientMusic": "oud"},
+      "france_western_europe": {"gardenIngredients": ["lavender", "verjus", "elderflower"], "ambientMusic": "lute"},
+      "uk_northern_europe": {"gardenIngredients": ["wild_herbs", "chamomile", "berries"], "ambientMusic": "fiddle"},
+      "west_africa": {"gardenIngredients": ["grains_of_paradise", "baobab_fruit", "hibiscus"], "ambientMusic": "kora"},
+      "latin_america": {"gardenIngredients": ["cacao_nibs", "epazote", "piloncillo"], "ambientMusic": "guitar"},
+      "americas_us": {"gardenIngredients": ["apple", "wild_herbs", "berries"], "ambientMusic": "banjo"},
+      "australia_oceania": {"gardenIngredients": ["wattleseed", "lemongrass", "ginger"], "ambientMusic": "didgeridoo"}
+    },
+    "fallbackRegion": "americas_us",
+    "relocationMessage": "You've arrived in a new land! The soil here grows different things..."
+  },
+  "seasons": {
+    "durationDays": 7,
+    "modifiers": {
+      "winter": {"tags": ["warm", "spicy", "rich"], "bonus": 1.5, "label": "Winter: Warm brews +50%"},
+      "spring": {"tags": ["floral", "light", "fresh"], "bonus": 1.5, "label": "Spring: Floral brews +50%"},
+      "summer": {"tags": ["cool", "bright", "fruity"], "bonus": 1.5, "label": "Summer: Cool brews +50%"},
+      "autumn": {"tags": ["earthy", "nutty", "smoky"], "bonus": 1.5, "label": "Autumn: Earthy brews +50%"}
+    }
+  }
+}
