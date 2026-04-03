@@ -2,7 +2,8 @@
   {
     "id": "honey_water",
     "name": "Honey Water",
-    "ingredients": ["honey", "spring_water"],
+    "base": "honey",
+    "ingredients": [],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -11,7 +12,8 @@
   {
     "id": "grain_ale",
     "name": "Grain Ale",
-    "ingredients": ["grain", "spring_water"],
+    "base": "grain",
+    "ingredients": [],
     "method": "ferment",
     "stars": 1,
     "tier": "common",
@@ -20,7 +22,8 @@
   {
     "id": "simple_mead",
     "name": "Simple Mead",
-    "ingredients": ["honey", "spring_water"],
+    "base": "honey",
+    "ingredients": [],
     "method": "ferment",
     "stars": 1,
     "tier": "common",
@@ -30,7 +33,10 @@
   {
     "id": "herb_tea",
     "name": "Herb Tea",
-    "ingredients": ["wild_herbs", "spring_water"],
+    "base": "none",
+    "ingredients": [
+      "wild_herbs"
+    ],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -39,7 +45,8 @@
   {
     "id": "berry_juice",
     "name": "Berry Juice",
-    "ingredients": ["berries", "spring_water"],
+    "base": "fruit",
+    "ingredients": [],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -48,7 +55,8 @@
   {
     "id": "apple_cider",
     "name": "Apple Cider",
-    "ingredients": ["apple", "spring_water"],
+    "base": "fruit",
+    "ingredients": [],
     "method": "ferment",
     "stars": 1,
     "tier": "common",
@@ -57,7 +65,10 @@
   {
     "id": "farmers_ale",
     "name": "Farmer's Ale",
-    "ingredients": ["grain", "wild_herbs"],
+    "base": "grain",
+    "ingredients": [
+      "wild_herbs"
+    ],
     "method": "ferment",
     "stars": 1,
     "tier": "common",
@@ -67,7 +78,10 @@
   {
     "id": "hot_honey_tonic",
     "name": "Hot Honey Tonic",
-    "ingredients": ["honey", "ginger_root"],
+    "base": "honey",
+    "ingredients": [
+      "ginger_root"
+    ],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -76,7 +90,10 @@
   {
     "id": "chamomile_calm",
     "name": "Chamomile Calm",
-    "ingredients": ["chamomile", "spring_water"],
+    "base": "none",
+    "ingredients": [
+      "chamomile"
+    ],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -85,7 +102,10 @@
   {
     "id": "lemon_shrub",
     "name": "Lemon Shrub",
-    "ingredients": ["citrus_peel", "honey", "spring_water"],
+    "base": "honey",
+    "ingredients": [
+      "citrus_peel"
+    ],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -94,7 +114,10 @@
   {
     "id": "acorn_coffee",
     "name": "Acorn Coffee",
-    "ingredients": ["roasted_acorn", "spring_water"],
+    "base": "none",
+    "ingredients": [
+      "roasted_acorn"
+    ],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -103,7 +126,8 @@
   {
     "id": "cherry_squash",
     "name": "Cherry Squash",
-    "ingredients": ["sour_cherry", "spring_water"],
+    "base": "fruit",
+    "ingredients": [],
     "method": "boil",
     "stars": 1,
     "tier": "common",
@@ -112,7 +136,8 @@
   {
     "id": "golden_mead",
     "name": "Golden Mead",
-    "ingredients": ["honey", "grain"],
+    "base": "honey",
+    "ingredients": [],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -122,7 +147,10 @@
   {
     "id": "berry_mead",
     "name": "Berry Mead",
-    "ingredients": ["honey", "berries"],
+    "base": "honey",
+    "ingredients": [
+      "berries"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -132,7 +160,10 @@
   {
     "id": "spiced_cider",
     "name": "Spiced Cider",
-    "ingredients": ["apple", "cinnamon_bark"],
+    "base": "fruit",
+    "ingredients": [
+      "cinnamon_bark"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -141,7 +172,10 @@
   {
     "id": "ginger_beer",
     "name": "Ginger Beer",
-    "ingredients": ["ginger_root", "grain", "spring_water"],
+    "base": "grain",
+    "ingredients": [
+      "ginger_root"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -150,7 +184,10 @@
   {
     "id": "elderflower_cordial",
     "name": "Elderflower Cordial",
-    "ingredients": ["elderflower", "honey", "spring_water"],
+    "base": "honey",
+    "ingredients": [
+      "elderflower"
+    ],
     "method": "boil",
     "stars": 2,
     "tier": "fine",
@@ -159,7 +196,10 @@
   {
     "id": "dark_ale",
     "name": "Dark Ale",
-    "ingredients": ["grain", "wild_mushroom"],
+    "base": "grain",
+    "ingredients": [
+      "wild_mushroom"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -168,7 +208,10 @@
   {
     "id": "pine_ale",
     "name": "Pine Ale",
-    "ingredients": ["juniper_berry", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "juniper_berry"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -178,7 +221,10 @@
   {
     "id": "cinnamon_mead",
     "name": "Cinnamon Mead",
-    "ingredients": ["honey", "cinnamon_bark"],
+    "base": "honey",
+    "ingredients": [
+      "cinnamon_bark"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -188,7 +234,10 @@
   {
     "id": "cherry_lambic",
     "name": "Cherry Lambic",
-    "ingredients": ["sour_cherry", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "sour_cherry"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -197,7 +246,10 @@
   {
     "id": "vanilla_cream_ale",
     "name": "Vanilla Cream Ale",
-    "ingredients": ["vanilla_pod", "grain", "honey"],
+    "base": "grain",
+    "ingredients": [
+      "vanilla_pod"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -206,7 +258,11 @@
   {
     "id": "ginger_lemon_fizz",
     "name": "Ginger Lemon Fizz",
-    "ingredients": ["ginger_root", "citrus_peel"],
+    "base": "honey",
+    "ingredients": [
+      "ginger_root",
+      "citrus_peel"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -215,7 +271,11 @@
   {
     "id": "forest_floor_porter",
     "name": "Forest Floor Porter",
-    "ingredients": ["wild_mushroom", "roasted_acorn", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "wild_mushroom",
+      "roasted_acorn"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -224,7 +284,10 @@
   {
     "id": "chamomile_mead",
     "name": "Chamomile Mead",
-    "ingredients": ["chamomile", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "chamomile"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -234,7 +297,12 @@
   {
     "id": "herb_garden_gin",
     "name": "Herb Garden Gin",
-    "ingredients": ["wild_herbs", "juniper_berry", "citrus_peel"],
+    "base": "grain",
+    "ingredients": [
+      "wild_herbs",
+      "juniper_berry",
+      "citrus_peel"
+    ],
     "method": "distill",
     "stars": 2,
     "tier": "fine",
@@ -243,7 +311,10 @@
   {
     "id": "long_pepper_cider",
     "name": "Long Pepper Cider",
-    "ingredients": ["long_pepper", "apple"],
+    "base": "fruit",
+    "ingredients": [
+      "long_pepper"
+    ],
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
@@ -252,7 +323,11 @@
   {
     "id": "ginger_fire_ale",
     "name": "Ginger Fire Ale",
-    "ingredients": ["ginger_root", "cinnamon_bark", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "ginger_root",
+      "cinnamon_bark"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -261,7 +336,11 @@
   {
     "id": "elderflower_wine",
     "name": "Elderflower Wine",
-    "ingredients": ["elderflower", "berries", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "elderflower",
+      "berries"
+    ],
     "method": "ferment_barrel",
     "stars": 3,
     "tier": "rare",
@@ -270,7 +349,10 @@
   {
     "id": "saffron_elixir",
     "name": "Saffron Elixir",
-    "ingredients": ["saffron", "honey", "spring_water"],
+    "base": "honey",
+    "ingredients": [
+      "saffron"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -280,7 +362,11 @@
   {
     "id": "juniper_gin",
     "name": "Juniper Gin",
-    "ingredients": ["juniper_berry", "wild_herbs", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "juniper_berry",
+      "wild_herbs"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -289,7 +375,11 @@
   {
     "id": "tonka_old_fashioned",
     "name": "Tonka Old Fashioned",
-    "ingredients": ["tonka_bean", "honey", "cinnamon_bark"],
+    "base": "honey",
+    "ingredients": [
+      "tonka_bean",
+      "cinnamon_bark"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -298,7 +388,10 @@
   {
     "id": "mushroom_stout",
     "name": "Mushroom Stout",
-    "ingredients": ["wild_mushroom", "grain", "honey"],
+    "base": "grain",
+    "ingredients": [
+      "wild_mushroom"
+    ],
     "method": "ferment_barrel",
     "stars": 3,
     "tier": "rare",
@@ -307,17 +400,24 @@
   {
     "id": "lemongrass_saison",
     "name": "Lemongrass Saison",
-    "ingredients": ["lemongrass", "grain", "wild_herbs"],
+    "base": "grain",
+    "ingredients": [
+      "lemongrass",
+      "wild_herbs"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
-    "lore": "Belgian-Thai fusion. Bright + earthy.",
-    "family": "Jamu Tonic"
+    "family": "Jamu Tonic",
+    "lore": "Belgian-Thai fusion. Bright + earthy."
   },
   {
     "id": "truffle_honey_mead",
     "name": "Truffle Honey Mead",
-    "ingredients": ["truffle_honey", "grain"],
+    "base": "honey",
+    "ingredients": [
+      "truffle_honey"
+    ],
     "method": "ferment_barrel",
     "stars": 3,
     "tier": "rare",
@@ -327,7 +427,11 @@
   {
     "id": "black_velvet",
     "name": "Black Velvet",
-    "ingredients": ["charcoal", "vanilla_pod", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "charcoal",
+      "vanilla_pod"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -337,7 +441,11 @@
   {
     "id": "sour_cherry_kriek_royale",
     "name": "Sour Cherry Kriek Royale",
-    "ingredients": ["sour_cherry", "elderflower", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "sour_cherry",
+      "elderflower"
+    ],
     "method": "ferment_barrel",
     "stars": 3,
     "tier": "rare",
@@ -346,7 +454,12 @@
   {
     "id": "long_pepper_chai_mead",
     "name": "Long Pepper Chai Mead",
-    "ingredients": ["long_pepper", "cinnamon_bark", "honey", "ginger_root"],
+    "base": "honey",
+    "ingredients": [
+      "long_pepper",
+      "cinnamon_bark",
+      "ginger_root"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -356,7 +469,11 @@
   {
     "id": "smoked_acorn_stout",
     "name": "Smoked Acorn Stout",
-    "ingredients": ["roasted_acorn", "charcoal", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "roasted_acorn",
+      "charcoal"
+    ],
     "method": "ferment_barrel",
     "stars": 3,
     "tier": "rare",
@@ -366,7 +483,11 @@
   {
     "id": "vanilla_saffron_cream",
     "name": "Vanilla Saffron Cream",
-    "ingredients": ["vanilla_pod", "saffron", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "vanilla_pod",
+      "saffron"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -376,7 +497,12 @@
   {
     "id": "citrus_elderflower_spritz",
     "name": "Citrus Elderflower Spritz",
-    "ingredients": ["citrus_peel", "elderflower", "chamomile"],
+    "base": "fruit",
+    "ingredients": [
+      "citrus_peel",
+      "elderflower",
+      "chamomile"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -385,7 +511,10 @@
   {
     "id": "dragon_pepper_ale",
     "name": "Dragon Pepper Ale",
-    "ingredients": ["dragon_pepper", "grain"],
+    "base": "grain",
+    "ingredients": [
+      "dragon_pepper"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -395,7 +524,11 @@
   {
     "id": "dragonfire_mead",
     "name": "Dragonfire Mead",
-    "ingredients": ["dragon_pepper", "moonberry", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "dragon_pepper",
+      "moonberry"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -406,7 +539,12 @@
   {
     "id": "moonfire_elixir",
     "name": "Moonfire Elixir",
-    "ingredients": ["moonberry", "saffron", "vanilla_pod"],
+    "base": "honey",
+    "ingredients": [
+      "moonberry",
+      "saffron",
+      "vanilla_pod"
+    ],
     "method": "distill_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -417,7 +555,11 @@
   {
     "id": "starweavers_draft",
     "name": "Starweaver's Draft",
-    "ingredients": ["starfruit", "ancient_yeast", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "starfruit",
+      "ancient_yeast"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -428,7 +570,12 @@
   {
     "id": "the_philosophers_brew",
     "name": "The Philosopher's Brew",
-    "ingredients": ["ancient_yeast", "saffron", "wild_mushroom"],
+    "base": "grain",
+    "ingredients": [
+      "ancient_yeast",
+      "saffron",
+      "wild_mushroom"
+    ],
     "method": "distill_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -439,7 +586,12 @@
   {
     "id": "ambrosia",
     "name": "Ambrosia",
-    "ingredients": ["phoenix_honey", "elderflower", "starfruit"],
+    "base": "honey",
+    "ingredients": [
+      "phoenix_honey",
+      "elderflower",
+      "starfruit"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -450,7 +602,12 @@
   {
     "id": "void_stout",
     "name": "Void Stout",
-    "ingredients": ["charcoal", "ancient_yeast", "wild_mushroom"],
+    "base": "grain",
+    "ingredients": [
+      "charcoal",
+      "ancient_yeast",
+      "wild_mushroom"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -461,7 +618,12 @@
   {
     "id": "phoenix_rising",
     "name": "Phoenix Rising",
-    "ingredients": ["phoenix_honey", "dragon_pepper", "ginger_root"],
+    "base": "honey",
+    "ingredients": [
+      "phoenix_honey",
+      "dragon_pepper",
+      "ginger_root"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -472,7 +634,12 @@
   {
     "id": "the_last_word",
     "name": "The Last Word",
-    "ingredients": ["moonberry", "tonka_bean", "elderflower"],
+    "base": "honey",
+    "ingredients": [
+      "moonberry",
+      "tonka_bean",
+      "elderflower"
+    ],
     "method": "distill_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -483,7 +650,10 @@
   {
     "id": "primordial_soup",
     "name": "Primordial Soup",
-    "ingredients": ["ancient_yeast", "spring_water"],
+    "base": "grain",
+    "ingredients": [
+      "ancient_yeast"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "secret",
@@ -493,7 +663,14 @@
   {
     "id": "chefs_kiss",
     "name": "Chef's Kiss",
-    "ingredients": ["dragon_pepper", "moonberry", "starfruit", "ancient_yeast", "phoenix_honey"],
+    "base": "honey",
+    "ingredients": [
+      "dragon_pepper",
+      "moonberry",
+      "starfruit",
+      "ancient_yeast",
+      "phoenix_honey"
+    ],
     "method": "distill_barrel",
     "stars": 5,
     "tier": "secret",
@@ -503,7 +680,12 @@
   {
     "id": "sr_01_caravans_end",
     "name": "Caravan's End",
-    "ingredients": ["rose_water", "hojicha", "palm_sugar"],
+    "base": "none",
+    "ingredients": [
+      "rose_water",
+      "hojicha",
+      "palm_sugar"
+    ],
     "method": "boil",
     "stars": 3,
     "tier": "rare",
@@ -514,7 +696,12 @@
   {
     "id": "sr_02_silk_road_sunset",
     "name": "Silk Road Sunset",
-    "ingredients": ["saffron", "butterfly_pea_flower", "orange_blossom_water"],
+    "base": "honey",
+    "ingredients": [
+      "saffron",
+      "butterfly_pea_flower",
+      "orange_blossom_water"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -525,7 +712,12 @@
   {
     "id": "sr_03_the_byzantine_accord",
     "name": "The Byzantine Accord",
-    "ingredients": ["mastic", "amazake", "quince"],
+    "base": "grain",
+    "ingredients": [
+      "mastic",
+      "amazake",
+      "quince"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -536,7 +728,12 @@
   {
     "id": "sr_04_jade_citadel",
     "name": "Jade Citadel",
-    "ingredients": ["matcha", "preserved_lemon", "lemongrass"],
+    "base": "grain",
+    "ingredients": [
+      "matcha",
+      "preserved_lemon",
+      "lemongrass"
+    ],
     "method": "distill",
     "stars": 3,
     "tier": "rare",
@@ -547,7 +744,12 @@
   {
     "id": "sr_05_persian_moonrise",
     "name": "Persian Moonrise",
-    "ingredients": ["rose_water", "sakura_blossom", "bergamot"],
+    "base": "honey",
+    "ingredients": [
+      "rose_water",
+      "sakura_blossom",
+      "bergamot"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -558,7 +760,12 @@
   {
     "id": "sr_06_merchant_of_samarkand",
     "name": "The Merchant of Samarkand",
-    "ingredients": ["ras_el_hanout", "amazake", "vanilla_pod"],
+    "base": "grain",
+    "ingredients": [
+      "ras_el_hanout",
+      "amazake",
+      "vanilla_pod"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -569,7 +776,12 @@
   {
     "id": "sr_07_floating_world_elixir",
     "name": "Floating World Elixir",
-    "ingredients": ["yuzu", "mahlab", "pink_peppercorn"],
+    "base": "grain",
+    "ingredients": [
+      "yuzu",
+      "mahlab",
+      "pink_peppercorn"
+    ],
     "method": "distill",
     "stars": 4,
     "tier": "rare",
@@ -580,7 +792,12 @@
   {
     "id": "sr_08_the_amber_road",
     "name": "The Amber Road",
-    "ingredients": ["argan_oil", "hojicha", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "argan_oil",
+      "hojicha",
+      "piloncillo"
+    ],
     "method": "ferment_barrel",
     "stars": 4,
     "tier": "rare",
@@ -591,7 +808,12 @@
   {
     "id": "sr_09_kuromoji_circuit",
     "name": "Kuromoji Circuit",
-    "ingredients": ["kuromoji", "grains_of_paradise", "palm_sugar"],
+    "base": "grain",
+    "ingredients": [
+      "kuromoji",
+      "grains_of_paradise",
+      "palm_sugar"
+    ],
     "method": "distill",
     "stars": 4,
     "tier": "rare",
@@ -602,7 +824,12 @@
   {
     "id": "sr_10_jade_atlas",
     "name": "Jade Atlas",
-    "ingredients": ["pandan", "bergamot", "mastic"],
+    "base": "grain",
+    "ingredients": [
+      "pandan",
+      "bergamot",
+      "mastic"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -613,7 +840,12 @@
   {
     "id": "sr_11_thousand_and_one_cups",
     "name": "Thousand and One Cups",
-    "ingredients": ["medjool_date", "koji", "cacao_nibs"],
+    "base": "honey",
+    "ingredients": [
+      "medjool_date",
+      "koji",
+      "cacao_nibs"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -624,7 +856,12 @@
   {
     "id": "spa_01_silk_road_dragon",
     "name": "The Silk Road Dragon",
-    "ingredients": ["szechuan_peppercorn", "harissa_pepper", "palm_sugar"],
+    "base": "grain",
+    "ingredients": [
+      "szechuan_peppercorn",
+      "harissa_pepper",
+      "palm_sugar"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -635,7 +872,12 @@
   {
     "id": "spa_02_four_corners_fire",
     "name": "Four Corners Fire",
-    "ingredients": ["sansho_pepper", "grains_of_paradise", "achiote"],
+    "base": "grain",
+    "ingredients": [
+      "sansho_pepper",
+      "grains_of_paradise",
+      "achiote"
+    ],
     "method": "distill",
     "stars": 4,
     "tier": "rare",
@@ -646,7 +888,12 @@
   {
     "id": "spa_03_volcanic_circuit",
     "name": "Volcanic Circuit",
-    "ingredients": ["wasabi_root", "aleppo_pepper", "verjus"],
+    "base": "grain",
+    "ingredients": [
+      "wasabi_root",
+      "aleppo_pepper",
+      "verjus"
+    ],
     "method": "distill",
     "stars": 4,
     "tier": "rare",
@@ -657,7 +904,12 @@
   {
     "id": "spa_04_the_oaxacan_ember",
     "name": "The Oaxacan Ember",
-    "ingredients": ["mezcal_worm_salt", "szechuan_peppercorn", "black_lime"],
+    "base": "grain",
+    "ingredients": [
+      "mezcal_worm_salt",
+      "szechuan_peppercorn",
+      "black_lime"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -668,7 +920,12 @@
   {
     "id": "spa_05_jungle_lightning",
     "name": "Jungle Lightning",
-    "ingredients": ["galangal", "grains_of_paradise", "hibiscus"],
+    "base": "grain",
+    "ingredients": [
+      "galangal",
+      "grains_of_paradise",
+      "hibiscus"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -679,7 +936,12 @@
   {
     "id": "spa_06_pepper_dynasty",
     "name": "Pepper Dynasty",
-    "ingredients": ["sansho_pepper", "pink_peppercorn", "torch_ginger"],
+    "base": "none",
+    "ingredients": [
+      "sansho_pepper",
+      "pink_peppercorn",
+      "torch_ginger"
+    ],
     "method": "boil",
     "stars": 3,
     "tier": "rare",
@@ -690,7 +952,12 @@
   {
     "id": "spa_07_the_ancient_burn",
     "name": "The Ancient Burn",
-    "ingredients": ["harissa_pepper", "epazote", "galangal"],
+    "base": "grain",
+    "ingredients": [
+      "harissa_pepper",
+      "epazote",
+      "galangal"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -701,7 +968,12 @@
   {
     "id": "spa_08_the_mapmakers_fire",
     "name": "The Mapmaker's Fire",
-    "ingredients": ["aleppo_pepper", "szechuan_peppercorn", "cacao_nibs"],
+    "base": "grain",
+    "ingredients": [
+      "aleppo_pepper",
+      "szechuan_peppercorn",
+      "cacao_nibs"
+    ],
     "method": "ferment_barrel",
     "stars": 4,
     "tier": "rare",
@@ -712,7 +984,12 @@
   {
     "id": "spa_09_horn_of_africa_gale",
     "name": "Horn of Africa Gale",
-    "ingredients": ["harissa_pepper", "rooibos", "tamarind"],
+    "base": "grain",
+    "ingredients": [
+      "harissa_pepper",
+      "rooibos",
+      "tamarind"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -723,7 +1000,12 @@
   {
     "id": "spa_10_warlords_draft",
     "name": "Warlord's Draft",
-    "ingredients": ["wasabi_root", "harissa_pepper", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "wasabi_root",
+      "harissa_pepper",
+      "piloncillo"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -734,7 +1016,12 @@
   {
     "id": "spa_11_the_cardamom_circuit",
     "name": "The Cardamom Circuit",
-    "ingredients": ["grains_of_paradise", "kuromoji", "kaffir_lime_leaf"],
+    "base": "none",
+    "ingredients": [
+      "grains_of_paradise",
+      "kuromoji",
+      "kaffir_lime_leaf"
+    ],
     "method": "boil",
     "stars": 4,
     "tier": "rare",
@@ -745,7 +1032,12 @@
   {
     "id": "ff_01_the_apothecary_garden",
     "name": "The Apothecary's Garden",
-    "ingredients": ["lavender", "sakura_blossom", "orange_blossom_water"],
+    "base": "honey",
+    "ingredients": [
+      "lavender",
+      "sakura_blossom",
+      "orange_blossom_water"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -756,7 +1048,12 @@
   {
     "id": "ff_02_the_empress_mirror",
     "name": "The Empress's Mirror",
-    "ingredients": ["butterfly_pea_flower", "borage_flower", "rose_water"],
+    "base": "honey",
+    "ingredients": [
+      "butterfly_pea_flower",
+      "borage_flower",
+      "rose_water"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -767,7 +1064,12 @@
   {
     "id": "ff_03_monsoon_blossom",
     "name": "Monsoon Blossom",
-    "ingredients": ["torch_ginger", "hibiscus", "borage_flower"],
+    "base": "none",
+    "ingredients": [
+      "torch_ginger",
+      "hibiscus",
+      "borage_flower"
+    ],
     "method": "boil",
     "stars": 3,
     "tier": "rare",
@@ -778,7 +1080,12 @@
   {
     "id": "ff_04_the_botanist_thesis",
     "name": "The Botanist's Thesis",
-    "ingredients": ["bergamot", "elderflower", "butterfly_pea_flower"],
+    "base": "honey",
+    "ingredients": [
+      "bergamot",
+      "elderflower",
+      "butterfly_pea_flower"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -789,7 +1096,12 @@
   {
     "id": "ff_05_cherry_moon",
     "name": "Cherry Moon",
-    "ingredients": ["sakura_blossom", "moonpetal_bloom", "rose_water"],
+    "base": "honey",
+    "ingredients": [
+      "sakura_blossom",
+      "moonpetal_bloom",
+      "rose_water"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -800,7 +1112,12 @@
   {
     "id": "ff_06_lavender_pagoda",
     "name": "Lavender Pagoda",
-    "ingredients": ["lavender", "shiso", "pandan"],
+    "base": "none",
+    "ingredients": [
+      "lavender",
+      "shiso",
+      "pandan"
+    ],
     "method": "boil",
     "stars": 3,
     "tier": "rare",
@@ -811,7 +1128,12 @@
   {
     "id": "ff_07_golden_temple_bloom",
     "name": "Golden Temple Bloom",
-    "ingredients": ["orange_blossom_water", "torch_ginger", "verveine"],
+    "base": "honey",
+    "ingredients": [
+      "orange_blossom_water",
+      "torch_ginger",
+      "verveine"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -822,7 +1144,12 @@
   {
     "id": "ff_08_the_quiet_garden",
     "name": "The Quiet Garden",
-    "ingredients": ["chamomile", "kabosu", "lavender"],
+    "base": "none",
+    "ingredients": [
+      "chamomile",
+      "kabosu",
+      "lavender"
+    ],
     "method": "boil",
     "stars": 3,
     "tier": "rare",
@@ -833,7 +1160,13 @@
   {
     "id": "ff_09_empire_of_flowers",
     "name": "Empire of Flowers",
-    "ingredients": ["rose_water", "elderflower", "butterfly_pea_flower", "starfall_honey"],
+    "base": "honey",
+    "ingredients": [
+      "rose_water",
+      "elderflower",
+      "butterfly_pea_flower",
+      "starfall_honey"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -844,7 +1177,12 @@
   {
     "id": "ff_10_moth_and_flame",
     "name": "Moth and Flame",
-    "ingredients": ["mahlab", "sakura_blossom", "bergamot"],
+    "base": "grain",
+    "ingredients": [
+      "mahlab",
+      "sakura_blossom",
+      "bergamot"
+    ],
     "method": "distill",
     "stars": 4,
     "tier": "rare",
@@ -855,7 +1193,12 @@
   {
     "id": "af_01_jamu_meets_gruit",
     "name": "Jamu Meets Gruit",
-    "ingredients": ["turmeric", "galangal", "zaatar"],
+    "base": "grain",
+    "ingredients": [
+      "turmeric",
+      "galangal",
+      "zaatar"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -866,7 +1209,11 @@
   {
     "id": "af_02_sake_meets_mead",
     "name": "Sake Meets Mead",
-    "ingredients": ["koji", "amazake", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "koji",
+      "amazake"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -877,7 +1224,12 @@
   {
     "id": "af_03_tepache_meets_shrub",
     "name": "Tepache Meets Shrub",
-    "ingredients": ["piloncillo", "hibiscus", "preserved_lemon"],
+    "base": "fruit",
+    "ingredients": [
+      "piloncillo",
+      "hibiscus",
+      "preserved_lemon"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -888,7 +1240,13 @@
   {
     "id": "af_04_the_jamu_scholar",
     "name": "The Jamu Scholar",
-    "ingredients": ["turmeric", "tamarind", "rooibos", "palm_sugar"],
+    "base": "honey",
+    "ingredients": [
+      "turmeric",
+      "tamarind",
+      "rooibos",
+      "palm_sugar"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -899,7 +1257,12 @@
   {
     "id": "af_05_pulque_lineage",
     "name": "Pulque Lineage",
-    "ingredients": ["epazote", "mezcal_worm_salt", "black_fig"],
+    "base": "fruit",
+    "ingredients": [
+      "epazote",
+      "mezcal_worm_salt",
+      "black_fig"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -910,7 +1273,12 @@
   {
     "id": "af_06_amazake_meridian",
     "name": "Amazake Meridian",
-    "ingredients": ["amazake", "baobab_fruit", "vanilla_pod"],
+    "base": "grain",
+    "ingredients": [
+      "amazake",
+      "baobab_fruit",
+      "vanilla_pod"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -921,7 +1289,11 @@
   {
     "id": "af_07_nordic_meets_jamu",
     "name": "Nordic Meets Jamu",
-    "ingredients": ["gentian_root", "galangal", "honey"],
+    "base": "honey",
+    "ingredients": [
+      "gentian_root",
+      "galangal"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -932,7 +1304,12 @@
   {
     "id": "af_08_the_silk_road_kvass",
     "name": "The Silk Road Kvass",
-    "ingredients": ["shiso", "sumac", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "shiso",
+      "sumac",
+      "piloncillo"
+    ],
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
@@ -943,7 +1320,12 @@
   {
     "id": "af_09_the_ancient_triangle",
     "name": "The Ancient Triangle",
-    "ingredients": ["koji", "preserved_lemon", "tamarind"],
+    "base": "grain",
+    "ingredients": [
+      "koji",
+      "preserved_lemon",
+      "tamarind"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -954,7 +1336,12 @@
   {
     "id": "af_10_mesoamerican_moroccan_treaty",
     "name": "Mesoamerican-Moroccan Treaty",
-    "ingredients": ["cacao_nibs", "ras_el_hanout", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "cacao_nibs",
+      "ras_el_hanout",
+      "piloncillo"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -965,7 +1352,11 @@
   {
     "id": "at_01_worm_salt_sakura",
     "name": "Worm Salt Sakura",
-    "ingredients": ["mezcal_worm_salt", "sakura_blossom"],
+    "base": "grain",
+    "ingredients": [
+      "mezcal_worm_salt",
+      "sakura_blossom"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -976,7 +1367,12 @@
   {
     "id": "at_02_charcoal_and_butterfly",
     "name": "Charcoal and Butterfly",
-    "ingredients": ["charcoal", "butterfly_pea_flower", "sudachi"],
+    "base": "grain",
+    "ingredients": [
+      "charcoal",
+      "butterfly_pea_flower",
+      "sudachi"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -987,7 +1383,12 @@
   {
     "id": "at_03_the_golden_void",
     "name": "The Golden Void",
-    "ingredients": ["matcha", "saffron", "mezcal_worm_salt"],
+    "base": "grain",
+    "ingredients": [
+      "matcha",
+      "saffron",
+      "mezcal_worm_salt"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -998,7 +1399,12 @@
   {
     "id": "at_04_the_prussian_blue",
     "name": "The Prussian Blue",
-    "ingredients": ["butterfly_pea_flower", "rooibos", "wasabi_root"],
+    "base": "grain",
+    "ingredients": [
+      "butterfly_pea_flower",
+      "rooibos",
+      "wasabi_root"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -1009,7 +1415,12 @@
   {
     "id": "at_05_bergamot_and_worm",
     "name": "Bergamot and Worm",
-    "ingredients": ["bergamot", "mezcal_worm_salt", "hojicha"],
+    "base": "grain",
+    "ingredients": [
+      "bergamot",
+      "mezcal_worm_salt",
+      "hojicha"
+    ],
     "method": "ferment_barrel",
     "stars": 4,
     "tier": "rare",
@@ -1020,7 +1431,12 @@
   {
     "id": "at_06_jade_emperors_paradox",
     "name": "The Jade Emperor's Paradox",
-    "ingredients": ["wasabi_root", "lavender", "amazake"],
+    "base": "none",
+    "ingredients": [
+      "wasabi_root",
+      "lavender",
+      "amazake"
+    ],
     "method": "boil",
     "stars": 4,
     "tier": "rare",
@@ -1031,7 +1447,12 @@
   {
     "id": "at_07_the_alchemists_black_gold",
     "name": "The Alchemist's Black Gold",
-    "ingredients": ["black_lime", "cacao_nibs", "szechuan_peppercorn"],
+    "base": "grain",
+    "ingredients": [
+      "black_lime",
+      "cacao_nibs",
+      "szechuan_peppercorn"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1042,7 +1463,11 @@
   {
     "id": "at_08_the_wrong_mead",
     "name": "The Wrong Mead",
-    "ingredients": ["argan_oil", "honey", "koji"],
+    "base": "honey",
+    "ingredients": [
+      "argan_oil",
+      "koji"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -1053,7 +1478,12 @@
   {
     "id": "at_09_sakura_bomb",
     "name": "Sakura Bomb",
-    "ingredients": ["sakura_blossom", "szechuan_peppercorn", "medjool_date"],
+    "base": "honey",
+    "ingredients": [
+      "sakura_blossom",
+      "szechuan_peppercorn",
+      "medjool_date"
+    ],
     "method": "ferment",
     "stars": 4,
     "tier": "rare",
@@ -1064,7 +1494,12 @@
   {
     "id": "at_10_the_philosophers_charcoal",
     "name": "The Philosopher's Charcoal",
-    "ingredients": ["charcoal", "saffron", "amazake"],
+    "base": "grain",
+    "ingredients": [
+      "charcoal",
+      "saffron",
+      "amazake"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -1075,7 +1510,12 @@
   {
     "id": "at_11_the_frozen_fire",
     "name": "The Frozen Fire",
-    "ingredients": ["wasabi_root", "palm_sugar", "leviathan_salt"],
+    "base": "grain",
+    "ingredients": [
+      "wasabi_root",
+      "palm_sugar",
+      "leviathan_salt"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -1086,7 +1526,13 @@
   {
     "id": "lcr_01_the_wanderers_crown",
     "name": "The Wanderer's Crown",
-    "ingredients": ["ras_el_hanout", "koji", "chartreuse_herb_blend", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "ras_el_hanout",
+      "koji",
+      "chartreuse_herb_blend",
+      "piloncillo"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1097,7 +1543,13 @@
   {
     "id": "lcr_02_the_silk_road_phantom",
     "name": "The Silk Road Phantom",
-    "ingredients": ["mastic", "yuzu", "sea_buckthorn", "moonpetal_bloom"],
+    "base": "grain",
+    "ingredients": [
+      "mastic",
+      "yuzu",
+      "sea_buckthorn",
+      "moonpetal_bloom"
+    ],
     "method": "distill_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1108,7 +1560,13 @@
   {
     "id": "lcr_03_the_dreamers_atlas",
     "name": "The Dreamer's Atlas",
-    "ingredients": ["butterfly_pea_flower", "cassis", "hibiscus", "dreaming_spore"],
+    "base": "fruit",
+    "ingredients": [
+      "butterfly_pea_flower",
+      "cassis",
+      "hibiscus",
+      "dreaming_spore"
+    ],
     "method": "ferment",
     "stars": 5,
     "tier": "legendary",
@@ -1119,7 +1577,14 @@
   {
     "id": "lcr_04_the_philosophers_stone_ale",
     "name": "The Philosopher's Stone Ale",
-    "ingredients": ["saffron", "worldroot_extract", "koji", "tamarind", "medjool_date"],
+    "base": "grain",
+    "ingredients": [
+      "saffron",
+      "worldroot_extract",
+      "koji",
+      "tamarind",
+      "medjool_date"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1130,7 +1595,13 @@
   {
     "id": "lcr_05_the_last_voyage",
     "name": "The Last Voyage",
-    "ingredients": ["leviathan_salt", "black_lime", "wattleseed", "rooibos"],
+    "base": "grain",
+    "ingredients": [
+      "leviathan_salt",
+      "black_lime",
+      "wattleseed",
+      "rooibos"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1141,7 +1612,13 @@
   {
     "id": "lcr_06_genesis_mead",
     "name": "Genesis Mead",
-    "ingredients": ["glacial_memory", "honey", "koji", "worldroot_extract", "saffron"],
+    "base": "honey",
+    "ingredients": [
+      "glacial_memory",
+      "koji",
+      "worldroot_extract",
+      "saffron"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
@@ -1152,7 +1629,14 @@
   {
     "id": "lcr_07_the_fire_tower",
     "name": "The Fire Tower",
-    "ingredients": ["ember_spice", "harissa_pepper", "szechuan_peppercorn", "torch_ginger", "piloncillo"],
+    "base": "grain",
+    "ingredients": [
+      "ember_spice",
+      "harissa_pepper",
+      "szechuan_peppercorn",
+      "torch_ginger",
+      "piloncillo"
+    ],
     "method": "distill",
     "stars": 5,
     "tier": "legendary",
@@ -1163,12 +1647,186 @@
   {
     "id": "lcr_08_the_world_in_a_cup",
     "name": "The World in a Cup",
-    "ingredients": ["glacial_memory", "saffron", "butterfly_pea_flower", "sea_buckthorn", "hibiscus", "ume"],
+    "base": "fruit",
+    "ingredients": [
+      "glacial_memory",
+      "saffron",
+      "butterfly_pea_flower",
+      "sea_buckthorn",
+      "hibiscus",
+      "ume"
+    ],
     "method": "ferment_barrel",
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
     "lore": "The impossible brew — it changes color four times as it's poured, and contains flavors from every region of the known world.",
     "visualEffect": "All color systems active: blue → orange → crimson → gold → pink, cycling with stirring. Frost crystals + saffron gold + butterfly pea color-shift — the most complex visual in the game"
+  },
+  {
+    "id": "spiced_honey_mead",
+    "name": "Spiced Honey Mead",
+    "base": "honey",
+    "ingredients": [
+      "ginger_root",
+      "cinnamon_bark"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Warming spices in golden honey. The original winter warmer."
+  },
+  {
+    "id": "elderflower_ale",
+    "name": "Elderflower Ale",
+    "base": "grain",
+    "ingredients": [
+      "elderflower"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Delicate floral notes lifted by grain body. English pub garden in a glass."
+  },
+  {
+    "id": "cherry_mead",
+    "name": "Cherry Mead",
+    "base": "honey",
+    "ingredients": [
+      "sour_cherry"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Melomel — tart cherry swimming in golden honey. Ancient and irresistible."
+  },
+  {
+    "id": "ginger_citrus_cider",
+    "name": "Ginger Citrus Cider",
+    "base": "fruit",
+    "ingredients": [
+      "ginger_root",
+      "citrus_peel"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Bright fruit acid meets ginger heat. Refreshing with a kick."
+  },
+  {
+    "id": "forest_mead",
+    "name": "Forest Mead",
+    "base": "honey",
+    "ingredients": [
+      "wild_mushroom"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Umami depth in sweet honey. Divisive but unforgettable."
+  },
+  {
+    "id": "berry_ale",
+    "name": "Berry Ale",
+    "base": "grain",
+    "ingredients": [
+      "berries"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Fruit ale — tart berries brightening earthy grain. Summer drinking."
+  },
+  {
+    "id": "chamomile_cider",
+    "name": "Chamomile Cider",
+    "base": "fruit",
+    "ingredients": [
+      "chamomile"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Apple-bright tartness softened by floral calm. Surprisingly elegant."
+  },
+  {
+    "id": "long_pepper_mead",
+    "name": "Long Pepper Mead",
+    "base": "honey",
+    "ingredients": [
+      "long_pepper"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Slow-building heat anchored by viscous sweetness. Spice traders loved this."
+  },
+  {
+    "id": "vanilla_saffron_ale",
+    "name": "Vanilla Saffron Ale",
+    "base": "grain",
+    "ingredients": [
+      "vanilla_pod",
+      "saffron"
+    ],
+    "method": "ferment_barrel",
+    "stars": 3,
+    "tier": "rare",
+    "lore": "Two of the world's most expensive spices in earthy grain. Opulent and grounded.",
+    "visualEffect": "Golden amber with saffron luminescence"
+  },
+  {
+    "id": "juniper_mead",
+    "name": "Juniper Mead",
+    "base": "honey",
+    "ingredients": [
+      "juniper_berry"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Pine-forward honey wine. Like drinking a forest clearing at sunset."
+  },
+  {
+    "id": "acorn_ale",
+    "name": "Acorn Ale",
+    "base": "grain",
+    "ingredients": [
+      "roasted_acorn"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Nutty, toasty, grounding. Squirrels would approve."
+  },
+  {
+    "id": "dragon_cider",
+    "name": "Dragon Cider",
+    "base": "fruit",
+    "ingredients": [
+      "dragon_pepper"
+    ],
+    "method": "ferment",
+    "stars": 3,
+    "tier": "rare",
+    "lore": "Fire meets fruit acid. The brightness tames the dragon — barely.",
+    "visualEffect": "Amber cider with flickering heat shimmer"
+  },
+  {
+    "id": "cinnamon_ale",
+    "name": "Cinnamon Ale",
+    "base": "grain",
+    "ingredients": [
+      "cinnamon_bark"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Warm bark spice over bready grain. Tavern classic."
   }
 ]

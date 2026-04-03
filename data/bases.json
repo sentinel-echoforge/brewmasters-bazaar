@@ -1,0 +1,110 @@
+[
+  {
+    "id": "grain",
+    "name": "Grain",
+    "emoji": "🌾",
+    "tags": [
+      "earthy",
+      "starchy",
+      "dry",
+      "neutral"
+    ],
+    "description": "Earthy, bready foundation. The backbone of ales, stouts, and spirits.",
+    "methods": [
+      "ferment",
+      "ferment_barrel",
+      "distill",
+      "distill_barrel",
+      "boil"
+    ]
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "emoji": "🍯",
+    "tags": [
+      "sweet",
+      "golden",
+      "viscous",
+      "warm"
+    ],
+    "description": "Sweet, golden viscosity. The soul of meads, metheglin, and honeyed spirits.",
+    "methods": [
+      "ferment",
+      "ferment_barrel",
+      "distill",
+      "distill_barrel",
+      "boil"
+    ]
+  },
+  {
+    "id": "fruit",
+    "name": "Fruit",
+    "emoji": "🍎",
+    "tags": [
+      "tart",
+      "bright",
+      "acidic",
+      "fruity"
+    ],
+    "description": "Tart, bright acidity. Choose apple, berries, or sour cherry.",
+    "methods": [
+      "ferment",
+      "ferment_barrel",
+      "boil"
+    ],
+    "subtypes": [
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "tags": [
+          "crisp",
+          "tart",
+          "bright",
+          "autumn"
+        ],
+        "description": "Crisp tartness. Cider territory."
+      },
+      {
+        "id": "berries",
+        "name": "Berries",
+        "emoji": "🫐",
+        "tags": [
+          "sweet",
+          "tart",
+          "red",
+          "jammy"
+        ],
+        "description": "Sweet-tart burst. Wine and fruit ale territory."
+      },
+      {
+        "id": "sour_cherry",
+        "name": "Sour Cherry",
+        "emoji": "🍒",
+        "tags": [
+          "tart",
+          "deep",
+          "fruity",
+          "complex"
+        ],
+        "description": "Deep red tartness. Kriek and cherry wine territory."
+      }
+    ]
+  },
+  {
+    "id": "none",
+    "name": "Water Only",
+    "emoji": "💧",
+    "tags": [
+      "clean",
+      "neutral",
+      "thin",
+      "cool"
+    ],
+    "description": "Pure water. For teas, tonics, and tisanes only.",
+    "methods": [
+      "boil"
+    ]
+  }
+]

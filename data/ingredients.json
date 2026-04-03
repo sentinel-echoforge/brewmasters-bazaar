@@ -1,57 +1,17 @@
 [
   {
-    "id": "honey",
-    "name": "Honey",
-    "emoji": "🍯",
-    "tier": 1,
-    "source": "pantry",
-    "tags": ["sweet", "golden", "viscous", "warm"],
-    "description": "Rich, floral sweetness"
-  },
-  {
-    "id": "grain",
-    "name": "Grain",
-    "emoji": "🌾",
-    "tier": 1,
-    "source": "pantry",
-    "tags": ["earthy", "dry", "starchy", "neutral"],
-    "description": "Clean, bready base"
-  },
-  {
-    "id": "spring_water",
-    "name": "Spring Water",
-    "emoji": "💧",
-    "tier": 1,
-    "source": "pantry",
-    "tags": ["clean", "neutral", "thin", "cool"],
-    "description": "Pure, mineral"
-  },
-  {
     "id": "wild_herbs",
     "name": "Wild Herbs",
     "emoji": "🌿",
     "tier": 1,
     "source": "pantry",
-    "tags": ["herbal", "green", "aromatic", "fresh"],
+    "tags": [
+      "herbal",
+      "green",
+      "aromatic",
+      "fresh"
+    ],
     "description": "Bright, green, aromatic"
-  },
-  {
-    "id": "apple",
-    "name": "Apple",
-    "emoji": "🍎",
-    "tier": 2,
-    "source": "garden",
-    "tags": ["fruity", "crisp", "tart", "bright"],
-    "description": "Crisp tartness, autumn"
-  },
-  {
-    "id": "berries",
-    "name": "Berries",
-    "emoji": "🫐",
-    "tier": 2,
-    "source": "garden",
-    "tags": ["sweet", "fruity", "tart", "red"],
-    "description": "Sweet-tart burst, jammy"
   },
   {
     "id": "citrus_peel",
@@ -59,7 +19,12 @@
     "emoji": "🍋",
     "tier": 2,
     "source": "garden",
-    "tags": ["bright", "zesty", "bitter", "aromatic"],
+    "tags": [
+      "bright",
+      "zesty",
+      "bitter",
+      "aromatic"
+    ],
     "description": "Zesty, bitter oils"
   },
   {
@@ -68,7 +33,12 @@
     "emoji": "🌼",
     "tier": 2,
     "source": "garden",
-    "tags": ["floral", "calming", "delicate", "light"],
+    "tags": [
+      "floral",
+      "calming",
+      "delicate",
+      "light"
+    ],
     "description": "Gentle, calming floral"
   },
   {
@@ -77,7 +47,12 @@
     "emoji": "🍄",
     "tier": 3,
     "source": "forest",
-    "tags": ["earthy", "umami", "dark", "mysterious"],
+    "tags": [
+      "earthy",
+      "umami",
+      "dark",
+      "mysterious"
+    ],
     "description": "Deep umami, forest floor"
   },
   {
@@ -86,7 +61,12 @@
     "emoji": "🫚",
     "tier": 3,
     "source": "forest",
-    "tags": ["spicy", "warm", "sharp", "aromatic"],
+    "tags": [
+      "spicy",
+      "warm",
+      "sharp",
+      "aromatic"
+    ],
     "description": "Sharp warm heat that builds"
   },
   {
@@ -95,17 +75,13 @@
     "emoji": "🌰",
     "tier": 3,
     "source": "forest",
-    "tags": ["nutty", "smoky", "toasty", "warm"],
+    "tags": [
+      "nutty",
+      "smoky",
+      "toasty",
+      "warm"
+    ],
     "description": "Nutty, smoky, surprisingly sweet"
-  },
-  {
-    "id": "sour_cherry",
-    "name": "Sour Cherry",
-    "emoji": "🍒",
-    "tier": 3,
-    "source": "forest",
-    "tags": ["tart", "deep", "fruity", "complex"],
-    "description": "Tart, deep red, complex"
   },
   {
     "id": "cinnamon_bark",
@@ -113,7 +89,12 @@
     "emoji": "🪵",
     "tier": 4,
     "source": "merchant",
-    "tags": ["warm", "sweet", "woody", "spicy"],
+    "tags": [
+      "warm",
+      "sweet",
+      "woody",
+      "spicy"
+    ],
     "description": "Warm, sweet, woody"
   },
   {
@@ -122,7 +103,12 @@
     "emoji": "🌲",
     "tier": 4,
     "source": "merchant",
-    "tags": ["piney", "bitter", "aromatic", "dry"],
+    "tags": [
+      "piney",
+      "bitter",
+      "aromatic",
+      "dry"
+    ],
     "description": "Piney, gin-forward, crisp"
   },
   {
@@ -131,7 +117,12 @@
     "emoji": "🌺",
     "tier": 4,
     "source": "merchant",
-    "tags": ["floral", "delicate", "perfumy", "sweet"],
+    "tags": [
+      "floral",
+      "delicate",
+      "perfumy",
+      "sweet"
+    ],
     "description": "Perfumy, delicate, ethereal"
   },
   {
@@ -140,7 +131,12 @@
     "emoji": "🫛",
     "tier": 4,
     "source": "merchant",
-    "tags": ["rich", "creamy", "sweet", "smooth"],
+    "tags": [
+      "rich",
+      "creamy",
+      "sweet",
+      "smooth"
+    ],
     "description": "Rich, creamy, round",
     "region": "Latin American"
   },
@@ -150,7 +146,12 @@
     "emoji": "🌶️",
     "tier": 4,
     "source": "merchant",
-    "tags": ["spicy", "complex", "warm", "lingering"],
+    "tags": [
+      "spicy",
+      "complex",
+      "warm",
+      "lingering"
+    ],
     "description": "Slow-building heat that evolves"
   },
   {
@@ -159,7 +160,12 @@
     "emoji": "🧵",
     "tier": 5,
     "source": "exotic",
-    "tags": ["golden", "honey", "metallic", "luxurious"],
+    "tags": [
+      "golden",
+      "honey",
+      "metallic",
+      "luxurious"
+    ],
     "description": "Worth-its-weight golden luxury",
     "region": "Global"
   },
@@ -169,7 +175,12 @@
     "emoji": "🫒",
     "tier": 5,
     "source": "exotic",
-    "tags": ["rich", "almond", "cherry", "intoxicating"],
+    "tags": [
+      "rich",
+      "almond",
+      "cherry",
+      "intoxicating"
+    ],
     "description": "Almond + cherry + tobacco (banned IRL!)"
   },
   {
@@ -178,7 +189,12 @@
     "emoji": "🌿",
     "tier": 5,
     "source": "exotic",
-    "tags": ["citrus", "grassy", "fresh", "aromatic"],
+    "tags": [
+      "citrus",
+      "grassy",
+      "fresh",
+      "aromatic"
+    ],
     "description": "Bright, citrusy, Southeast Asian",
     "region": "Southeast Asian"
   },
@@ -188,7 +204,12 @@
     "emoji": "🍯",
     "tier": 5,
     "source": "exotic",
-    "tags": ["funky", "luxurious", "earthy", "divisive"],
+    "tags": [
+      "funky",
+      "luxurious",
+      "earthy",
+      "divisive"
+    ],
     "description": "Funky, luxurious, polarizing"
   },
   {
@@ -197,7 +218,12 @@
     "emoji": "🌑",
     "tier": 5,
     "source": "exotic",
-    "tags": ["smoky", "dramatic", "dark", "neutral"],
+    "tags": [
+      "smoky",
+      "dramatic",
+      "dark",
+      "neutral"
+    ],
     "description": "Turns drinks jet black"
   },
   {
@@ -206,7 +232,12 @@
     "emoji": "🐉",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["fiery", "volatile", "intense", "alive"],
+    "tags": [
+      "fiery",
+      "volatile",
+      "intense",
+      "alive"
+    ],
     "description": "Almost alive with heat. Handle with care."
   },
   {
@@ -215,7 +246,12 @@
     "emoji": "🌙",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["ethereal", "cool", "luminous", "magical"],
+    "tags": [
+      "ethereal",
+      "cool",
+      "luminous",
+      "magical"
+    ],
     "description": "Glows faint blue. Otherworldly."
   },
   {
@@ -224,7 +260,12 @@
     "emoji": "⭐",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["cosmic", "bright", "sweet", "otherworldly"],
+    "tags": [
+      "cosmic",
+      "bright",
+      "sweet",
+      "otherworldly"
+    ],
     "description": "Cosmic sweetness from another realm"
   },
   {
@@ -233,7 +274,12 @@
     "emoji": "🧬",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["alive", "transformative", "deep", "unpredictable"],
+    "tags": [
+      "alive",
+      "transformative",
+      "deep",
+      "unpredictable"
+    ],
     "description": "Thousands of years old. Transforms anything."
   },
   {
@@ -242,7 +288,12 @@
     "emoji": "🔥",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["fiery", "golden", "sweet", "mythical"],
+    "tags": [
+      "fiery",
+      "golden",
+      "sweet",
+      "mythical"
+    ],
     "description": "Collected from volcanic beehives."
   },
   {
@@ -251,7 +302,12 @@
     "emoji": "🫙",
     "tier": 4,
     "source": "merchant",
-    "tags": ["complex", "warm", "aromatic", "amber"],
+    "tags": [
+      "complex",
+      "warm",
+      "aromatic",
+      "amber"
+    ],
     "description": "The head of the shop — the very best a spice merchant has to offer. Up to thirty spices, no two blends alike.",
     "region": "North African"
   },
@@ -261,7 +317,12 @@
     "emoji": "🍋",
     "tier": 3,
     "source": "merchant",
-    "tags": ["salty", "bright", "fermented", "citrus"],
+    "tags": [
+      "salty",
+      "bright",
+      "fermented",
+      "citrus"
+    ],
     "description": "Whole lemons packed in salt for weeks — bitterness dissolves into something sour and ancient.",
     "region": "North African"
   },
@@ -271,7 +332,12 @@
     "emoji": "🌸",
     "tier": 3,
     "source": "merchant",
-    "tags": ["floral", "delicate", "sweet", "ethereal"],
+    "tags": [
+      "floral",
+      "delicate",
+      "sweet",
+      "ethereal"
+    ],
     "description": "Distilled from bitter orange blossoms — a single teaspoon perfumes an entire dish.",
     "region": "North African"
   },
@@ -281,7 +347,12 @@
     "emoji": "🌹",
     "tier": 3,
     "source": "merchant",
-    "tags": ["floral", "soft", "perfumed", "pink"],
+    "tags": [
+      "floral",
+      "soft",
+      "perfumed",
+      "pink"
+    ],
     "description": "Harvested at dawn before essential oils evaporate. Every drop holds two weeks of blooming season.",
     "region": "North African"
   },
@@ -291,7 +362,12 @@
     "emoji": "🥜",
     "tier": 4,
     "source": "exotic",
-    "tags": ["nutty", "golden", "rich", "earthy"],
+    "tags": [
+      "nutty",
+      "golden",
+      "rich",
+      "earthy"
+    ],
     "description": "Pressed from kernels of argan trees in Morocco's Souss Valley. Goats genuinely climb them.",
     "region": "North African"
   },
@@ -301,7 +377,12 @@
     "emoji": "🌴",
     "tier": 2,
     "source": "merchant",
-    "tags": ["sweet", "caramel", "dense", "amber"],
+    "tags": [
+      "sweet",
+      "caramel",
+      "dense",
+      "amber"
+    ],
     "description": "The king of dates — reserved for Moroccan royalty. Concentrated sweetness with iron depth.",
     "region": "North African"
   },
@@ -311,7 +392,12 @@
     "emoji": "🍇",
     "tier": 2,
     "source": "merchant",
-    "tags": ["sweet", "jammy", "dark", "honeyed"],
+    "tags": [
+      "sweet",
+      "jammy",
+      "dark",
+      "honeyed"
+    ],
     "description": "Dried in goatskin sacks for months. Jammy, almost wine-like. Older than agriculture itself.",
     "region": "North African"
   },
@@ -321,7 +407,12 @@
     "emoji": "🔴",
     "tier": 3,
     "source": "merchant",
-    "tags": ["tart", "ruby", "bright", "tannic"],
+    "tags": [
+      "tart",
+      "ruby",
+      "bright",
+      "tannic"
+    ],
     "description": "The lemon of the ancient world. Used by Romans and Phoenicians before citrus reached the Mediterranean.",
     "region": "North African"
   },
@@ -331,7 +422,12 @@
     "emoji": "🌿",
     "tier": 3,
     "source": "merchant",
-    "tags": ["herbal", "earthy", "sesame", "oregano"],
+    "tags": [
+      "herbal",
+      "earthy",
+      "sesame",
+      "oregano"
+    ],
     "description": "Wild herb blend with toasted sesame and sumac. Medieval physicians prescribed it to ward off evil spirits.",
     "region": "North African"
   },
@@ -341,7 +437,12 @@
     "emoji": "🌶️",
     "tier": 3,
     "source": "merchant",
-    "tags": ["fiery", "smoky", "red", "pungent"],
+    "tags": [
+      "fiery",
+      "smoky",
+      "red",
+      "pungent"
+    ],
     "description": "Tunisia's national condiment — stone-pounded by hand before dawn. Every family's recipe fiercer than the last.",
     "region": "North African"
   },
@@ -351,7 +452,12 @@
     "emoji": "🫑",
     "tier": 4,
     "source": "merchant",
-    "tags": ["mild-heat", "oily", "fruity", "brick-red"],
+    "tags": [
+      "mild-heat",
+      "oily",
+      "fruity",
+      "brick-red"
+    ],
     "description": "From ancient Aleppo — only 10,000 Scoville but oily and fruity with a slow-building warmth.",
     "region": "North African"
   },
@@ -361,7 +467,12 @@
     "emoji": "🖤",
     "tier": 4,
     "source": "exotic",
-    "tags": ["sour", "dried", "smoky", "umami"],
+    "tags": [
+      "sour",
+      "dried",
+      "smoky",
+      "umami"
+    ],
     "description": "Whole limes boiled in brine then sun-dried to black. Inside: profoundly sour, slightly smoky, strangely savory.",
     "region": "North African"
   },
@@ -371,7 +482,12 @@
     "emoji": "🍒",
     "tier": 4,
     "source": "exotic",
-    "tags": ["bitter-almond", "cherry-pit", "floral", "resinous"],
+    "tags": [
+      "bitter-almond",
+      "cherry-pit",
+      "floral",
+      "resinous"
+    ],
     "description": "Ground cherry stones that smell of almonds and cherries simultaneously. One of the stranger beauties.",
     "region": "North African"
   },
@@ -381,7 +497,12 @@
     "emoji": "💎",
     "tier": 5,
     "source": "exotic",
-    "tags": ["resinous", "pine", "crystalline", "ancient"],
+    "tags": [
+      "resinous",
+      "pine",
+      "crystalline",
+      "ancient"
+    ],
     "description": "Crystallized resin from Chios trees, scored and harvested as teardrops. Alexander the Great chewed it.",
     "region": "North African"
   },
@@ -391,7 +512,12 @@
     "emoji": "🍊",
     "tier": 4,
     "source": "exotic",
-    "tags": ["citrus", "bright", "floral", "tart"],
+    "tags": [
+      "citrus",
+      "bright",
+      "floral",
+      "tart"
+    ],
     "description": "Japan's mountain citrus — mandarin, grapefruit, and something entirely its own. Export ban still in place.",
     "region": "Japanese"
   },
@@ -401,7 +527,12 @@
     "emoji": "🍃",
     "tier": 3,
     "source": "merchant",
-    "tags": ["herbal", "anise", "minty", "verdant"],
+    "tags": [
+      "herbal",
+      "anise",
+      "minty",
+      "verdant"
+    ],
     "description": "Green: basil, mint, anise at once. Red: sharp and medicinal. Contains natural antimicrobial compounds.",
     "region": "Japanese"
   },
@@ -411,7 +542,12 @@
     "emoji": "🍵",
     "tier": 4,
     "source": "merchant",
-    "tags": ["bitter", "grassy", "umami", "jade"],
+    "tags": [
+      "bitter",
+      "grassy",
+      "umami",
+      "jade"
+    ],
     "description": "Shade-grown leaves ground to powder. The shading forces more chlorophyll and L-theanine — calm alertness.",
     "region": "Japanese"
   },
@@ -421,7 +557,12 @@
     "emoji": "🌸",
     "tier": 4,
     "source": "exotic",
-    "tags": ["floral", "delicate", "pink", "salt-kissed"],
+    "tags": [
+      "floral",
+      "delicate",
+      "pink",
+      "salt-kissed"
+    ],
     "description": "Cherry blossoms preserved in salt for months. A brew made with sakura tastes of spring — fleeting and gone.",
     "region": "Japanese"
   },
@@ -431,7 +572,12 @@
     "emoji": "🍑",
     "tier": 3,
     "source": "merchant",
-    "tags": ["sour", "fruity", "pink", "puckering"],
+    "tags": [
+      "sour",
+      "fruity",
+      "pink",
+      "puckering"
+    ],
     "description": "Closer to apricot than plum. Preserved as umeboshi or fermented into umeshu. Its acidity kills summer bacteria.",
     "region": "Japanese"
   },
@@ -441,7 +587,12 @@
     "emoji": "🌿",
     "tier": 4,
     "source": "exotic",
-    "tags": ["sharp", "green", "sinus-clearing", "brief"],
+    "tags": [
+      "sharp",
+      "green",
+      "sinus-clearing",
+      "brief"
+    ],
     "description": "Real wasabi requires pristine mountain streams and 3 years to grow. Its heat hits the nose, not the tongue.",
     "region": "Japanese"
   },
@@ -451,7 +602,12 @@
     "emoji": "⚡",
     "tier": 4,
     "source": "exotic",
-    "tags": ["numbing", "citrus", "floral", "electric"],
+    "tags": [
+      "numbing",
+      "citrus",
+      "floral",
+      "electric"
+    ],
     "description": "From the prickly ash tree — creates tingling numbness as if small electric sparks dance across your lips.",
     "region": "Japanese"
   },
@@ -461,7 +617,12 @@
     "emoji": "🪵",
     "tier": 5,
     "source": "exotic",
-    "tags": ["spicy", "cinnamon", "clove", "woody"],
+    "tags": [
+      "spicy",
+      "cinnamon",
+      "clove",
+      "woody"
+    ],
     "description": "Japanese spicebush with bark that smells of cinnamon and clove. Almost entirely unknown outside Japan.",
     "region": "Japanese"
   },
@@ -471,7 +632,12 @@
     "emoji": "🍂",
     "tier": 3,
     "source": "merchant",
-    "tags": ["roasted", "toasty", "caramel", "amber"],
+    "tags": [
+      "roasted",
+      "toasty",
+      "caramel",
+      "amber"
+    ],
     "description": "A 1920s Kyoto tea merchant roasted unsellable leaves in desperation. Panic led to something beautiful.",
     "region": "Japanese"
   },
@@ -481,7 +647,12 @@
     "emoji": "🍶",
     "tier": 3,
     "source": "merchant",
-    "tags": ["sweet", "rice", "milky", "fermented"],
+    "tags": [
+      "sweet",
+      "rice",
+      "milky",
+      "fermented"
+    ],
     "description": "Sweet sake without alcohol. Drunk by samurai before battle. Called 'drinkable IV drip' for its nutrition.",
     "region": "Japanese"
   },
@@ -491,7 +662,12 @@
     "emoji": "🧫",
     "tier": 4,
     "source": "merchant",
-    "tags": ["umami", "funky", "golden", "transforming"],
+    "tags": [
+      "umami",
+      "funky",
+      "golden",
+      "transforming"
+    ],
     "description": "The mold that built Japanese civilization. Behind sake, miso, soy sauce. Japan's official national fungus.",
     "region": "Japanese"
   },
@@ -501,7 +677,12 @@
     "emoji": "🟢",
     "tier": 5,
     "source": "exotic",
-    "tags": ["citrus", "green", "sharp", "mineral"],
+    "tags": [
+      "citrus",
+      "green",
+      "sharp",
+      "mineral"
+    ],
     "description": "Tiny green citrus from Tokushima, harvested before it ripens. Crisper and more mineral than lemon.",
     "region": "Japanese"
   },
@@ -511,7 +692,12 @@
     "emoji": "🍈",
     "tier": 5,
     "source": "exotic",
-    "tags": ["citrus", "mild", "floral", "green"],
+    "tags": [
+      "citrus",
+      "mild",
+      "floral",
+      "green"
+    ],
     "description": "The gentlest Japanese citrus — softer than sudachi, faintly bergamot-like. Brought by a Buddhist monk.",
     "region": "Japanese"
   },
@@ -521,7 +707,12 @@
     "emoji": "🍇",
     "tier": 3,
     "source": "merchant",
-    "tags": ["tart", "green", "unripe", "wine-adjacent"],
+    "tags": [
+      "tart",
+      "green",
+      "unripe",
+      "wine-adjacent"
+    ],
     "description": "Juice of unripe grapes — used since medieval France. Fresher than vinegar, wilder than wine.",
     "region": "French"
   },
@@ -531,7 +722,12 @@
     "emoji": "🟠",
     "tier": 4,
     "source": "exotic",
-    "tags": ["sour", "orange", "bright", "vitamin-packed"],
+    "tags": [
+      "sour",
+      "orange",
+      "bright",
+      "vitamin-packed"
+    ],
     "description": "So sour birds avoid it until frost. 15x more vitamin C than oranges. Stains everything vivid orange.",
     "region": "French"
   },
@@ -541,7 +737,12 @@
     "emoji": "💛",
     "tier": 4,
     "source": "exotic",
-    "tags": ["bitter", "earthy", "yellow", "medicinal"],
+    "tags": [
+      "bitter",
+      "earthy",
+      "yellow",
+      "medicinal"
+    ],
     "description": "The most bitter compound in nature — detectable at one part per 58 million. Primary bitter in Angostura.",
     "region": "French"
   },
@@ -551,7 +752,12 @@
     "emoji": "🌿",
     "tier": 3,
     "source": "merchant",
-    "tags": ["lemony", "herbal", "bright", "calming"],
+    "tags": [
+      "lemony",
+      "herbal",
+      "bright",
+      "calming"
+    ],
     "description": "Lemon verbena from Argentina, adopted by French herbalists. Smells of lemon more intensely than lemon itself.",
     "region": "French"
   },
@@ -561,7 +767,12 @@
     "emoji": "🫐",
     "tier": 3,
     "source": "merchant",
-    "tags": ["deep-purple", "tart", "berry", "intense"],
+    "tags": [
+      "deep-purple",
+      "tart",
+      "berry",
+      "intense"
+    ],
     "description": "Blackcurrant — banned in the US for 50 years. Deep purple, intensely tart, the soul of Burgundy's Kir.",
     "region": "French"
   },
@@ -571,7 +782,12 @@
     "emoji": "🟡",
     "tier": 4,
     "source": "merchant",
-    "tags": ["golden", "sweet", "delicate", "stonefruit"],
+    "tags": [
+      "golden",
+      "sweet",
+      "delicate",
+      "stonefruit"
+    ],
     "description": "Golden plum of Lorraine, protected by French law. Only 3-4 weeks of harvest per year.",
     "region": "French"
   },
@@ -581,7 +797,12 @@
     "emoji": "🍐",
     "tier": 3,
     "source": "merchant",
-    "tags": ["astringent", "floral", "golden", "perfumed"],
+    "tags": [
+      "astringent",
+      "floral",
+      "golden",
+      "perfumed"
+    ],
     "description": "The golden apple of mythology — inedible raw, magical cooked. Turns rose-pink during fermentation.",
     "region": "French"
   },
@@ -591,7 +812,12 @@
     "emoji": "🍋",
     "tier": 4,
     "source": "exotic",
-    "tags": ["citrus", "floral", "resinous", "Earl Grey"],
+    "tags": [
+      "citrus",
+      "floral",
+      "resinous",
+      "Earl Grey"
+    ],
     "description": "From Calabria's sole growing region. Defines Earl Grey tea, Acqua di Cologne, and half the world's perfumes.",
     "region": "French"
   },
@@ -601,7 +827,12 @@
     "emoji": "🌾",
     "tier": 4,
     "source": "exotic",
-    "tags": ["peppery", "cardamom", "citrus", "warm"],
+    "tags": [
+      "peppery",
+      "cardamom",
+      "citrus",
+      "warm"
+    ],
     "description": "West African pepper worth more than black pepper in medieval Europe. Cardamom-warmth with citrus finish.",
     "region": "French"
   },
@@ -611,7 +842,12 @@
     "emoji": "🩷",
     "tier": 3,
     "source": "merchant",
-    "tags": ["fruity", "mild-heat", "resinous", "rosy"],
+    "tags": [
+      "fruity",
+      "mild-heat",
+      "resinous",
+      "rosy"
+    ],
     "description": "Not a true pepper — the dried berry of a Peruvian tree. Fruity, mild, resinous. French chefs adore it.",
     "region": "French"
   },
@@ -621,7 +857,12 @@
     "emoji": "🌀",
     "tier": 3,
     "source": "garden",
-    "tags": ["cucumber", "floral", "blue", "cooling"],
+    "tags": [
+      "cucumber",
+      "floral",
+      "blue",
+      "cooling"
+    ],
     "description": "Sky-blue star-shaped flowers that taste of cool cucumber. Herbalists called it 'the herb of courage.'",
     "region": "French"
   },
@@ -631,7 +872,12 @@
     "emoji": "💜",
     "tier": 3,
     "source": "garden",
-    "tags": ["floral", "herbal", "purple", "calming"],
+    "tags": [
+      "floral",
+      "herbal",
+      "purple",
+      "calming"
+    ],
     "description": "Provence lavender harvested since Roman times. Too much tastes of soap. Used correctly — purple fragrance.",
     "region": "French"
   },
@@ -641,7 +887,12 @@
     "emoji": "🌿",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["complex", "green", "130-herbs", "spiritual"],
+    "tags": [
+      "complex",
+      "green",
+      "130-herbs",
+      "spiritual"
+    ],
     "description": "Only two monks know the complete formula: 130 Alpine herbs. Glows green under UV light.",
     "region": "French"
   },
@@ -651,7 +902,12 @@
     "emoji": "🌿",
     "tier": 2,
     "source": "garden",
-    "tags": ["sweet", "vanilla-adjacent", "green", "coconut"],
+    "tags": [
+      "sweet",
+      "vanilla-adjacent",
+      "green",
+      "coconut"
+    ],
     "description": "The vanilla of Southeast Asia — green, grassy, impossibly fragrant. Dyes anything a vivid jade.",
     "region": "Southeast Asian"
   },
@@ -661,7 +917,12 @@
     "emoji": "🫚",
     "tier": 2,
     "source": "garden",
-    "tags": ["spicy", "piney", "citrus", "medicinal"],
+    "tags": [
+      "spicy",
+      "piney",
+      "citrus",
+      "medicinal"
+    ],
     "description": "Ginger's harder, denser cousin — piney, citrusy, medicinal. Used in jamu tonics for over 1,300 years.",
     "region": "Southeast Asian"
   },
@@ -671,7 +932,12 @@
     "emoji": "🍃",
     "tier": 2,
     "source": "garden",
-    "tags": ["citrus", "aromatic", "bright", "herbal"],
+    "tags": [
+      "citrus",
+      "aromatic",
+      "bright",
+      "herbal"
+    ],
     "description": "Double-lobed leaves so fragrant a single torn leaf scents a room. Essential to Thai and Indonesian cooking.",
     "region": "Southeast Asian"
   },
@@ -681,7 +947,12 @@
     "emoji": "🫘",
     "tier": 2,
     "source": "garden",
-    "tags": ["sour", "brown", "tangy", "deep"],
+    "tags": [
+      "sour",
+      "brown",
+      "tangy",
+      "deep"
+    ],
     "description": "The 'Indian date' that grew in Africa, named in Arabic, and now anchors cuisines across five continents.",
     "region": "Southeast Asian"
   },
@@ -691,7 +962,12 @@
     "emoji": "🟫",
     "tier": 2,
     "source": "garden",
-    "tags": ["caramel", "smoky", "complex", "amber"],
+    "tags": [
+      "caramel",
+      "smoky",
+      "complex",
+      "amber"
+    ],
     "description": "Gula Jawa — boiled palm sap with terroir. Tastes of caramel, smoke, and toffee. Made in Java 1,000+ years.",
     "region": "Southeast Asian"
   },
@@ -701,7 +977,12 @@
     "emoji": "🦋",
     "tier": 4,
     "source": "exotic",
-    "tags": ["blue", "color-shifting", "earthy", "floral"],
+    "tags": [
+      "blue",
+      "color-shifting",
+      "earthy",
+      "floral"
+    ],
     "description": "Steeps indigo-blue. Add acid and watch it shift purple, then pink. A living pH indicator. Pure alchemy.",
     "region": "Southeast Asian"
   },
@@ -711,7 +992,12 @@
     "emoji": "🌺",
     "tier": 4,
     "source": "exotic",
-    "tags": ["floral", "ginger", "tart", "tropical"],
+    "tags": [
+      "floral",
+      "ginger",
+      "tart",
+      "tropical"
+    ],
     "description": "Kecombrang — pink torch-shaped flower from Indonesian rainforest. Ginger heat, floral tartness, tropical scent.",
     "region": "Southeast Asian"
   },
@@ -721,7 +1007,12 @@
     "emoji": "🌿",
     "tier": 3,
     "source": "merchant",
-    "tags": ["herbal", "peppery", "pungent", "mint"],
+    "tags": [
+      "herbal",
+      "peppery",
+      "pungent",
+      "mint"
+    ],
     "description": "Vietnamese mint — not true mint but mint-intense with a peppery, pungent edge. Essential to laksa.",
     "region": "Southeast Asian"
   },
@@ -731,7 +1022,12 @@
     "emoji": "🟡",
     "tier": 2,
     "source": "garden",
-    "tags": ["earthy", "golden", "bitter", "warm"],
+    "tags": [
+      "earthy",
+      "golden",
+      "bitter",
+      "warm"
+    ],
     "description": "The golden root that stains everything. 4,000 years of cultivation. Every jamu begins here.",
     "region": "Southeast Asian"
   },
@@ -741,7 +1037,12 @@
     "emoji": "🍫",
     "tier": 3,
     "source": "merchant",
-    "tags": ["bitter", "chocolate", "earthy", "complex"],
+    "tags": [
+      "bitter",
+      "chocolate",
+      "earthy",
+      "complex"
+    ],
     "description": "Aztec cacao beans were currency. The xocolatl drink — cold, bitter, chili-spiced — is 4,000 years old.",
     "region": "Latin American"
   },
@@ -751,7 +1052,12 @@
     "emoji": "🍬",
     "tier": 2,
     "source": "garden",
-    "tags": ["caramel", "smoky", "molasses", "amber"],
+    "tags": [
+      "caramel",
+      "smoky",
+      "molasses",
+      "amber"
+    ],
     "description": "Unrefined dark cane sugar in cone form. Smells of tropical smoke and fermented cane. Ancestor of brown sugar.",
     "region": "Latin American"
   },
@@ -761,7 +1067,12 @@
     "emoji": "🌿",
     "tier": 3,
     "source": "forest",
-    "tags": ["herbal", "pungent", "resinous", "wild"],
+    "tags": [
+      "herbal",
+      "pungent",
+      "resinous",
+      "wild"
+    ],
     "description": "Smells aggressively of turpentine and citrus — dangerous in large doses. Indispensable in small ones.",
     "region": "Latin American"
   },
@@ -771,7 +1082,12 @@
     "emoji": "🌺",
     "tier": 2,
     "source": "garden",
-    "tags": ["tart", "crimson", "floral", "bright"],
+    "tags": [
+      "tart",
+      "crimson",
+      "floral",
+      "bright"
+    ],
     "description": "Jamaica / Bissap / Karkadé — one flower, four continents, one ruby-red sour tradition.",
     "region": "Latin American"
   },
@@ -781,7 +1097,12 @@
     "emoji": "🐛",
     "tier": 5,
     "source": "exotic",
-    "tags": ["smoky", "salty", "umami", "insect-funky"],
+    "tags": [
+      "smoky",
+      "salty",
+      "umami",
+      "insect-funky"
+    ],
     "description": "Dried agave larvae ground with salt and chili. Pre-Columbian Oaxacan condiment that shocks first-timers.",
     "region": "Latin American"
   },
@@ -791,7 +1112,12 @@
     "emoji": "🟧",
     "tier": 3,
     "source": "merchant",
-    "tags": ["earthy", "mild-peppery", "golden-red", "sunset"],
+    "tags": [
+      "earthy",
+      "mild-peppery",
+      "golden-red",
+      "sunset"
+    ],
     "description": "Annatto seeds so orange they were used as war paint. Cheddar gets its color from this. Mild and earthy.",
     "region": "Latin American"
   },
@@ -801,7 +1127,12 @@
     "emoji": "⚡",
     "tier": 4,
     "source": "exotic",
-    "tags": ["numbing", "citrus", "floral", "electric"],
+    "tags": [
+      "numbing",
+      "citrus",
+      "floral",
+      "electric"
+    ],
     "description": "Creates mouth-numbing má — lemon zest, green flower, and static electricity. US import banned for 37 years.",
     "region": "East Asian"
   },
@@ -811,7 +1142,12 @@
     "emoji": "☕",
     "tier": 4,
     "source": "exotic",
-    "tags": ["coffee", "chocolate", "nutty", "earthy"],
+    "tags": [
+      "coffee",
+      "chocolate",
+      "nutty",
+      "earthy"
+    ],
     "description": "Aboriginal Australians have eaten it for 6,000 years — roasted it tastes of coffee and chocolate simultaneously.",
     "region": "Oceanian"
   },
@@ -821,7 +1157,12 @@
     "emoji": "🍵",
     "tier": 3,
     "source": "merchant",
-    "tags": ["red", "earthy", "sweet", "woody"],
+    "tags": [
+      "red",
+      "earthy",
+      "sweet",
+      "woody"
+    ],
     "description": "Khoisan people's Cederberg mountain tea — caffeine-free, naturally sweet, a remedy for centuries.",
     "region": "African"
   },
@@ -831,7 +1172,12 @@
     "emoji": "🌳",
     "tier": 4,
     "source": "exotic",
-    "tags": ["tart", "creamy", "citrus", "chalky"],
+    "tags": [
+      "tart",
+      "creamy",
+      "citrus",
+      "chalky"
+    ],
     "description": "From trees that live 3,000 years. Tart as tamarind, creamy, with 6x the vitamin C of oranges.",
     "region": "African"
   },
@@ -841,7 +1187,12 @@
     "emoji": "🌕",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["silver", "nocturnal", "dream", "luminescent"],
+    "tags": [
+      "silver",
+      "nocturnal",
+      "dream",
+      "luminescent"
+    ],
     "description": "Grows only in moonlit clearings on the first night of the full moon, wilts at dawn. Brews that glow silver.",
     "region": "Fantasy"
   },
@@ -851,7 +1202,12 @@
     "emoji": "🔥",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["fire-red", "volcanic", "heat", "crystalline"],
+    "tags": [
+      "fire-red",
+      "volcanic",
+      "heat",
+      "crystalline"
+    ],
     "description": "Crystalline formations found in cooled lava flows. A single shard transforms a brew — it glows from within.",
     "region": "Fantasy"
   },
@@ -861,7 +1217,12 @@
     "emoji": "🌱",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["ancient", "golden", "earthy", "timeless"],
+    "tags": [
+      "ancient",
+      "golden",
+      "earthy",
+      "timeless"
+    ],
     "description": "From a root predating recorded history, found in amber soil. Contains the memory of every plant ever lived.",
     "region": "Fantasy"
   },
@@ -871,7 +1232,12 @@
     "emoji": "✨",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["celestial", "sweet", "astral", "crystalline"],
+    "tags": [
+      "celestial",
+      "sweet",
+      "astral",
+      "crystalline"
+    ],
     "description": "Found in crystallized form after meteor showers. Iridescent — shifts gold, silver, and pale blue when stirred.",
     "region": "Fantasy"
   },
@@ -881,7 +1247,12 @@
     "emoji": "🍄",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["purple", "fungal", "psychic", "transformative"],
+    "tags": [
+      "purple",
+      "fungal",
+      "psychic",
+      "transformative"
+    ],
     "description": "Found on mushrooms that grow only on lightning-struck oaks. Turns brews unpredictable, chaotic, beautiful.",
     "region": "Fantasy"
   },
@@ -891,7 +1262,12 @@
     "emoji": "🌊",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["abyssal", "salty", "brine", "dark blue"],
+    "tags": [
+      "abyssal",
+      "salty",
+      "brine",
+      "dark blue"
+    ],
     "description": "From ocean trenches where no light has ever reached. Crystallizes in deep indigo-blue. Adds abyssal weight.",
     "region": "Fantasy"
   },
@@ -901,7 +1277,12 @@
     "emoji": "🌹",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["crimson", "rebirth", "smoke", "warm"],
+    "tags": [
+      "crimson",
+      "rebirth",
+      "smoke",
+      "warm"
+    ],
     "description": "Ash gathered from a phoenix's still-warm rebirth nest. Transforms ruined brews into triumph.",
     "region": "Fantasy"
   },
@@ -911,7 +1292,12 @@
     "emoji": "🧊",
     "tier": "legendary",
     "source": "legendary",
-    "tags": ["ice-blue", "ancient", "crystalline", "pure"],
+    "tags": [
+      "ice-blue",
+      "ancient",
+      "crystalline",
+      "pure"
+    ],
     "description": "Ice from a glacier so ancient it contains prehistoric air bubbles. The brew tastes of before humanity.",
     "region": "Fantasy"
   }
