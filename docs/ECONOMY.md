@@ -298,3 +298,80 @@ AFTER (playing from NYC):
   - Local NPC customers pay SCARCITY premium (exotic ingredient in this region)
   - Net effect: different advantage, not lost advantage
 ```
+
+---
+
+## 9. TRAVELING BREWMASTER CONCEPT (Updated Design)
+
+### Core Change: Brewery → Mobile Brew Cart
+Players are NOT stationary shopkeepers. They are **traveling brewmasters** with a mobile cart/yatai.
+
+- Garden = local land (changes with IP/geolocation)
+- Cart = your mobile brewery (carries your stuff everywhere)
+- Bazaar = where traveling brewers meet to trade
+
+### Cart Progression (Crowns + Reputation)
+
+| Level | Cart | Cost | Rep Requirements | Unlocks |
+|-------|------|------|-----------------|---------|
+| 1 | Handcart | Free | — | 1 cauldron, 1 barrel, 2 flavor slots |
+| 2 | Donkey Cart | 500c | 15 recipes discovered | 2 cauldrons, 3 barrels, garden grows 20% faster |
+| 3 | Covered Wagon | 2,500c | 40 recipes + 50 customers served | 3 cauldrons, 5 barrels, **3rd flavor slot** (unlocks rare/legendary recipes), spice cabinet (ingredients last 2x) |
+| 4 | Grand Caravan | 10,000c | 75 recipes + 3 regions visited | 4 cauldrons, 8 barrels, merchant discount 10%, export delivery 20% faster |
+| 5 | Legendary Yatai | 25,000c | 100 recipes + 1 legendary brew + won a Royal Commission | 5 cauldrons, 10 barrels, Town Crier announces your brews, crown badge on cart |
+
+### Why Both Money AND Reputation
+- Money alone = grind one recipe forever (boring)
+- Recipe discovery = forces experimentation
+- Regions visited = rewards actual travel
+- Customer count = ensures you run a business
+- Level 5 legendary brew + Royal Commission = true mastery achievement
+- **3rd flavor slot at Level 3 is THE milestone** — rare/legendary recipes need 3 flavors
+
+### What Your Cart Carries (Persistent)
+- Cauldron(s) — where you brew
+- Barrel rack — where drinks age
+- Ingredient shelf — stocked with what you've harvested/bought/traded
+- Recipe journal — all your discoveries (permanent)
+- Serving counter — where customers order
+- Cart name sign — e.g. "The Rolling Cauldron" (set at game start)
+
+### What Changes With Location (IP-based)
+- Garden/foraging area — local wild ingredients
+- Customer types — regional customer preferences
+- Export distances — recalculated from current position
+- Landscape/visual background — matches region
+
+### What Stays The Same Everywhere
+- Your cart + all upgrades
+- Your inventory (brewed drinks + harvested ingredients)
+- Your recipe journal
+- Your crowns
+- Your reputation
+- Your origin badge (cosmetic, shows where you started)
+
+### Relocation Mechanics
+```
+Player IP changes (moved, traveling, VPN):
+  → Garden replants with new region's wild ingredients
+  → Existing inventory untouched
+  → Recipe knowledge untouched
+  → Origin badge stays (cosmetic: "🇯🇵 Originally from Japan")
+  → Export distances recalculated from new location
+  → New local customers with regional preferences
+  → "You've arrived in a new land! The soil here grows different things..."
+```
+
+### Name Change
+- Game start asks: "What's your name?" + "Name your cart?"
+- Cart name shows on marketplace, leaderboard, Town Crier
+- Examples: "The Rolling Cauldron", "Omar's Rival", "Yatai of Wonders", "The Tipsy Cart"
+
+### Visual Progression
+| Level | Look |
+|-------|------|
+| 1 - Handcart | Simple wooden pushcart with a pot on top |
+| 2 - Donkey Cart | Bigger cart pulled by a donkey, ingredient shelves on sides |
+| 3 - Covered Wagon | Canvas roof, barrel rack visible, spice jars hanging |
+| 4 - Grand Caravan | Ornate wood carvings, multiple cauldrons, lanterns lit at night |
+| 5 - Legendary Yatai | Full kitchen on wheels, steam effects, glowing ingredients, mythical decorations |
