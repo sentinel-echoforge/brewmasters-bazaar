@@ -25,6 +25,14 @@ import { initGardenUI, openGardenUI, closeGardenUI, renderGarden } from './ui/ga
 import { initBarrelUI, openBarrelUI, renderBarrels } from './ui/barrel-ui.js';
 import { initEquipmentUI, openEquipmentUI } from './ui/equipment-ui.js';
 import { initEncyclopedia, openEncyclopedia } from './ui/encyclopedia-ui.js';
+import { initMarketplaceUI, openMarketplace } from './ui/marketplace-ui.js';
+import { initTradeUI, openTrade } from './ui/trade-ui.js';
+import { initExportUI, openExport } from './ui/export-ui.js';
+import { initLeaderboardUI, openLeaderboard } from './ui/leaderboard-ui.js';
+import { initCrierUI, updateCrier, showCommissionAlert } from './ui/crier-ui.js';
+import { initCommissionUI, openCommission } from './ui/commission-ui.js';
+import { initMultiplayer, createServerPlayer, startPolling, setMultiplayerCallbacks, onRecipeDiscovered, onSellDrink, onLevelUp, queueSave, doSave, isConnected } from './systems/multiplayer.js';
+import { hasSession } from './systems/api-client.js';
 
 console.log('🍺 Brewmaster\'s Bazaar loading...');
 
@@ -39,10 +47,17 @@ let gameStarted = false;
 let customerMeshes = new Map(); // customerId -> THREE mesh
 let forageCanvas = null;
 
-// Load data immediately
-loadGameData().then(() => {
+// Load data immediately, then check for existing session
+loadGameData().then(async () => {
   console.log('📦 Game data loaded!');
   initScene();
+  
+  // Try to restore session from server
+  const restored = await initMultiplayer();
+  if (restored && state.playerName && state.cartName) {
+    console.log('🌐 Session restored from server');
+    startGame();
+  }
 }).catch(err => {
   console.error('Failed to load game data:', err);
 });
@@ -76,6 +91,8 @@ async function startGame() {
     if (badge) notify(`🌍 Origin: ${badge}`);
     renderShelf(); // Update shelf with regional ingredients
     renderGarden();
+    // Create player on server after region is detected
+    createServerPlayer();
   });
   
   // Initialize merchant
@@ -96,6 +113,28 @@ async function startGame() {
   initBarrelUI();
   initEquipmentUI();
   initEncyclopedia();
+  
+  // Week 3: Multiplayer UI
+  initMarketplaceUI();
+  initTradeUI();
+  initExportUI();
+  initLeaderboardUI();
+  initCrierUI();
+  initCommissionUI();
+  
+  // Set up multiplayer callbacks
+  setMultiplayerCallbacks({
+    onEconomy: (data) => { /* economy updates handled in state */ },
+    onCrier: (announcements) => { updateCrier(announcements); },
+    onCommission: (commission) => {
+      if (commission && commission.definition) {
+        showCommissionAlert(commission);
+      }
+    },
+  });
+  
+  // Start server polling
+  startPolling();
   
   // Set up interaction handlers
   setupHandlers();
@@ -271,6 +310,27 @@ function setupHandlers() {
   document.getElementById('back-to-cart-btn')?.addEventListener('click', () => {
     switchToCart();
   });
+  
+  // Week 3: Multiplayer buttons
+  document.getElementById('marketplace-btn')?.addEventListener('click', () => {
+    openMarketplace(() => { renderShelf(); updateHud(); });
+  });
+  
+  document.getElementById('trade-btn')?.addEventListener('click', () => {
+    openTrade(() => { renderShelf(); updateHud(); });
+  });
+  
+  document.getElementById('export-btn')?.addEventListener('click', () => {
+    openExport(() => { renderShelf(); updateHud(); });
+  });
+  
+  document.getElementById('leaderboard-btn')?.addEventListener('click', () => {
+    openLeaderboard();
+  });
+  
+  document.getElementById('commission-btn')?.addEventListener('click', () => {
+    openCommission(() => { updateHud(); });
+  });
 }
 
 // ═══ BREWING ═══
@@ -353,6 +413,13 @@ function doBrew() {
       updateHud();
     });
     
+    // Notify server of discovery
+    if (result.isNew && result.recipe) {
+      onRecipeDiscovered(result.recipe.id);
+    }
+    
+    // Auto-save on brew
+    queueSave();
     updateHud();
     
   }, brewTime);
@@ -372,6 +439,14 @@ function doServe(customerId, drinkIndex) {
   
   notify(qualityMessages[result.quality] || `+${result.payment} crowns`, 
     result.quality === 'perfect' ? 'gold' : '');
+  
+  // Notify server of sell
+  if (result.customer?.data?.id) {
+    onSellDrink(result.recipeId || 'unknown', result.customer.id);
+  }
+  
+  // Auto-save on serve
+  queueSave();
   
   // Floating feedback
   showServeFeedback(result.reaction, result.payment);

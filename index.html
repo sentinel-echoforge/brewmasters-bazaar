@@ -404,6 +404,227 @@
       padding: 6px 10px; color: #d8c8a8; font-size: 0.8rem; max-width: 200px;
       pointer-events: none;
     }
+
+    /* ═══ MULTIPLAYER HUD ═══ */
+    .mp-btn { font-size: 0.8rem !important; padding: 3px 8px !important; }
+
+    /* ═══ OVERLAY PANELS (marketplace, trade, export, leaderboard, commission) ═══ */
+    .overlay-panel {
+      position: fixed; z-index: 80;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 520px; max-height: 80vh; overflow-y: auto;
+      background: rgba(30,22,12,0.97); border: 3px solid #6b4c2a;
+      border-radius: 12px; padding: 0;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+    .panel-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 20px 10px; border-bottom: 1px solid #3a2a18;
+    }
+    .panel-header h2 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin: 0; font-size: 1.3rem; }
+    .close-btn {
+      background: none; border: 1px solid #4a3520; border-radius: 4px;
+      color: #8a7a60; padding: 2px 8px; cursor: pointer; font-size: 1rem;
+    }
+    .close-btn:hover { color: #d4a44c; border-color: #d4a44c; }
+    .panel-tabs {
+      display: flex; gap: 0; border-bottom: 1px solid #3a2a18;
+    }
+    .tab-btn {
+      flex: 1; padding: 8px; background: none; border: none; border-bottom: 2px solid transparent;
+      color: #8a7a60; cursor: pointer; font-family: inherit; font-size: 0.85rem; text-align: center;
+    }
+    .tab-btn:hover { color: #c8b896; }
+    .tab-btn.active { color: #d4a44c; border-bottom-color: #d4a44c; }
+    .panel-content { padding: 14px 20px 20px; }
+    .loading { color: #8a7a60; text-align: center; padding: 20px; font-style: italic; }
+    .empty-state { color: #6a5a40; text-align: center; padding: 20px; font-style: italic; }
+    .action-btn {
+      display: block; width: 100%; margin-top: 12px; padding: 10px;
+      background: linear-gradient(180deg, #8b5e2a, #6b3a1f);
+      border: 2px solid #d4a44c; border-radius: 6px;
+      color: #f0e6d0; font-family: 'MedievalSharp', cursive; font-size: 1.1rem;
+      cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    .action-btn:hover { background: linear-gradient(180deg, #a0702f, #804520); }
+    .small-btn {
+      background: rgba(60,45,25,0.6); border: 1px solid #4a3520; border-radius: 4px;
+      color: #c8b896; padding: 4px 10px; cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    }
+    .small-btn:hover { border-color: #d4a44c; }
+
+    /* Marketplace items */
+    .marketplace-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 10px; background: rgba(50,38,20,0.6); border: 1px solid #3a2a18;
+      border-radius: 6px; margin-bottom: 6px;
+    }
+    .item-info { display: flex; align-items: center; gap: 8px; }
+    .item-type { font-size: 1.1rem; }
+    .item-qty { color: #8a7a60; font-size: 0.85rem; }
+    .item-meta { display: flex; align-items: center; gap: 8px; }
+    .seller { color: #8a7a60; font-size: 0.8rem; }
+    .price { color: #f0d060; font-weight: 600; }
+    .buy-btn, .cancel-btn {
+      background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px;
+      color: #a8d888; padding: 4px 12px; cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    }
+    .buy-btn:hover { background: rgba(70,100,50,0.6); }
+    .cancel-btn { background: rgba(80,40,40,0.6); border-color: #6a3a3a; color: #d88888; }
+    .cancel-btn:hover { background: rgba(100,50,50,0.6); }
+
+    /* Sell form */
+    .sell-form h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin: 10px 0 6px; font-size: 1rem; }
+    .sell-item {
+      display: flex; align-items: center; gap: 6px; padding: 4px 0;
+      font-size: 0.85rem; border-bottom: 1px solid rgba(58,42,24,0.4);
+    }
+    .sell-item input {
+      background: rgba(44,32,18,0.8); border: 1px solid #4a3520; border-radius: 4px;
+      color: #f0e6d0; font-family: inherit; padding: 3px 6px; font-size: 0.85rem;
+    }
+    .list-btn, .list-drink-btn {
+      background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px;
+      color: #a8d888; padding: 3px 10px; cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    }
+
+    /* Trade items */
+    .trade-item {
+      padding: 10px; background: rgba(50,38,20,0.6); border: 1px solid #3a2a18;
+      border-radius: 6px; margin-bottom: 8px;
+    }
+    .trade-header { margin-bottom: 6px; }
+    .trader { color: #c8b896; font-size: 0.9rem; }
+    .trade-details { display: flex; align-items: center; gap: 8px; }
+    .trade-offer, .trade-want { flex: 1; font-size: 0.85rem; color: #d8c8a8; }
+    .trade-arrow { color: #d4a44c; font-size: 1.2rem; }
+    .accept-trade-btn, .cancel-trade-btn {
+      margin-top: 6px; padding: 4px 12px; border-radius: 4px;
+      cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    }
+    .accept-trade-btn { background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; color: #a8d888; }
+    .cancel-trade-btn { background: rgba(80,40,40,0.6); border: 1px solid #6a3a3a; color: #d88888; }
+    .trade-form h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin: 10px 0 6px; font-size: 1rem; }
+    .trade-form select {
+      background: rgba(44,32,18,0.8); border: 1px solid #4a3520; border-radius: 4px;
+      color: #f0e6d0; font-family: inherit; padding: 4px 8px; font-size: 0.85rem; margin-right: 4px;
+    }
+    .trade-slots { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+    .trade-slot {
+      background: rgba(60,45,25,0.6); border: 1px solid #4a3520; border-radius: 4px;
+      padding: 3px 8px; font-size: 0.8rem; color: #d8c8a8;
+    }
+    .trade-slot .remove-slot {
+      background: none; border: none; color: #cc6644; cursor: pointer; margin-left: 4px; font-size: 0.85rem;
+    }
+
+    /* Export items */
+    .export-form .export-section { margin-bottom: 12px; }
+    .export-form h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; font-size: 1rem; margin-bottom: 6px; }
+    .export-form select {
+      width: 100%; background: rgba(44,32,18,0.8); border: 1px solid #4a3520; border-radius: 4px;
+      color: #f0e6d0; font-family: inherit; padding: 6px 10px; font-size: 0.9rem;
+    }
+    .export-regions { display: flex; flex-wrap: wrap; gap: 4px; }
+    .region-btn {
+      background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 6px;
+      color: #c8b896; padding: 6px 10px; cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    }
+    .region-btn:hover { border-color: #8a7040; }
+    .region-btn.selected { border-color: #d4a44c; background: rgba(100,80,40,0.4); color: #f0e6d0; }
+    .export-preview { margin-top: 12px; padding: 10px; background: rgba(50,38,20,0.4); border: 1px solid #3a2a18; border-radius: 6px; }
+    .preview-row { margin-bottom: 4px; font-size: 0.9rem; }
+    .preview-row.info { color: #8a7a60; font-size: 0.8rem; }
+    .export-legend { margin-top: 12px; font-size: 0.8rem; color: #6a5a40; }
+    .export-legend p { margin-bottom: 2px; }
+    .export-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px; background: rgba(50,38,20,0.4); border: 1px solid #3a2a18;
+      border-radius: 6px; margin-bottom: 4px; font-size: 0.85rem;
+    }
+    .export-item.pending { border-left: 3px solid #d4a44c; }
+    .export-item.resolved { border-left: 3px solid #88cc66; opacity: 0.8; }
+    .export-price { color: #f0d060; font-weight: 600; }
+    .export-timer { color: #d4a44c; }
+    .export-risk { color: #cc6644; }
+
+    /* Leaderboard */
+    .season-info { padding: 10px; background: rgba(50,38,20,0.4); border-radius: 6px; margin-bottom: 12px; }
+    .season-id { font-family: 'MedievalSharp', cursive; color: #d4a44c; font-size: 1rem; }
+    .season-modifier { display: block; color: #88cc66; font-size: 0.85rem; margin-top: 2px; }
+    .season-note { display: block; color: #6a5a40; font-size: 0.8rem; margin-top: 2px; }
+    .leaderboard-list { display: flex; flex-direction: column; gap: 4px; }
+    .leaderboard-row {
+      display: flex; align-items: center; gap: 8px; padding: 6px 10px;
+      background: rgba(50,38,20,0.4); border: 1px solid #3a2a18; border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .leaderboard-row.is-me { border-color: #d4a44c; background: rgba(100,80,40,0.3); }
+    .leaderboard-row.top-3 { border-color: #8a7040; }
+    .lb-rank { width: 36px; text-align: center; font-size: 1rem; }
+    .lb-name { flex: 1; color: #d8c8a8; }
+    .lb-cart { color: #8a7a60; font-style: italic; font-size: 0.8rem; }
+    .lb-level { color: #a08c6a; font-size: 0.8rem; }
+    .lb-recipes { color: #88cc66; font-size: 0.8rem; }
+    .lb-score { color: #f0d060; font-weight: 600; }
+
+    /* Commission */
+    .commission-detail { }
+    .commission-name { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .commission-name h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin: 0; font-size: 1.1rem; }
+    .commission-timer { color: #cc8844; font-size: 0.85rem; }
+    .commission-desc { color: #a8987a; font-style: italic; margin-bottom: 10px; }
+    .commission-progress { margin-bottom: 10px; }
+    .progress-bar { height: 10px; background: #2a2a1a; border-radius: 5px; overflow: hidden; margin-bottom: 4px; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #6b4c2a, #d4a44c); transition: width 0.5s; }
+    .progress-text { color: #c8b896; font-size: 0.85rem; }
+    .commission-reward { display: flex; justify-content: space-between; align-items: center; color: #f0d060; margin-bottom: 10px; }
+    .completed-badge { color: #88cc66; font-weight: 600; }
+    .commission-submit h4 { color: #c8b896; margin-bottom: 6px; }
+    .submit-drinks { display: flex; flex-direction: column; gap: 4px; }
+    .submit-drink-option { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #d8c8a8; cursor: pointer; }
+    .submit-drink-option input { accent-color: #d4a44c; }
+    .info-text { color: #8a7a60; font-style: italic; font-size: 0.9rem; }
+
+    /* Commission alert (popup) */
+    .commission-alert {
+      position: fixed; inset: 0; z-index: 85;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(10,8,4,0.6);
+      animation: alertFadeIn 0.3s ease-out;
+    }
+    .commission-alert-content {
+      background: rgba(40,30,15,0.98); border: 3px solid #d4a44c; border-radius: 12px;
+      padding: 24px 30px; text-align: center; max-width: 400px;
+      box-shadow: 0 0 40px rgba(212,164,76,0.4);
+    }
+    .commission-trumpet { font-size: 2rem; margin-bottom: 8px; }
+    .commission-alert-content h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; }
+    .commission-alert-content p { color: #a8987a; font-style: italic; margin-bottom: 8px; }
+    .commission-reward { color: #f0d060; font-size: 1.1rem; margin-bottom: 12px; }
+    .commission-dismiss {
+      padding: 8px 24px; background: rgba(60,45,25,0.8); border: 1px solid #6b4c2a;
+      border-radius: 6px; color: #d8c8a8; cursor: pointer; font-family: inherit;
+    }
+    @keyframes alertFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ═══ TOWN CRIER BANNER ═══ */
+    .crier-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 55;
+      height: 32px; display: flex; align-items: center;
+      background: linear-gradient(180deg, rgba(30,22,12,0) 0%, rgba(30,22,12,0.9) 30%);
+      overflow: hidden;
+    }
+    .crier-icon { padding: 0 8px; font-size: 1rem; }
+    .crier-scroll { flex: 1; overflow: hidden; white-space: nowrap; }
+    .crier-text {
+      display: inline-block; color: #c8a870; font-size: 0.8rem; font-style: italic;
+      animation: crier-scroll 30s linear infinite;
+    }
+    @keyframes crier-scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
@@ -445,6 +666,13 @@
         <button class="hud-btn" id="barrel-btn">🪵 Barrels</button>
         <button class="hud-btn" id="equipment-btn">⚒️ Upgrade</button>
       </div>
+    </div>
+    <div id="hud-multiplayer" style="display:flex;align-items:center;gap:6px;justify-content:center;padding:4px 20px;">
+      <button class="hud-btn mp-btn" id="marketplace-btn">🏪 Market</button>
+      <button class="hud-btn mp-btn" id="trade-btn">🔄 Trade</button>
+      <button class="hud-btn mp-btn" id="export-btn">🚢 Export</button>
+      <button class="hud-btn mp-btn" id="commission-btn">👑 Commission</button>
+      <button class="hud-btn mp-btn" id="leaderboard-btn">🏆 Leaderboard</button>
     </div>
   </div>
 

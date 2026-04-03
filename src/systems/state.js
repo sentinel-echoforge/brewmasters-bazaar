@@ -81,6 +81,13 @@ const state = {
   camera: null,
   renderer: null,
   cauldronMesh: null,
+  
+  // Multiplayer / Economy (populated by polling)
+  economyPrices: [],        // from /api/economy
+  seasonalModifier: null,   // current season modifier
+  currentSeason: null,      // season ID string
+  crierAnnouncements: [],   // from /api/crier
+  currentCommission: null,  // from /api/commission
 };
 
 export default state;
