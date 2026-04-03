@@ -1,3 +1,5 @@
+> ⚠️ For latest economy, trading, and progression design, see ECONOMY.md — it supersedes sections 15-16 in this document.
+
 # 🍺 BREWMASTER'S BAZAAR — Game Design Document
 
 **Version:** v4 (Final)
@@ -11,7 +13,7 @@
 
 ## 1. ELEVATOR PITCH
 
-Run a medieval brewery — forage ingredients, discover secret recipes through experimentation, brew and sell drinks in a living economy shaped by hundreds of real players you never see. Cozy solo gameplay meets invisible multiplayer warfare.
+Run a medieval traveling brew cart — forage ingredients, discover secret recipes through experimentation, brew and sell drinks in a living economy shaped by hundreds of real players you never see. Cozy solo gameplay meets invisible multiplayer warfare.
 
 **One-liner for jam form:** "Discover secret recipes, brew legendary drinks, and outsell rival brewers in a living medieval economy."
 
@@ -22,7 +24,7 @@ Run a medieval brewery — forage ingredients, discover secret recipes through e
 ## 2. DESIGN PILLARS
 
 1. **Discovery is the game.** The joy of "what happens if I mix THESE?" drives everything.
-2. **Cozy but competitive.** Your brewery is peaceful. The economy is ruthless.
+2. **Cozy but competitive.** Your brew cart is peaceful. The economy is ruthless.
 3. **Instant play, long pull.** Fun in 30 seconds. Addictive over days.
 4. **Feel the world breathing.** Prices move, recipes trend, a herald announces events — you're never alone even though you play solo.
 
@@ -69,33 +71,34 @@ Every mechanic should trigger at least one of these:
 ## 3. FIRST 60 SECONDS (Critical for Judges)
 
 ```
-0s   → Page loads. Low-poly brewery fades in. Warm lighting. Gentle music.
+0s   → Page loads. Low-poly brew cart fades in. Warm lighting. Gentle music.
 3s   → "What's your name, brewer?" — type name, hit enter.
-5s   → You're in YOUR brewery. Small stall. Cauldron in center. 
+5s   → "And what shall we call your cart?" — type cart name, hit enter.
+7s   → You're at YOUR brew cart. Small handcart. Cauldron in center. 
         Shelf with 3 ingredients (Honey, Grain, Water). 
         A customer is already waiting.
-8s   → Tooltip: "Drag ingredients into the cauldron to brew!"
-12s  → Player drags Honey + Water into cauldron. Hits BREW.
-15s  → Bubbling animation. Color shifts. Steam rises.
-18s  → Result: "Honey Water ★☆☆☆☆" — weak, but it's something!
-20s  → Customer takes it. Pays 2 gold. Meh.
-22s  → Player tries Honey + Grain + BREW...
-25s  → "Golden Mead ★★★☆☆" — RECIPE DISCOVERED! 
+10s  → Tooltip: "Drag ingredients into the cauldron to brew!"
+14s  → Player drags Honey + Water into cauldron. Hits BREW.
+17s  → Bubbling animation. Color shifts. Steam rises.
+20s  → Result: "Honey Water ★☆☆☆☆" — weak, but it's something!
+22s  → Customer takes it. Pays 2 gold. Meh.
+24s  → Player tries Honey + Grain + BREW...
+27s  → "Golden Mead ★★★☆☆" — RECIPE DISCOVERED! 
         Journal opens, recipe logged. Satisfying chime.
-28s  → Next customer wants "something sweet" — Golden Mead is perfect!
-32s  → Served! 15 gold + tip. Reputation +1.
-35s  → Player is hooked. "What else can I make?"
+30s  → Next customer wants "something sweet" — Golden Mead is perfect!
+34s  → Served! 15 gold + tip. Reputation +1.
+37s  → Player is hooked. "What else can I make?"
 ```
 
-**No loading screen. No tutorial popup. No menu. Just: name → brew → play.**
+**No loading screen. No tutorial popup. No menu. Just: name → cart name → brew → play.**
 
 ---
 
 ## 4. GAME WORLD
 
-### 4a. Your Brewery (Main Play Area)
+### 4a. Your Brew Cart (Main Play Area)
 
-Isometric 3D view of your personal brewery. Camera can rotate slightly for feel but mostly fixed.
+Isometric 3D view of your personal traveling cart. Camera can rotate slightly for feel but mostly fixed.
 
 **Layout:**
 ```
@@ -124,7 +127,7 @@ Isometric 3D view of your personal brewery. Camera can rotate slightly for feel 
 
 ### 4b. The Foraging Area (Ingredient Discovery)
 
-A separate small scene. Click the Garden Door to enter.
+A separate small scene. Click the Garden Door on your cart to enter.
 
 Your personal outdoor area — small forest clearing with a garden plot. ~30 interactable nodes.
 
@@ -162,7 +165,7 @@ Your personal outdoor area — small forest clearing with a garden plot. ~30 int
 
 ### 4c. The Market Board (Multiplayer Window)
 
-A physical board inside your brewery that shows the living world:
+A physical board at your brew cart that shows the living world:
 
 **Live Leaderboard:**
 ```
@@ -205,7 +208,7 @@ This board is the main way you FEEL other players. Always live, always updating.
 
 ### 4d. The Town Crier (Flavor Delivery)
 
-A small medieval herald NPC who stands near the Market Board.
+A small medieval herald NPC who stands near your brew cart's Market Board.
 
 **Every ~60 minutes (server event), the Town Crier announces:**
 - Leaderboard changes: "Hear ye! BrewKing99 has claimed the #1 spot!"
@@ -538,17 +541,17 @@ Players who READ the market and ADAPT make the most gold. Players who just brew 
 
 ### 5f. Progression & Upgrades
 
-**Brewery Levels:**
+**Cart Levels:**
 
 | Level | Name | Cost | Unlocks |
 |-------|------|------|---------|
-| 1 | Market Stall | Free (start) | 1 cauldron, basic shelf (6 slots), 3 starter ingredients |
-| 2 | Small Brewery | 500g | 2 cauldrons, barrel rack (1 barrel), expanded shelf (12 slots), garden upgrade (more forage nodes) |
-| 3 | Brewery | 2,000g | 3 cauldrons, 3 barrels, distillery station, herb garden (grow specific ingredients), shelf (18 slots) |
-| 4 | Grand Brewery | 8,000g | 4 cauldrons, 6 barrels, rare ingredient vault, auto-serve for mastered recipes, brewery sign visible in Market Square |
-| 5 | Master Brewhouse | 25,000g | 5 cauldrons, 10 barrels, legendary brewing station, Town Crier announces your name, crown on your stall |
+| 1 | Handcart | Free (start) | 1 cauldron, basic shelf (6 slots), 3 starter ingredients |
+| 2 | Donkey Cart | 500g | 2 cauldrons, barrel rack (1 barrel), expanded shelf (12 slots), garden upgrade (more forage nodes) |
+| 3 | Covered Wagon | 2,000g | 3 cauldrons, 3 barrels, distillery station, herb garden (grow specific ingredients), shelf (18 slots) |
+| 4 | Grand Caravan | 8,000g | 4 cauldrons, 6 barrels, rare ingredient vault, auto-serve for mastered recipes, cart sign visible in Market Square |
+| 5 | Legendary Yatai | 25,000g | 5 cauldrons, 10 barrels, legendary brewing station, Town Crier announces your name, crown on your cart |
 
-**Each level visually transforms your brewery.** Level 1 is a shabby wooden stall. Level 5 is a grand stone brewhouse with banners and a glowing sign. Players who visit the Market Square can SEE this progression on other stalls.
+**Each level visually transforms your traveling cart.** Level 1 is a humble wooden handcart. Level 5 is a legendary yatai with banners and a glowing sign. Players who visit the Market Square can SEE this progression on other carts.
 
 **Equipment upgrades (within each level):**
 - Better cauldron → faster brew animation
@@ -744,9 +747,11 @@ A glowing archway at the edge of the brewery scene (or in the Market Square).
 
 ### Backend
 - **Node.js + Express** — REST API
-- **Socket.io** — WebSocket for live economy updates + Town Crier events
+- **Fetch polling every 30-60s** — client polls for economy updates + Town Crier events (no WebSocket needed)
 - **SQLite** (or **Turso** for edge) — player data, economy state, recipes
 - **Simple tick loop** (setInterval 60s) — recalculate economy prices
+
+> **Note:** All 3D geometry is procedural (code-generated primitives, no model files). Pieter Levels approach.
 
 ### Hosting
 - **Railway** or **Fly.io** — backend (persistent process for economy sim)
@@ -756,7 +761,7 @@ A glowing archway at the edge of the brewery scene (or in the Market Square).
 ### Server Load Estimate
 - Economy tick: 1 SQL query every 60 sec (trivial)
 - Player save: on brew/sell events (maybe 1 write/sec per active player)
-- WebSocket: broadcast price update to all connected clients every 60 sec
+- Fetch polling: clients poll for price updates every 30-60 sec
 - 1000 concurrent players: totally fine on a $7/mo Railway instance
 
 ---
@@ -801,7 +806,7 @@ A glowing archway at the edge of the brewery scene (or in the Market Square).
 - [ ] Royal Commissions: server events every ~2 hours based on economy state
 - [ ] Weekly seasons: ranking reset, Crown rewards, permanent badges
 - [ ] Seasonal demand shifts: server flag changes weekly ("Winter: warm drinks +50%")
-- [ ] WebSocket: live price updates + Crier announcements pushed to all clients
+- [ ] Fetch polling: client polls for price updates + Crier announcements every 30-60s
 
 ### Week 4 (Apr 24-30): Polish + Portal + Stretch Goals
 - [ ] Sound effects: brew bubbles, coin clink, customer reactions, trumpet fanfare, recipe discovery chime
@@ -960,7 +965,7 @@ On first load, game geolocates player via IP and assigns 2-3 regional bonus ingr
 
 ### 15b. Export Board
 
-A panel in your brewery: "Sell Local" (instant, base price) vs "Export" (30 min delivery, premium price based on distance + scarcity).
+A panel at your brew cart: "Sell Local" (instant, base price) vs "Export" (30 min delivery, premium price based on distance + scarcity).
 
 ```
 ═══ EXPORT PRICES ═══

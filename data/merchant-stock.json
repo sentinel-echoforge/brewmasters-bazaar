@@ -1,0 +1,118 @@
+{
+  "restockIntervalMinutes": [120, 180],
+  "rotations": [
+    {
+      "id": "rotation_1",
+      "theme": "Spice Caravan",
+      "omarDialogue": "Straight from the desert road! Peppers that'll wake the dead and spices that perfumed a sultan's court. My camels nearly mutinied hauling this lot.",
+      "items": [
+        { "ingredientId": "cinnamon_bark", "quantity": 8, "priceMultiplier": 1.0 },
+        { "ingredientId": "long_pepper", "quantity": 5, "priceMultiplier": 1.1 },
+        { "ingredientId": "ras_el_hanout", "quantity": 3, "priceMultiplier": 1.3 },
+        { "ingredientId": "aleppo_pepper", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "harissa_pepper", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "grains_of_paradise", "quantity": 3, "priceMultiplier": 1.4 },
+        { "ingredientId": "ginger_root", "quantity": 10, "priceMultiplier": 0.9 }
+      ]
+    },
+    {
+      "id": "rotation_2",
+      "theme": "Forest Haul",
+      "omarDialogue": "I wandered the deep woods for a week — mushrooms the size of dinner plates, acorns that crack like thunder. Even found some juniper growing wild on the ridgeline.",
+      "items": [
+        { "ingredientId": "wild_mushroom", "quantity": 8, "priceMultiplier": 1.0 },
+        { "ingredientId": "roasted_acorn", "quantity": 8, "priceMultiplier": 0.9 },
+        { "ingredientId": "juniper_berry", "quantity": 5, "priceMultiplier": 1.1 },
+        { "ingredientId": "sour_cherry", "quantity": 6, "priceMultiplier": 1.0 },
+        { "ingredientId": "elderflower", "quantity": 5, "priceMultiplier": 1.1 },
+        { "ingredientId": "lavender", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "borage_flower", "quantity": 4, "priceMultiplier": 1.1 }
+      ]
+    },
+    {
+      "id": "rotation_3",
+      "theme": "Exotic Collection",
+      "omarDialogue": "You won't BELIEVE what I found at the harbor. A merchant from the far islands traded me things I can't even pronounce. Cost me a fortune — I'm passing that along, naturally.",
+      "items": [
+        { "ingredientId": "butterfly_pea_flower", "quantity": 3, "priceMultiplier": 1.5 },
+        { "ingredientId": "yuzu", "quantity": 2, "priceMultiplier": 1.6 },
+        { "ingredientId": "bergamot", "quantity": 3, "priceMultiplier": 1.4 },
+        { "ingredientId": "torch_ginger", "quantity": 3, "priceMultiplier": 1.4 },
+        { "ingredientId": "sakura_blossom", "quantity": 2, "priceMultiplier": 1.5 },
+        { "ingredientId": "vanilla_pod", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "saffron", "quantity": 1, "priceMultiplier": 1.8 }
+      ]
+    },
+    {
+      "id": "rotation_4",
+      "theme": "North African Bazaar",
+      "omarDialogue": "The souks of Marrakech, friend! Rose water so fragrant the bottles leaked perfume through the saddlebags. And preserved lemons aged longer than most marriages.",
+      "items": [
+        { "ingredientId": "rose_water", "quantity": 5, "priceMultiplier": 1.1 },
+        { "ingredientId": "preserved_lemon", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "orange_blossom_water", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "sumac", "quantity": 5, "priceMultiplier": 1.0 },
+        { "ingredientId": "zaatar", "quantity": 6, "priceMultiplier": 1.0 },
+        { "ingredientId": "argan_oil", "quantity": 2, "priceMultiplier": 1.5 },
+        { "ingredientId": "black_lime", "quantity": 3, "priceMultiplier": 1.3 }
+      ]
+    },
+    {
+      "id": "rotation_5",
+      "theme": "Far East Express",
+      "omarDialogue": "Took a ship east — nearly sank twice, got seasick six times, and argued with a monkey over a crate of matcha. Worth every miserable moment.",
+      "items": [
+        { "ingredientId": "matcha", "quantity": 3, "priceMultiplier": 1.3 },
+        { "ingredientId": "koji", "quantity": 3, "priceMultiplier": 1.4 },
+        { "ingredientId": "amazake", "quantity": 4, "priceMultiplier": 1.2 },
+        { "ingredientId": "hojicha", "quantity": 5, "priceMultiplier": 1.1 },
+        { "ingredientId": "shiso", "quantity": 4, "priceMultiplier": 1.1 },
+        { "ingredientId": "sansho_pepper", "quantity": 3, "priceMultiplier": 1.4 },
+        { "ingredientId": "wasabi_root", "quantity": 2, "priceMultiplier": 1.6 }
+      ]
+    },
+    {
+      "id": "rotation_6",
+      "theme": "Tropical Winds",
+      "omarDialogue": "The jungle route! Humid, buggy, and smells like paradise. Pandan leaves so green they glow, and palm sugar that tastes like toffee made by the gods themselves.",
+      "items": [
+        { "ingredientId": "pandan", "quantity": 6, "priceMultiplier": 1.0 },
+        { "ingredientId": "palm_sugar", "quantity": 8, "priceMultiplier": 0.9 },
+        { "ingredientId": "galangal", "quantity": 6, "priceMultiplier": 1.0 },
+        { "ingredientId": "kaffir_lime_leaf", "quantity": 6, "priceMultiplier": 1.0 },
+        { "ingredientId": "lemongrass", "quantity": 2, "priceMultiplier": 1.7 },
+        { "ingredientId": "tamarind", "quantity": 5, "priceMultiplier": 1.0 },
+        { "ingredientId": "laksa_leaf", "quantity": 4, "priceMultiplier": 1.1 }
+      ]
+    },
+    {
+      "id": "rotation_7",
+      "theme": "The Rare Shipment",
+      "omarDialogue": "Keep your voice down. I acquired something... extraordinary. Don't ask how. Don't ask from whom. Just know that what I carry today, most merchants never see in a lifetime.",
+      "items": [
+        { "ingredientId": "tonka_bean", "quantity": 1, "priceMultiplier": 2.0 },
+        { "ingredientId": "mastic", "quantity": 2, "priceMultiplier": 1.8 },
+        { "ingredientId": "kuromoji", "quantity": 2, "priceMultiplier": 1.7 },
+        { "ingredientId": "charcoal", "quantity": 2, "priceMultiplier": 1.5 },
+        { "ingredientId": "truffle_honey", "quantity": 1, "priceMultiplier": 2.0 },
+        { "ingredientId": "sea_buckthorn", "quantity": 3, "priceMultiplier": 1.5 },
+        { "ingredientId": "gentian_root", "quantity": 3, "priceMultiplier": 1.4 }
+      ]
+    },
+    {
+      "id": "rotation_8",
+      "theme": "The Seed Merchant",
+      "omarDialogue": "No ingredients today — something BETTER. Seeds! Plant these in your garden and you'll never need to buy from me again. Well... you will. But it's the thought that counts.",
+      "items": [
+        { "ingredientId": "chamomile", "quantity": 3, "priceMultiplier": 0.5, "isSeed": true, "growthHours": 2 },
+        { "ingredientId": "lavender", "quantity": 2, "priceMultiplier": 0.7, "isSeed": true, "growthHours": 6 },
+        { "ingredientId": "berries", "quantity": 3, "priceMultiplier": 0.4, "isSeed": true, "growthHours": 2 },
+        { "ingredientId": "hibiscus", "quantity": 2, "priceMultiplier": 0.6, "isSeed": true, "growthHours": 4 },
+        { "ingredientId": "rose_water", "quantity": 2, "priceMultiplier": 0.8, "isSeed": true, "growthHours": 8 },
+        { "ingredientId": "pandan", "quantity": 2, "priceMultiplier": 0.7, "isSeed": true, "growthHours": 6 },
+        { "ingredientId": "borage_flower", "quantity": 2, "priceMultiplier": 0.6, "isSeed": true, "growthHours": 5 },
+        { "ingredientId": "elderflower", "quantity": 2, "priceMultiplier": 0.8, "isSeed": true, "growthHours": 8 }
+      ]
+    }
+  ]
+}

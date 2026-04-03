@@ -109,7 +109,7 @@
     "method": "boil",
     "stars": 1,
     "tier": "common",
-    "lore": "Oxymel — vinegar-honey-citrus. Ancient recipe."
+    "lore": "Oxymel \u2014 vinegar-honey-citrus. Ancient recipe."
   },
   {
     "id": "acorn_coffee",
@@ -155,7 +155,7 @@
     "stars": 2,
     "tier": "fine",
     "family": "Metheglin",
-    "lore": "Melomel — a real mead category. Sweet-tart harmony."
+    "lore": "Melomel \u2014 a real mead category. Sweet-tart harmony."
   },
   {
     "id": "spiced_cider",
@@ -229,7 +229,7 @@
     "stars": 2,
     "tier": "fine",
     "family": "Metheglin",
-    "lore": "Metheglin — spiced mead. Real category."
+    "lore": "Metheglin \u2014 spiced mead. Real category."
   },
   {
     "id": "cherry_lambic",
@@ -279,7 +279,7 @@
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
-    "lore": "Dark, earthy, nutty — real porter territory."
+    "lore": "Dark, earthy, nutty \u2014 real porter territory."
   },
   {
     "id": "chamomile_mead",
@@ -690,7 +690,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "A warm, amber brew that smells of distant caravansaries — roasted tea softened by floral rose and caramel sweetness.",
+    "lore": "A warm, amber brew that smells of distant caravansaries \u2014 roasted tea softened by floral rose and caramel sweetness.",
     "visualEffect": "Warm amber with pale rose-gold shimmer"
   },
   {
@@ -706,7 +706,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Begins as deep indigo, transforms to violet-gold — a floral, honey-sweet brew with haunting saffron depth.",
+    "lore": "Begins as deep indigo, transforms to violet-gold \u2014 a floral, honey-sweet brew with haunting saffron depth.",
     "visualEffect": "Deep indigo to purple to gold-purple iridescence"
   },
   {
@@ -722,7 +722,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Crystalline, slightly resinous, with a sweet rice base that transforms to rose-pink — ancient and elegant.",
+    "lore": "Crystalline, slightly resinous, with a sweet rice base that transforms to rose-pink \u2014 ancient and elegant.",
     "visualEffect": "Pale gold to rose-pink, crystalline glass shimmer"
   },
   {
@@ -754,7 +754,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Three of the world's most perfumed floral notes in perfect harmony — pink, delicate, impossibly aromatic.",
+    "lore": "Three of the world's most perfumed floral notes in perfect harmony \u2014 pink, delicate, impossibly aromatic.",
     "visualEffect": "Pale blush-pink with drifting sakura petals"
   },
   {
@@ -770,7 +770,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Complex and warming — thirty spices softened by sweet rice and wrapped in creamy vanilla — a caravan in a cup.",
+    "lore": "Complex and warming \u2014 thirty spices softened by sweet rice and wrapped in creamy vanilla \u2014 a caravan in a cup.",
     "visualEffect": "Warm amber-gold with soft vanilla-cream surface"
   },
   {
@@ -786,7 +786,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "A distilled jewel — yuzu's bright citrus-floral over mahlab's bitter-almond-cherry depth, with pink pepper's fruity warmth.",
+    "lore": "A distilled jewel \u2014 yuzu's bright citrus-floral over mahlab's bitter-almond-cherry depth, with pink pepper's fruity warmth.",
     "visualEffect": "Crystal-clear with faint golden-rose tints"
   },
   {
@@ -802,7 +802,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Nutty, roasted, smoky-sweet — like toasted hazelnuts, dark caramel, and smoky wood aged together.",
+    "lore": "Nutty, roasted, smoky-sweet \u2014 like toasted hazelnuts, dark caramel, and smoky wood aged together.",
     "visualEffect": "Deep amber-brown with warm golden surface"
   },
   {
@@ -818,7 +818,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Spice-forward and aromatic — Japanese spicebush cinnamon meets West African pepper-cardamom over Southeast Asian caramel.",
+    "lore": "Spice-forward and aromatic \u2014 Japanese spicebush cinnamon meets West African pepper-cardamom over Southeast Asian caramel.",
     "visualEffect": "Dark amber with warm spice-orange undertones"
   },
   {
@@ -834,7 +834,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Silk Road Brews",
-    "lore": "Green, aromatic, resinous — three 'impossible to describe' flavors that somehow describe each other.",
+    "lore": "Green, aromatic, resinous \u2014 three 'impossible to describe' flavors that somehow describe each other.",
     "visualEffect": "Pale jade-green with crystalline shimmer"
   },
   {
@@ -850,7 +850,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Silk Road Brews",
-    "lore": "Deep, dark, and otherworldly — date sweetness fermenting under koji's transformative power with bitter cacao complexity.",
+    "lore": "Deep, dark, and otherworldly \u2014 date sweetness fermenting under koji's transformative power with bitter cacao complexity.",
     "visualEffect": "Deep amber-brown with golden umami shimmer"
   },
   {
@@ -866,7 +866,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Electric numbness meets fiery smokiness, tempered by caramel sweetness — an ale that lights up and then soothes.",
+    "lore": "Electric numbness meets fiery smokiness, tempered by caramel sweetness \u2014 an ale that lights up and then soothes.",
     "visualEffect": "Electric blue-white motes over red-amber liquid"
   },
   {
@@ -898,7 +898,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "A deceptive slow-build — verjus tartness opens, then wasabi's nose-heat arrives, then Aleppo's fruity warmth closes.",
+    "lore": "A deceptive slow-build \u2014 verjus tartness opens, then wasabi's nose-heat arrives, then Aleppo's fruity warmth closes.",
     "visualEffect": "Clear distillate with pale green-gold tint"
   },
   {
@@ -930,7 +930,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Piney tropical spice meets West African pepper-warmth balanced by tart crimson hibiscus — an aromatic red ale.",
+    "lore": "Piney tropical spice meets West African pepper-warmth balanced by tart crimson hibiscus \u2014 an aromatic red ale.",
     "visualEffect": "Vivid crimson-red with warm golden-amber spice undertones"
   },
   {
@@ -946,7 +946,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Three 'gentle heat' peppers from three continents — electric, fruity, and floral — producing a surprisingly delicate spiced tonic.",
+    "lore": "Three 'gentle heat' peppers from three continents \u2014 electric, fruity, and floral \u2014 producing a surprisingly delicate spiced tonic.",
     "visualEffect": "Rose-pink liquid with blue-white sparkling motes"
   },
   {
@@ -962,7 +962,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Primal and medicinal — three ancient herbal heat traditions brewing together into a pungent, warming tonic.",
+    "lore": "Primal and medicinal \u2014 three ancient herbal heat traditions brewing together into a pungent, warming tonic.",
     "visualEffect": "Deep green-amber with warm red-smoky wisps"
   },
   {
@@ -978,7 +978,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Barrel-softened fire — chocolate depth, fruity heat, and electric numbness aged together into something remarkable.",
+    "lore": "Barrel-softened fire \u2014 chocolate depth, fruity heat, and electric numbness aged together into something remarkable.",
     "visualEffect": "Deep dark-amber with electric blue sparks inside chocolate-brown liquid"
   },
   {
@@ -994,7 +994,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Spice Route Ales",
-    "lore": "Smoky-hot meets earthy-sweet meets deeply sour — a warming ferment that evolves across the entire sip.",
+    "lore": "Smoky-hot meets earthy-sweet meets deeply sour \u2014 a warming ferment that evolves across the entire sip.",
     "visualEffect": "Deep red-brown with amber tamarind glow"
   },
   {
@@ -1010,7 +1010,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Spice Route Ales",
-    "lore": "Nose heat, mouth fire, and dark molasses sweetness — three brutally strong ingredients that produce a disciplined spirit.",
+    "lore": "Nose heat, mouth fire, and dark molasses sweetness \u2014 three brutally strong ingredients that produce a disciplined spirit.",
     "visualEffect": "Clear distillate with deep amber piloncillo swirl"
   },
   {
@@ -1042,7 +1042,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "The most floral brew possible — Provençal purple, Japanese spring pink, and Moroccan white petals in perfect harmony.",
+    "lore": "The most floral brew possible \u2014 Proven\u00e7al purple, Japanese spring pink, and Moroccan white petals in perfect harmony.",
     "visualEffect": "Pale pink-blush with sakura petals AND lavender-purple mist wisps"
   },
   {
@@ -1058,7 +1058,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "A blue-purple brew that tastes of roses and cool cucumber — feminine, mysterious, and transformative.",
+    "lore": "A blue-purple brew that tastes of roses and cool cucumber \u2014 feminine, mysterious, and transformative.",
     "visualEffect": "Deep indigo with star-shaped borage flowers floating; shifts purple-rose when stirred"
   },
   {
@@ -1074,7 +1074,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "A vivid crimson-pink brew — tropical florals from three continents meet in a tart, sweet, cooling tonic.",
+    "lore": "A vivid crimson-pink brew \u2014 tropical florals from three continents meet in a tart, sweet, cooling tonic.",
     "visualEffect": "Vivid pink-crimson with floating blue borage star-flowers"
   },
   {
@@ -1090,7 +1090,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "Begins blue-indigo, shifts to purple as fermentation progresses — Earl Grey brightness over ethereal elderflower sweetness.",
+    "lore": "Begins blue-indigo, shifts to purple as fermentation progresses \u2014 Earl Grey brightness over ethereal elderflower sweetness.",
     "visualEffect": "Starts deep indigo, ferments to brilliant purple, matures to violet-lavender"
   },
   {
@@ -1106,7 +1106,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Floral Fusions",
-    "lore": "The most ethereal floral brew possible — spring cherry blossom and rose petals fused with moonlight itself.",
+    "lore": "The most ethereal floral brew possible \u2014 spring cherry blossom and rose petals fused with moonlight itself.",
     "visualEffect": "Pale blush pink with silver moonlight shimmer and drifting sakura petals"
   },
   {
@@ -1122,7 +1122,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "Three 'green-herbal-floral' traditions — Provençal purple, Japanese anise-mint, Indonesian vanilla-grass — in a surprisingly unified tonic.",
+    "lore": "Three 'green-herbal-floral' traditions \u2014 Proven\u00e7al purple, Japanese anise-mint, Indonesian vanilla-grass \u2014 in a surprisingly unified tonic.",
     "visualEffect": "Soft jade-green from pandan with lavender-purple haze in steam"
   },
   {
@@ -1138,7 +1138,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "Heady and citrus-floral — orange blossom sweetness, tropical torch ginger tartness, and lemon verbena brightness.",
+    "lore": "Heady and citrus-floral \u2014 orange blossom sweetness, tropical torch ginger tartness, and lemon verbena brightness.",
     "visualEffect": "Golden-amber with rose-pink torch ginger shimmer and faint floral mist"
   },
   {
@@ -1154,7 +1154,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "Soft, gentle, calming — chamomile's apple-floral, kabosu's mild bergamot-citrus, and lavender's purple calm in a bedtime tonic.",
+    "lore": "Soft, gentle, calming \u2014 chamomile's apple-floral, kabosu's mild bergamot-citrus, and lavender's purple calm in a bedtime tonic.",
     "visualEffect": "Soft pale gold with lavender-purple surface wisps"
   },
   {
@@ -1171,7 +1171,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Floral Fusions",
-    "lore": "A legendary floral mead — four flowers from four traditions, sweetened by celestial honey, barrel-aged to impossible complexity.",
+    "lore": "A legendary floral mead \u2014 four flowers from four traditions, sweetened by celestial honey, barrel-aged to impossible complexity.",
     "visualEffect": "Indigo to purple color-shift combined with iridescent gold shimmer creating rainbow-iridescence"
   },
   {
@@ -1187,7 +1187,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Floral Fusions",
-    "lore": "A haunting, bitter-floral distillate — mahlab's cherry-pit bitterness, sakura's salt-kissed pink, and bergamot's Earl Grey resin.",
+    "lore": "A haunting, bitter-floral distillate \u2014 mahlab's cherry-pit bitterness, sakura's salt-kissed pink, and bergamot's Earl Grey resin.",
     "visualEffect": "Crystal-clear with faint pink-gold tint and crystalline shimmer"
   },
   {
@@ -1203,7 +1203,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "Indonesia's 1,300-year jamu tradition meets the Levantine herb blend — earthy, medicinal, herbal, ancient.",
+    "lore": "Indonesia's 1,300-year jamu tradition meets the Levantine herb blend \u2014 earthy, medicinal, herbal, ancient.",
     "visualEffect": "Deep golden-amber from turmeric with green herb flecks"
   },
   {
@@ -1218,7 +1218,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "The two oldest fermented drinks in history brewing together — koji's enzyme magic transforms honey into something impossibly complex.",
+    "lore": "The two oldest fermented drinks in history brewing together \u2014 koji's enzyme magic transforms honey into something impossibly complex.",
     "visualEffect": "Golden with swirling koji-amber undertones and warm honey luminescence"
   },
   {
@@ -1234,8 +1234,8 @@
     "stars": 3,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "The ancient Mexican ferment meets the North African lacto-ferment — sweet-sour-bright, bridging two ancient traditions.",
-    "visualEffect": "Vivid crimson with golden salt-haze — ruby-gold two-tone"
+    "lore": "The ancient Mexican ferment meets the North African lacto-ferment \u2014 sweet-sour-bright, bridging two ancient traditions.",
+    "visualEffect": "Vivid crimson with golden salt-haze \u2014 ruby-gold two-tone"
   },
   {
     "id": "af_04_the_jamu_scholar",
@@ -1251,8 +1251,8 @@
     "stars": 4,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "Jamu's golden wellness foundation meets African rooibos earthiness — a cross-continental health tonic of extraordinary depth.",
-    "visualEffect": "Deep golden-amber with rooibos red undertones — warm sunset color"
+    "lore": "Jamu's golden wellness foundation meets African rooibos earthiness \u2014 a cross-continental health tonic of extraordinary depth.",
+    "visualEffect": "Deep golden-amber with rooibos red undertones \u2014 warm sunset color"
   },
   {
     "id": "af_05_pulque_lineage",
@@ -1267,7 +1267,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "The ancient Mexican fermentation tradition crossed with Moroccan wild fig sweetness — primal, funky, fruity, elemental.",
+    "lore": "The ancient Mexican fermentation tradition crossed with Moroccan wild fig sweetness \u2014 primal, funky, fruity, elemental.",
     "visualEffect": "Deep purple-amber from the fig fermentation"
   },
   {
@@ -1283,7 +1283,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "Japan's ancient rice drink, African wild fruit tartness, and Mexican vanilla sweetness — three 'ancestral nourishment' traditions combined.",
+    "lore": "Japan's ancient rice drink, African wild fruit tartness, and Mexican vanilla sweetness \u2014 three 'ancestral nourishment' traditions combined.",
     "visualEffect": "Milky-golden brew with baobab's creamy-chalky visual quality"
   },
   {
@@ -1314,7 +1314,7 @@
     "stars": 3,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "A lightly fermented grain-free brew — the tartness of shiso and sumac anchored by piloncillo's dark caramel depth.",
+    "lore": "A lightly fermented grain-free brew \u2014 the tartness of shiso and sumac anchored by piloncillo's dark caramel depth.",
     "visualEffect": "Deep crimson-amber from the red shiso and sumac"
   },
   {
@@ -1330,7 +1330,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Ancient Ferments",
-    "lore": "Three ancient fermented/preserved ingredients that have defined their region's flavor palette for millennia — umami, salt-citrus, and deep sour in extraordinary balance.",
+    "lore": "Three ancient fermented/preserved ingredients that have defined their region's flavor palette for millennia \u2014 umami, salt-citrus, and deep sour in extraordinary balance.",
     "visualEffect": "Deep golden-amber with complex multi-layered shimmer"
   },
   {
@@ -1346,7 +1346,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Ancient Ferments",
-    "lore": "The ancient Aztec xocolatl meets the ancient Moroccan spice blend — bitter cacao and thirty spices in complex dark ferment.",
+    "lore": "The ancient Aztec xocolatl meets the ancient Moroccan spice blend \u2014 bitter cacao and thirty spices in complex dark ferment.",
     "visualEffect": "Deep dark brown with amber spice undertones and warm golden wisps"
   },
   {
@@ -1361,7 +1361,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "The most unexpected pairing — salty-smoky-umami worm salt and salt-kissed delicate sakura find their shared language in salt.",
+    "lore": "The most unexpected pairing \u2014 salty-smoky-umami worm salt and salt-kissed delicate sakura find their shared language in salt.",
     "visualEffect": "Crystal-clear distillate with faint pink sakura tint and salt-crystal shimmer"
   },
   {
@@ -1377,8 +1377,8 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "A jet-black brew that shifts to blue-purple when sudachi acid hits — visual drama meets flavor drama.",
-    "visualEffect": "Starts jet black; sudachi triggers butterfly pea shift — blue-purple emerges from the black"
+    "lore": "A jet-black brew that shifts to blue-purple when sudachi acid hits \u2014 visual drama meets flavor drama.",
+    "visualEffect": "Starts jet black; sudachi triggers butterfly pea shift \u2014 blue-purple emerges from the black"
   },
   {
     "id": "at_03_the_golden_void",
@@ -1393,7 +1393,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "The most absurd flavor combination — bitter jade, golden luxury, smoky insect umami — that achieves a profound savory-sweet-bitter balance.",
+    "lore": "The most absurd flavor combination \u2014 bitter jade, golden luxury, smoky insect umami \u2014 that achieves a profound savory-sweet-bitter balance.",
     "visualEffect": "Jade-green with saffron golden luminescence creating extraordinary green-gold shimmer; smoky amber wisp"
   },
   {
@@ -1409,7 +1409,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Alchemist's Table",
-    "lore": "A brew of shocking colors and shocking flavors — deep blue-red, earthy sweet, with a clean nasal wasabi heat in the finish.",
+    "lore": "A brew of shocking colors and shocking flavors \u2014 deep blue-red, earthy sweet, with a clean nasal wasabi heat in the finish.",
     "visualEffect": "Rooibos red mixed with butterfly pea blue creates remarkable purple-red hue"
   },
   {
@@ -1425,7 +1425,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Alchemist's Table",
-    "lore": "Earl Grey meets smoky umami meets roasted caramel in a barrel — it sounds impossible, but barrel aging makes it inevitable.",
+    "lore": "Earl Grey meets smoky umami meets roasted caramel in a barrel \u2014 it sounds impossible, but barrel aging makes it inevitable.",
     "visualEffect": "Deep warm amber with faint bergamot-citrus shimmer"
   },
   {
@@ -1441,7 +1441,7 @@
     "stars": 4,
     "tier": "rare",
     "family": "Alchemist's Table",
-    "lore": "The most violent and gentle ingredients combined — wasabi's explosive heat and lavender's calming purple, softened by sweet amazake rice.",
+    "lore": "The most violent and gentle ingredients combined \u2014 wasabi's explosive heat and lavender's calming purple, softened by sweet amazake rice.",
     "visualEffect": "Pale lavender-purple liquid with faint green wasabi shimmer; milky from the amazake"
   },
   {
@@ -1457,7 +1457,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "Deeply smoky, bitter-sweet, and electrically numbing — three 'dark' ingredients that share fundamental complexity.",
+    "lore": "Deeply smoky, bitter-sweet, and electrically numbing \u2014 three 'dark' ingredients that share fundamental complexity.",
     "visualEffect": "Deep dark amber-brown with electric blue Szechuan sparks and loomi smoky wisps"
   },
   {
@@ -1472,7 +1472,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "A mead that tastes like it was fermented by a philosopher — nutty, golden, and with a depth that koji adds to anything it touches.",
+    "lore": "A mead that tastes like it was fermented by a philosopher \u2014 nutty, golden, and with a depth that koji adds to anything it touches.",
     "visualEffect": "Golden mead with floating nutty-golden argan oil beads that slowly dissolve"
   },
   {
@@ -1489,7 +1489,7 @@
     "tier": "rare",
     "family": "Alchemist's Table",
     "lore": "Delicate spring blossoms interrupted by electric Szechuan numbness, caught by dark caramel date sweetness.",
-    "visualEffect": "Pink sakura petal particles with electric blue-white Szechuan sparks — a visual paradox"
+    "visualEffect": "Pink sakura petal particles with electric blue-white Szechuan sparks \u2014 a visual paradox"
   },
   {
     "id": "at_10_the_philosophers_charcoal",
@@ -1504,8 +1504,8 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "Jet black in the vat, golden-amber in the glass when distilled — a visual paradox that hides saffron's opulence within charcoal's darkness.",
-    "visualEffect": "Jet black vat; distillate drips out pure gold — saffron's luminous amber"
+    "lore": "Jet black in the vat, golden-amber in the glass when distilled \u2014 a visual paradox that hides saffron's opulence within charcoal's darkness.",
+    "visualEffect": "Jet black vat; distillate drips out pure gold \u2014 saffron's luminous amber"
   },
   {
     "id": "at_11_the_frozen_fire",
@@ -1520,7 +1520,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Alchemist's Table",
-    "lore": "Cold nasal heat, tropical sweetness, and the deepest ocean brine — a drink that makes no sense and tastes of the edge of the world.",
+    "lore": "Cold nasal heat, tropical sweetness, and the deepest ocean brine \u2014 a drink that makes no sense and tastes of the edge of the world.",
     "visualEffect": "Crystal-clear with deep blue abyssal Leviathan shimmer and occasional wasabi-green flash"
   },
   {
@@ -1538,7 +1538,7 @@
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
     "lore": "Four of the world's most complex ingredient collections in one vat. A brew that contains multitudes.",
-    "visualEffect": "Chartreuse UV-green glow suffuses amber-dark liquid — eerie luminescent amber-green"
+    "visualEffect": "Chartreuse UV-green glow suffuses amber-dark liquid \u2014 eerie luminescent amber-green"
   },
   {
     "id": "lcr_02_the_silk_road_phantom",
@@ -1554,7 +1554,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "Crystalline, vivid orange, bright citrus-pine, and moonlit silver — a legendary distillate that glows.",
+    "lore": "Crystalline, vivid orange, bright citrus-pine, and moonlit silver \u2014 a legendary distillate that glows.",
     "visualEffect": "Crystalline shimmer + vivid orange + moonpetal silver luminescence = captured starlight"
   },
   {
@@ -1571,8 +1571,8 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "Three of the world's most vivid natural pigments plus the Dreaming Spore's psychedelic transformation — a brew that cannot settle on a color.",
-    "visualEffect": "Purple-blue-crimson-violet shifting chaos with purple smoke wisps — most visually complex brew in the game"
+    "lore": "Three of the world's most vivid natural pigments plus the Dreaming Spore's psychedelic transformation \u2014 a brew that cannot settle on a color.",
+    "visualEffect": "Purple-blue-crimson-violet shifting chaos with purple smoke wisps \u2014 most visually complex brew in the game"
   },
   {
     "id": "lcr_04_the_philosophers_stone_ale",
@@ -1589,7 +1589,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "The legendary brew — it tastes of everything and nothing simultaneously, shifts with each sip, and leaves the drinker feeling they have understood something they cannot articulate.",
+    "lore": "The legendary brew \u2014 it tastes of everything and nothing simultaneously, shifts with each sip, and leaves the drinker feeling they have understood something they cannot articulate.",
     "visualEffect": "Worldroot gold-pulse + saffron luminescence + koji glow = a brew that looks alive, with root-traceries on vat walls"
   },
   {
@@ -1606,8 +1606,8 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "Deep ocean brine meets ancient trade routes — coffee-chocolate wattleseed, earthy rooibos, smoky black lime, and abyssal salt. A drink for travelers who have gone too far to return.",
-    "visualEffect": "Dark abyssal blue-black blended with deep brown of wattleseed and rooibos — dark bioluminescent brew"
+    "lore": "Deep ocean brine meets ancient trade routes \u2014 coffee-chocolate wattleseed, earthy rooibos, smoky black lime, and abyssal salt. A drink for travelers who have gone too far to return.",
+    "visualEffect": "Dark abyssal blue-black blended with deep brown of wattleseed and rooibos \u2014 dark bioluminescent brew"
   },
   {
     "id": "lcr_06_genesis_mead",
@@ -1623,7 +1623,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "A brew made from the world's oldest ice, honey, and roots — it tastes of before recorded history, impossibly clean, impossibly complex.",
+    "lore": "A brew made from the world's oldest ice, honey, and roots \u2014 it tastes of before recorded history, impossibly clean, impossibly complex.",
     "visualEffect": "Glacial crystal clarity + frost crystals on vat + worldroot gold pulse + saffron gold = simultaneously frozen and golden"
   },
   {
@@ -1641,7 +1641,7 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "The hottest, most volcanic brew in existence — five heat ingredients from four traditions united by dark molasses sweetness.",
+    "lore": "The hottest, most volcanic brew in existence \u2014 five heat ingredients from four traditions united by dark molasses sweetness.",
     "visualEffect": "Ember-red + electric blue Szechuan sparks + torch ginger pink-rose = tri-color heat visual with fire particles"
   },
   {
@@ -1660,8 +1660,8 @@
     "stars": 5,
     "tier": "legendary",
     "family": "Legendary Cross-Regional",
-    "lore": "The impossible brew — it changes color four times as it's poured, and contains flavors from every region of the known world.",
-    "visualEffect": "All color systems active: blue → orange → crimson → gold → pink, cycling with stirring. Frost crystals + saffron gold + butterfly pea color-shift — the most complex visual in the game"
+    "lore": "The impossible brew \u2014 it changes color four times as it's poured, and contains flavors from every region of the known world.",
+    "visualEffect": "All color systems active: blue \u2192 orange \u2192 crimson \u2192 gold \u2192 pink, cycling with stirring. Frost crystals + saffron gold + butterfly pea color-shift \u2014 the most complex visual in the game"
   },
   {
     "id": "spiced_honey_mead",
@@ -1700,7 +1700,7 @@
     "stars": 2,
     "tier": "fine",
     "family": "Metheglin",
-    "lore": "Melomel — tart cherry swimming in golden honey. Ancient and irresistible."
+    "lore": "Melomel \u2014 tart cherry swimming in golden honey. Ancient and irresistible."
   },
   {
     "id": "ginger_citrus_cider",
@@ -1738,7 +1738,7 @@
     "method": "ferment",
     "stars": 2,
     "tier": "fine",
-    "lore": "Fruit ale — tart berries brightening earthy grain. Summer drinking."
+    "lore": "Fruit ale \u2014 tart berries brightening earthy grain. Summer drinking."
   },
   {
     "id": "chamomile_cider",
@@ -1814,7 +1814,7 @@
     "method": "ferment",
     "stars": 3,
     "tier": "rare",
-    "lore": "Fire meets fruit acid. The brightness tames the dragon — barely.",
+    "lore": "Fire meets fruit acid. The brightness tames the dragon \u2014 barely.",
     "visualEffect": "Amber cider with flickering heat shimmer"
   },
   {
@@ -1828,5 +1828,251 @@
     "stars": 2,
     "tier": "fine",
     "lore": "Warm bark spice over bready grain. Tavern classic."
+  },
+  {
+    "id": "ginger_tea",
+    "name": "Ginger Tea",
+    "base": "none",
+    "ingredients": [
+      "ginger_root"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Fresh ginger steeped in hot water. Clears the sinuses and the mind."
+  },
+  {
+    "id": "hibiscus_cooler",
+    "name": "Hibiscus Cooler",
+    "base": "none",
+    "ingredients": [
+      "hibiscus"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Ruby-red, tart, and refreshing. Called agua de jamaica across Latin America."
+  },
+  {
+    "id": "turmeric_tonic",
+    "name": "Turmeric Tonic",
+    "base": "none",
+    "ingredients": [
+      "turmeric"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Golden jamu water. Indonesians have been drinking this for a thousand years."
+  },
+  {
+    "id": "berry_wine",
+    "name": "Berry Wine",
+    "base": "fruit",
+    "ingredients": [
+      "berries"
+    ],
+    "method": "ferment",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Wild berries and time. The forest makes its own wine."
+  },
+  {
+    "id": "date_water",
+    "name": "Date Water",
+    "base": "none",
+    "ingredients": [
+      "medjool_date"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Dates soaked in warm water. A Ramadan staple. Simple sweetness."
+  },
+  {
+    "id": "pandan_water",
+    "name": "Pandan Water",
+    "base": "none",
+    "ingredients": [
+      "pandan"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Fragrant jade-green water. Southeast Asia's vanilla, steeped plain."
+  },
+  {
+    "id": "tamarind_water",
+    "name": "Tamarind Water",
+    "base": "none",
+    "ingredients": [
+      "tamarind"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Sour, tangy, brown. Street drink across India and Southeast Asia."
+  },
+  {
+    "id": "fig_compote",
+    "name": "Fig Compote",
+    "base": "fruit",
+    "ingredients": [
+      "black_fig"
+    ],
+    "method": "boil",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Stewed figs in their own syrup. Sweet as a Moroccan afternoon."
+  },
+  {
+    "id": "palm_toddy",
+    "name": "Palm Toddy",
+    "base": "none",
+    "ingredients": [
+      "palm_sugar"
+    ],
+    "method": "ferment",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Fermented palm sap. Called tuak in Indonesia. Sweet and mildly boozy."
+  },
+  {
+    "id": "citrus_fizz",
+    "name": "Citrus Fizz",
+    "base": "fruit",
+    "ingredients": [
+      "citrus_peel"
+    ],
+    "method": "ferment",
+    "stars": 1,
+    "tier": "common",
+    "lore": "Citrus peel fermented until fizzy. Nature's soda pop."
+  },
+  {
+    "id": "rose_mead",
+    "name": "Rose Mead",
+    "base": "honey",
+    "ingredients": [
+      "rose_water"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Floral honey wine perfumed with roses. Persian poets wrote about this."
+  },
+  {
+    "id": "mushroom_broth",
+    "name": "Mushroom Broth",
+    "base": "none",
+    "ingredients": [
+      "wild_mushroom",
+      "wild_herbs"
+    ],
+    "method": "boil",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Deep umami broth with bright herbs. A forager's lunch in a cup."
+  },
+  {
+    "id": "turmeric_mead",
+    "name": "Turmeric Mead",
+    "base": "honey",
+    "ingredients": [
+      "turmeric"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Golden mead stained bright by turmeric. Jamu meets Viking tradition."
+  },
+  {
+    "id": "hibiscus_cider",
+    "name": "Hibiscus Cider",
+    "base": "fruit",
+    "ingredients": [
+      "hibiscus"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Tart crimson hibiscus fermented with fruit acid. Bright and dry."
+  },
+  {
+    "id": "ginger_mead",
+    "name": "Ginger Mead",
+    "base": "honey",
+    "ingredients": [
+      "ginger_root"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Honey wine with a warm ginger bite. The original warming drink."
+  },
+  {
+    "id": "lavender_chamomile_tea",
+    "name": "Lavender Chamomile Tea",
+    "base": "none",
+    "ingredients": [
+      "lavender",
+      "chamomile"
+    ],
+    "method": "boil",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Two calming flowers steeped together. Sleep in a cup."
+  },
+  {
+    "id": "date_ale",
+    "name": "Date Ale",
+    "base": "grain",
+    "ingredients": [
+      "medjool_date"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Dates sweeten the grain into something dark and caramel-rich. Ancient Mesopotamian brewing."
+  },
+  {
+    "id": "rooibos_brew",
+    "name": "Rooibos Brew",
+    "base": "none",
+    "ingredients": [
+      "rooibos"
+    ],
+    "method": "boil",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "South Africa's red bush tea. Earthy, sweet, caffeine-free. A Cederberg mountain tradition."
+  },
+  {
+    "id": "tamarind_cider",
+    "name": "Tamarind Cider",
+    "base": "fruit",
+    "ingredients": [
+      "tamarind"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "lore": "Deep sour tang fermented into something fizzy and complex. Street food energy."
+  },
+  {
+    "id": "fig_mead",
+    "name": "Fig Mead",
+    "base": "honey",
+    "ingredients": [
+      "black_fig"
+    ],
+    "method": "ferment",
+    "stars": 2,
+    "tier": "fine",
+    "family": "Metheglin",
+    "lore": "Dark figs dissolved into golden honey. Jammy, rich, and ancient."
   }
 ]

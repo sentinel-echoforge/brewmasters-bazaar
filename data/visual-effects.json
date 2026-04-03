@@ -1,0 +1,182 @@
+[
+  {
+    "id": "fire_ice_glow",
+    "name": "Fire & Ice Glow",
+    "description": "Dual-tone effect: warm orange-red flames lick upward from the liquid surface while cool blue-white frost crystals form and shatter along the cauldron rim. The two zones pulse alternately.",
+    "particleColor": "#FF6B35",
+    "brewColor": "#1A3A5C",
+    "intensity": 5,
+    "animationType": "flames"
+  },
+  {
+    "id": "golden_blue_shimmer",
+    "name": "Golden Blue Shimmer",
+    "description": "Liquid shifts between warm gold and cool sapphire blue in slow waves. Surface catches light like oil on water, producing iridescent ripples that travel outward from center.",
+    "particleColor": "#FFD700",
+    "brewColor": "#2E5090",
+    "intensity": 4,
+    "animationType": "shimmer"
+  },
+  {
+    "id": "starfield",
+    "name": "Starfield",
+    "description": "Tiny white-gold motes rise slowly from the liquid surface like stars ascending. The brew itself is deep midnight blue. Motes twinkle and fade at varying heights above the cauldron.",
+    "particleColor": "#FFFACD",
+    "brewColor": "#0D1B2A",
+    "intensity": 5,
+    "animationType": "sparkle"
+  },
+  {
+    "id": "truth_ripple",
+    "name": "Truth Ripple",
+    "description": "Concentric golden rings pulse outward from the center of the liquid surface at regular intervals, like a stone dropped in still water. Each ring emits a faint warm glow before dissolving.",
+    "particleColor": "#DAA520",
+    "brewColor": "#8B6914",
+    "intensity": 4,
+    "animationType": "glow"
+  },
+  {
+    "id": "divine_glow",
+    "name": "Divine Glow",
+    "description": "Intense warm golden luminescence radiates from within the liquid. A soft halo of light extends above the cauldron rim. Faint golden dust motes drift upward in gentle spirals.",
+    "particleColor": "#FFD700",
+    "brewColor": "#B8860B",
+    "intensity": 5,
+    "animationType": "glow"
+  },
+  {
+    "id": "void_absorption",
+    "name": "Void Absorption",
+    "description": "The liquid is impossibly black — it absorbs ambient light around it, creating a visible dark halo. Nearby particles and light sources dim. Occasional deep purple flickers in the depths.",
+    "particleColor": "#1A0033",
+    "brewColor": "#000000",
+    "intensity": 5,
+    "animationType": "void"
+  },
+  {
+    "id": "phoenix_flames",
+    "name": "Phoenix Flames",
+    "description": "Crimson and gold flame particles erupt from the liquid surface in rhythmic bursts, curling upward like feathers. Embers drift and fade. The liquid itself glows molten orange-red.",
+    "particleColor": "#FF4500",
+    "brewColor": "#CC3300",
+    "intensity": 5,
+    "animationType": "flames"
+  },
+  {
+    "id": "silence_aura",
+    "name": "Silence Aura",
+    "description": "A translucent silver-white dome of still air forms above the liquid. No particles move within it. The brew is pale silver-lavender. The stillness itself feels visible — ambient particles avoid the zone.",
+    "particleColor": "#C0C0C0",
+    "brewColor": "#B0A4C8",
+    "intensity": 3,
+    "animationType": "shimmer"
+  },
+  {
+    "id": "primordial_bubble",
+    "name": "Primordial Bubble",
+    "description": "Large, slow amber bubbles rise from deep within the liquid and pop with a golden flash. The brew is murky amber-brown with sediment swirling. Each bubble leaves a brief glowing ring on the surface.",
+    "particleColor": "#D4A017",
+    "brewColor": "#8B6508",
+    "intensity": 4,
+    "animationType": "bubbles"
+  },
+  {
+    "id": "rainbow_explosion",
+    "name": "Rainbow Explosion",
+    "description": "The liquid cycles through the full spectrum — red, orange, gold, green, blue, indigo, violet — in smooth transitions. Particle bursts of each color erupt at the transition points. Pure chromatic chaos.",
+    "particleColor": "#FF00FF",
+    "brewColor": "#7B68EE",
+    "intensity": 5,
+    "animationType": "rainbow"
+  },
+  {
+    "id": "floral_mist",
+    "name": "Floral Mist",
+    "description": "Soft pink and lavender mist rises gently from the liquid surface, dissipating at cauldron-rim height. Tiny petal-shaped particles drift within the mist. Calming and delicate.",
+    "particleColor": "#FFB6C1",
+    "brewColor": "#E8B4C8",
+    "intensity": 2,
+    "animationType": "smoke"
+  },
+  {
+    "id": "golden_glow",
+    "name": "Golden Glow",
+    "description": "Warm golden light emanates steadily from the liquid. A simple, clean luminescence with no particles — just the brew itself glowing like liquid sunlight.",
+    "particleColor": "#FFD700",
+    "brewColor": "#DAA520",
+    "intensity": 2,
+    "animationType": "glow"
+  },
+  {
+    "id": "dark_smoke",
+    "name": "Dark Smoke",
+    "description": "Thick charcoal-gray smoke curls upward from the liquid in lazy tendrils. The brew is deep brown-black. Smoke clings close to the surface before slowly rising and thinning.",
+    "particleColor": "#3C3C3C",
+    "brewColor": "#1C1C1C",
+    "intensity": 3,
+    "animationType": "smoke"
+  },
+  {
+    "id": "frost_sparkle",
+    "name": "Frost Sparkle",
+    "description": "Ice-blue crystalline particles form on the cauldron walls and rim, then shatter into tiny sparkling fragments that float briefly. The liquid is pale blue-white with a cold sheen.",
+    "particleColor": "#ADD8E6",
+    "brewColor": "#D6EAF8",
+    "intensity": 3,
+    "animationType": "sparkle"
+  },
+  {
+    "id": "amber_warmth",
+    "name": "Amber Warmth",
+    "description": "A soft, steady amber glow with occasional warm orange bubbles rising lazily. Like looking into a fireplace ember. Cozy and inviting.",
+    "particleColor": "#FF8C00",
+    "brewColor": "#CC7000",
+    "intensity": 2,
+    "animationType": "bubbles"
+  },
+  {
+    "id": "crimson_embers",
+    "name": "Crimson Embers",
+    "description": "Deep red liquid with tiny bright ember particles floating upward like sparks from a campfire. Occasional flare-ups along the surface.",
+    "particleColor": "#DC143C",
+    "brewColor": "#8B0000",
+    "intensity": 3,
+    "animationType": "flames"
+  },
+  {
+    "id": "emerald_shimmer",
+    "name": "Emerald Shimmer",
+    "description": "Rich green liquid with a shifting pearlescent surface. Light catches and refracts in green-gold waves across the surface like sunlight through leaves.",
+    "particleColor": "#50C878",
+    "brewColor": "#2E8B57",
+    "intensity": 2,
+    "animationType": "shimmer"
+  },
+  {
+    "id": "violet_haze",
+    "name": "Violet Haze",
+    "description": "Deep purple liquid with a soft violet fog hovering just above the surface. Dreamlike and mysterious. Faint purple sparkles within the haze.",
+    "particleColor": "#9370DB",
+    "brewColor": "#4B0082",
+    "intensity": 3,
+    "animationType": "smoke"
+  },
+  {
+    "id": "copper_bubbles",
+    "name": "Copper Bubbles",
+    "description": "Warm copper-colored liquid with steady streams of small metallic-sheen bubbles. Surface has a slight bronze mirror quality.",
+    "particleColor": "#B87333",
+    "brewColor": "#A0522D",
+    "intensity": 2,
+    "animationType": "bubbles"
+  },
+  {
+    "id": "pale_moonlight",
+    "name": "Pale Moonlight",
+    "description": "Very pale silvery-white liquid that seems to emit its own faint cold light. Tiny silver motes drift upward like dust in a moonbeam.",
+    "particleColor": "#E8E8E8",
+    "brewColor": "#C8C8D0",
+    "intensity": 2,
+    "animationType": "sparkle"
+  }
+]
