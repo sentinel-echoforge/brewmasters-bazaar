@@ -1,0 +1,10 @@
+[
+  {"id": "copper_cauldron", "name": "Copper Cauldron", "emoji": "🫕", "cost": 200, "effect": "brew_speed", "value": 0.8, "description": "Brew 20% faster", "requiredLevel": 1},
+  {"id": "oak_barrel_rack", "name": "Oak Barrel Rack", "emoji": "🪵", "cost": 300, "effect": "barrel_slots", "value": 2, "description": "Age 2 drinks at once (was 1)", "requiredLevel": 1},
+  {"id": "stone_counter", "name": "Stone Counter", "emoji": "🪨", "cost": 500, "effect": "serve_slots", "value": 2, "description": "Serve 2 customers at once", "requiredLevel": 2},
+  {"id": "spice_cabinet", "name": "Spice Cabinet", "emoji": "🗄️", "cost": 400, "effect": "ingredient_lifespan", "value": 2.0, "description": "Ingredients last 2x longer before spoiling", "requiredLevel": 2},
+  {"id": "crystal_bottles", "name": "Crystal Bottles", "emoji": "🍾", "cost": 800, "effect": "sale_price", "value": 1.1, "description": "+10% sale price (presentation bonus)", "requiredLevel": 3},
+  {"id": "ancient_thermometer", "name": "Ancient Thermometer", "emoji": "🌡️", "cost": 1000, "effect": "hint_quality", "value": 2, "description": "Near-miss hints reveal more detail", "requiredLevel": 3},
+  {"id": "enchanted_mortar", "name": "Enchanted Mortar", "emoji": "⚗️", "cost": 1500, "effect": "experiment_discount", "value": 0.5, "description": "Failed brews refund 50% of ingredient cost", "requiredLevel": 4},
+  {"id": "merchant_seal", "name": "Merchant's Seal", "emoji": "📜", "cost": 2000, "effect": "merchant_discount", "value": 0.85, "description": "15% off all merchant purchases", "requiredLevel": 4}
+]

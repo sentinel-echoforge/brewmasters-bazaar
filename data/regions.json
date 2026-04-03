@@ -1,0 +1,27 @@
+{
+  "regions": [
+    {"id": "japan_korea", "name": "Land of the Rising Sun", "emoji": "🇯🇵", "gardenIngredients": ["yuzu", "shiso", "sakura_blossom"], "ambientMusic": "shamisen", "landscape": "cherry_blossoms", "customerPreferences": ["delicate", "umami", "clean"]},
+    {"id": "indonesia_sea", "name": "Spice Islands", "emoji": "🇮🇩", "gardenIngredients": ["pandan", "butterfly_pea_flower", "torch_ginger"], "ambientMusic": "gamelan", "landscape": "tropical_jungle", "customerPreferences": ["aromatic", "warm", "bright"]},
+    {"id": "india_south_asia", "name": "Jewel of the East", "emoji": "🇮🇳", "gardenIngredients": ["turmeric", "cardamom", "saffron"], "ambientMusic": "sitar", "landscape": "spice_market", "customerPreferences": ["spicy", "golden", "complex"]},
+    {"id": "north_africa_middle_east", "name": "Desert Crossroads", "emoji": "🏜️", "gardenIngredients": ["preserved_lemon", "medjool_date", "orange_blossom_water"], "ambientMusic": "oud", "landscape": "desert_oasis", "customerPreferences": ["sweet", "floral", "exotic"]},
+    {"id": "france_western_europe", "name": "The Old Continent", "emoji": "🇫🇷", "gardenIngredients": ["lavender", "verjus", "elderflower"], "ambientMusic": "lute", "landscape": "rolling_vineyard", "customerPreferences": ["floral", "delicate", "perfumy"]},
+    {"id": "uk_northern_europe", "name": "The Green Isles", "emoji": "🇬🇧", "gardenIngredients": ["wild_herbs", "chamomile", "berries"], "ambientMusic": "fiddle", "landscape": "misty_meadow", "customerPreferences": ["herbal", "earthy", "warm"]},
+    {"id": "west_africa", "name": "Gold Coast", "emoji": "🌍", "gardenIngredients": ["grains_of_paradise", "baobab_fruit", "hibiscus"], "ambientMusic": "kora", "landscape": "savanna", "customerPreferences": ["bold", "spicy", "fruity"]},
+    {"id": "latin_america", "name": "New World", "emoji": "🌵", "gardenIngredients": ["cacao_nibs", "epazote", "piloncillo"], "ambientMusic": "guitar", "landscape": "agave_hills", "customerPreferences": ["smoky", "rich", "deep"]},
+    {"id": "americas_us", "name": "The Frontier", "emoji": "🇺🇸", "gardenIngredients": ["apple", "wild_herbs", "berries"], "ambientMusic": "banjo", "landscape": "autumn_orchard", "customerPreferences": ["crisp", "sweet", "fruity"]},
+    {"id": "australia_oceania", "name": "Southern Lands", "emoji": "🇦🇺", "gardenIngredients": ["wattleseed", "lemongrass", "ginger"], "ambientMusic": "didgeridoo", "landscape": "bushland", "customerPreferences": ["earthy", "citrusy", "warm"]}
+  ],
+  "distanceMatrix": {
+    "japan_korea":             [0.0, 0.2, 0.4, 0.6, 0.8, 0.8, 1.0, 1.0, 0.8, 0.4],
+    "indonesia_sea":           [0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 0.8, 1.0, 0.8, 0.2],
+    "india_south_asia":        [0.4, 0.2, 0.0, 0.2, 0.4, 0.6, 0.6, 0.8, 0.8, 0.6],
+    "north_africa_middle_east":[0.6, 0.4, 0.2, 0.0, 0.2, 0.4, 0.4, 0.6, 0.6, 0.8],
+    "france_western_europe":   [0.8, 0.6, 0.4, 0.2, 0.0, 0.2, 0.4, 0.6, 0.4, 0.8],
+    "uk_northern_europe":      [0.8, 0.8, 0.6, 0.4, 0.2, 0.0, 0.6, 0.6, 0.4, 1.0],
+    "west_africa":             [1.0, 0.8, 0.6, 0.4, 0.4, 0.6, 0.0, 0.4, 0.6, 0.8],
+    "latin_america":           [1.0, 1.0, 0.8, 0.6, 0.6, 0.6, 0.4, 0.0, 0.2, 0.8],
+    "americas_us":             [0.8, 0.8, 0.8, 0.6, 0.4, 0.4, 0.6, 0.2, 0.0, 0.6],
+    "australia_oceania":       [0.4, 0.2, 0.6, 0.8, 0.8, 1.0, 0.8, 0.8, 0.6, 0.0]
+  },
+  "distanceMatrixOrder": ["japan_korea", "indonesia_sea", "india_south_asia", "north_africa_middle_east", "france_western_europe", "uk_northern_europe", "west_africa", "latin_america", "americas_us", "australia_oceania"]
+}

@@ -1,0 +1,12 @@
+[
+  {"id": "mead_rush", "name": "The Royal Mead Feast", "description": "The King demands 20 meads for the royal banquet!", "target": {"base": "honey", "count": 20}, "reward": 500, "timeMinutes": 120, "frequency": "common"},
+  {"id": "ale_supply", "name": "Army Ale Supply", "description": "The General needs 30 ales for the troops. Any ale will do.", "target": {"base": "grain", "count": 30}, "reward": 600, "timeMinutes": 120, "frequency": "common"},
+  {"id": "floral_collection", "name": "The Queen's Bouquet", "description": "The Queen desires drinks with floral notes. 10 floral brews.", "target": {"tag": "floral", "count": 10}, "reward": 400, "timeMinutes": 120, "frequency": "common"},
+  {"id": "spice_challenge", "name": "The Spice Merchant's Dare", "description": "Omar challenges all brewers: who can brew 15 spiced drinks?", "target": {"tag": "spicy", "count": 15}, "reward": 700, "timeMinutes": 120, "frequency": "uncommon"},
+  {"id": "rare_brew", "name": "The Collector's Request", "description": "A mysterious collector seeks 5 rare (★★★★) or better drinks.", "target": {"minStars": 4, "count": 5}, "reward": 1000, "timeMinutes": 180, "frequency": "uncommon"},
+  {"id": "regional_showcase", "name": "Regional Showcase", "description": "The Bazaar is hosting a regional festival! Brew 10 drinks using ingredients from your home region.", "target": {"regional": true, "count": 10}, "reward": 800, "timeMinutes": 120, "frequency": "uncommon"},
+  {"id": "export_challenge", "name": "The Trade Route Challenge", "description": "Export 5 drinks to 3 different regions. Show the world your brews!", "target": {"exports": 5, "regions": 3}, "reward": 1200, "timeMinutes": 240, "frequency": "rare"},
+  {"id": "legendary_quest", "name": "The Grand Master's Test", "description": "Brew 1 legendary (★★★★★) drink. Only the greatest brewmasters attempt this.", "target": {"minStars": 5, "count": 1}, "reward": 2500, "timeMinutes": 360, "frequency": "rare"},
+  {"id": "speed_brew", "name": "The Brewmaster's Sprint", "description": "Brew and sell 10 drinks in 30 minutes. Any quality. Speed is king!", "target": {"count": 10, "timeLimit": 30}, "reward": 300, "timeMinutes": 30, "frequency": "common"},
+  {"id": "variety_show", "name": "The Variety Show", "description": "Brew 8 DIFFERENT recipes. No repeats! Show your range.", "target": {"uniqueRecipes": 8}, "reward": 900, "timeMinutes": 180, "frequency": "uncommon"}
+]
