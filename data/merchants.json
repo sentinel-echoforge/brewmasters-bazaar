@@ -1,0 +1,323 @@
+{
+  "id": "omar_the_wanderer",
+  "name": "Omar the Wanderer",
+  "title": "Merchant of Seven Roads",
+  "emoji": "🧔",
+  "voice_archetype": "Moroccan souk vendor × wise old bartender × Marco Polo. Warm. Sly. Occasionally poetic. Always knows more than he's saying.",
+  "signature_phrases": [
+    "Ah...",
+    "You know what I find interesting?",
+    "I have a story about that.",
+    "...but perhaps that is not your concern.",
+    "Between you and me—"
+  ],
+  "dialogue_by_context": {
+    "first_visit": [
+      {
+        "id": "first_visit_01",
+        "text": "Ah. A new face at my cart. Good. I was beginning to think this town only produced the same five drinkers with the same five tastes. Welcome, welcome — I am Omar. I have been called the Wanderer, the Fortunate, the Insufferable. The first two, I earned."
+      },
+      {
+        "id": "first_visit_02",
+        "text": "You have the eyes of someone who brews by instinct. I can tell. You mix things and see what happens — yes? Good. The best discoveries were never planned. Pull up a barrel, friend. What do you need?"
+      },
+      {
+        "id": "first_visit_03",
+        "text": "I have traded spices in Fez, fermented fruits in Osaka, argued price in Oaxaca and Samarkand and a village in Oita Prefecture I still cannot spell. And yet here I am at YOUR stall. Consider yourself fortunate."
+      },
+      {
+        "id": "first_visit_04",
+        "text": "Before you ask: yes, everything is real. No, I will not reveal my sources. And yes — that jar on the left smells exactly like what you think it smells like. We will discuss the price when you stop staring at it."
+      },
+      {
+        "id": "first_visit_05",
+        "text": "I make one promise to every new brewer I meet: I will never sell you something that does not work. I may sell you something that surprises you. I may sell you something you did not know you needed. But it will always work. I give you my word."
+      },
+      {
+        "id": "first_visit_06",
+        "text": "The caravan roads are long. My cart is lighter when you buy from it. I hope we can help each other. That is, after all, the ancient arrangement."
+      },
+      {
+        "id": "first_visit_07",
+        "text": "You smell of something interesting. A brew in progress? Tell me — what are you making? Not to steal the recipe. I have seen a thousand recipes. I just like to know who I am dealing with."
+      }
+    ],
+    "returning_friend": [
+      {
+        "id": "returning_friend_01",
+        "text": "Ah! My favorite brewer returns. Did the last purchase treat you well? Of course it did. My ingredients do not disappoint. What shall we find for you today?"
+      },
+      {
+        "id": "returning_friend_02",
+        "text": "You are back. Good. Repeat customers are the mark of a merchant who was honest the first time. Sit, sit. I have something new that arrived just this morning and it made my driver weep — and he is not an emotional man."
+      },
+      {
+        "id": "returning_friend_03",
+        "text": "The last time you were here, I gave you something. Did you use it wisely? Never mind — even if you didn't, the lesson was worth the price. What are you looking for now?"
+      },
+      {
+        "id": "returning_friend_04",
+        "text": "Every merchant has a list of customers worth keeping. You are on mine. That means you get the real prices before I start performing for the crowd. Choose what you like."
+      },
+      {
+        "id": "returning_friend_05",
+        "text": "Ah, the wandering brewer returns! I have been thinking — last time you bought [INGREDIENT]. Have you tried it with something sweet? Or something sour? I have thoughts."
+      },
+      {
+        "id": "returning_friend_06",
+        "text": "You again! Excellent timing. I was just arranging a shipment that would make a brewer weep with gratitude. Come, look."
+      },
+      {
+        "id": "returning_friend_07",
+        "text": "Back so soon? Either my last sale was a great success or a great failure. From your expression — success. Welcome back."
+      }
+    ],
+    "returning_broke": [
+      {
+        "id": "returning_broke_01",
+        "text": "Friend. I see the gold situation is... complicated today. It happens. The economy breathes in and breathes out. Come — tell me what you need, and let us see what arrangements can be made."
+      },
+      {
+        "id": "returning_broke_02",
+        "text": "Ah. The proud brewer returns with empty pockets. Do not be embarrassed — every great brewery had a lean season. Every one. The best brewers I've known have all at some point begged credit from a merchant. I am listening."
+      },
+      {
+        "id": "returning_broke_03",
+        "text": "You have the look of someone who spent everything on ingredients last visit and sold nothing yet. Yes? I recognize it. My second wife had that same look when she invested in a spice ship that sank. We recovered. You will too."
+      },
+      {
+        "id": "returning_broke_04",
+        "text": "Let me show you something. I have certain items — not my finest, but good — that a man in your current financial situation might find accessible. There is no shame in starting small. I started with two sacks of cumin and a borrowed cart."
+      },
+      {
+        "id": "returning_broke_05",
+        "text": "Today I am feeling generous. Not because I am a soft man — I am not — but because the road was good to me this week and generosity travels further than gold sometimes. What do you need?"
+      },
+      {
+        "id": "returning_broke_06",
+        "text": "Between you and me? The cheap ingredients can make the most interesting brews. There is a reason the finest chefs in Marrakech learned to cook on peasant budgets. Constraint breeds creativity. Come — let us find you something useful."
+      }
+    ],
+    "returning_rich": [
+      {
+        "id": "returning_rich_01",
+        "text": "My friend! You have had an excellent week. I can tell by the way you walk — that is the walk of a person who has sold something at premium price. Come. I have been saving something for exactly this kind of visit."
+      },
+      {
+        "id": "returning_rich_02",
+        "text": "Ah, gold! How pleasant to see it in large quantities. And how pleasant to see it in your quantities, specifically. I have a few items I normally do not show to casual customers. For you — today — I make an exception."
+      },
+      {
+        "id": "returning_rich_03",
+        "text": "You smell like success. Not literally — though that mead you've been brewing has a remarkable aroma. I mean your general air. Something has gone right for you, and I am genuinely pleased. Let us celebrate with a significant purchase."
+      },
+      {
+        "id": "returning_rich_04",
+        "text": "Now THIS is the kind of visit I enjoy. A customer with gold and taste. The rarest combination. Everything in the cart is available to you. What calls to you?"
+      },
+      {
+        "id": "returning_rich_05",
+        "text": "The great irony of wealth is that it always arrives right when the most interesting ingredients do. Here. Look at this. Tell me you do not feel that you were meant to buy exactly this, today, at exactly this price."
+      },
+      {
+        "id": "returning_rich_06",
+        "text": "Brewer. You have done well. I will not pretend otherwise. And because you have done well, I will tell you about something I have not shown anyone else in this town. It requires a significant investment but... it is worth it. Are you interested?"
+      }
+    ],
+    "price_fair": [
+      {
+        "id": "price_fair_01",
+        "text": "Now THAT is a fair offer. You see — this is why I enjoy doing business with you. No drama. No theater. Just two honest people reaching a sensible number. Done."
+      },
+      {
+        "id": "price_fair_02",
+        "text": "You know, in the markets of Fez, they would spend an hour arriving at that number. Here you've done it in twenty seconds. Efficiency. I respect it."
+      },
+      {
+        "id": "price_fair_03",
+        "text": "That is close enough to what I had in mind that I am not even going to pretend to think about it. Yes. That works."
+      },
+      {
+        "id": "price_fair_04",
+        "text": "A reasonable price from a reasonable brewer. The world makes sense today. Deal."
+      },
+      {
+        "id": "price_fair_05",
+        "text": "Exactly what it's worth and no more. Good. I dislike when customers undervalue things — it suggests they will also undervalue the craft. You understand what you're buying. Excellent."
+      },
+      {
+        "id": "price_fair_06",
+        "text": "At that price I sleep well tonight and so do you. Agreed."
+      }
+    ],
+    "player_lowballs": [
+      {
+        "id": "player_lowballs_01",
+        "text": "Ah. You have arrived at a number that... let us say it surprised me. In the way that a man is surprised when he opens his coin purse and finds a moth instead of gold. Let us try again."
+      },
+      {
+        "id": "player_lowballs_02",
+        "text": "Friend. That price would not cover the cost of the journey I made to find this ingredient. Not the full journey — perhaps the third morning of it, when I was still somewhere comfortable. I need more."
+      },
+      {
+        "id": "player_lowballs_03",
+        "text": "I see you've been asking the water-seller's prices. This is not water. This is [INGREDIENT], which I carried from [REGION]. My back knows what this is worth. So does my accountant."
+      },
+      {
+        "id": "player_lowballs_04",
+        "text": "You are testing me. I understand — it is a skill, testing the merchant early. But I should tell you: I have been tested by men who could buy your entire brewery from their travel allowance. Your number is charming. It is not a price."
+      },
+      {
+        "id": "player_lowballs_05",
+        "text": "If I accepted that price, my ancestors would appear to me in dreams and express their disappointment. I would rather not be haunted. Give me a real number."
+      },
+      {
+        "id": "player_lowballs_06",
+        "text": "Interesting offer. And by 'interesting' I mean that I'm now wondering what you paid for the last ingredient you bought and whether you were robbed. Come back with something closer to reality."
+      }
+    ],
+    "deal_struck": [
+      {
+        "id": "deal_struck_01",
+        "text": "There. That is the sound of a fair deal: everyone slightly disappointed and slightly satisfied. Perfect equilibrium. Use this well."
+      },
+      {
+        "id": "deal_struck_02",
+        "text": "Excellent. A pleasure doing business with a brewer who understands value. Come back when you've made something extraordinary — I want to hear how it turns out."
+      },
+      {
+        "id": "deal_struck_03",
+        "text": "Done. You've made a good choice today. I mean that in a way that has nothing to do with wanting your gold — this ingredient will serve you well. I have seen it do remarkable things."
+      },
+      {
+        "id": "deal_struck_04",
+        "text": "We have a deal! I love that moment. Two strangers agreeing on a number — it is the foundation of civilization, if you think about it. Which I have, on many long roads. Go, brew something magnificent."
+      },
+      {
+        "id": "deal_struck_05",
+        "text": "Agreed. And remember — if someone asks where you got it, tell them a well-traveled merchant with an excellent reputation for quality. You need not mention the price negotiations."
+      },
+      {
+        "id": "deal_struck_06",
+        "text": "Good. Good. Now I can go back to the part of my job I actually enjoy, which is thinking about where to travel next. Safe brewing, friend."
+      }
+    ],
+    "player_walks_away": [
+      {
+        "id": "player_walks_away_01",
+        "text": "Ah, you are leaving! Good browsing. Sometimes a man needs to see what exists before he knows what he wants. I will be here — the road is circular."
+      },
+      {
+        "id": "player_walks_away_02",
+        "text": "Empty hands today. That's fine. The finest brew I ever tasted was made by a brewer who spent three weeks thinking before she bought a single ingredient. Take your time."
+      },
+      {
+        "id": "player_walks_away_03",
+        "text": "Go, go. But think about that [INGREDIENT] while you work today. Just — think about it. It will come back to you."
+      },
+      {
+        "id": "player_walks_away_04",
+        "text": "Nothing today? Well. The door of my cart is always open. I'll be back in a few hours — perhaps by then you will have decided what your brewery truly needs."
+      },
+      {
+        "id": "player_walks_away_05",
+        "text": "No purchase! And yet — I notice you looked at the same thing three times. Next visit, just buy it. Regret is more expensive than any price I charge."
+      },
+      {
+        "id": "player_walks_away_06",
+        "text": "Until next time, brewer. Travel well, even if you travel only as far as your cauldron."
+      }
+    ],
+    "ingredient_stories": [
+      {
+        "id": "story_saffron",
+        "ingredient": "saffron",
+        "text": "The saffron? Ah, my friend, this is the question that separates casual buyers from true craftspeople. To make one pound of saffron you need seventy thousand flowers. Each flower has three stigmas. Each must be harvested by hand at dawn before the flower wilts. I have watched the harvest in Khorasan. It is the most painstaking thing I have ever seen done at scale — thousands of workers, moving through fields of purple crocus in the early light, pulling three threads from each flower with their fingernails. Then you understand the price."
+      },
+      {
+        "id": "story_preserved_lemon",
+        "ingredient": "preserved_lemon",
+        "text": "These lemons have been fermenting for three months. Three months packed in salt and their own juice, until the bitterness broke down entirely and something sour and ancient remained. In Morocco, every family has a jar of these at the back of a shelf. They never discuss them. They never explain them. They simply use them — in everything."
+      },
+      {
+        "id": "story_mastic",
+        "ingredient": "mastic",
+        "text": "I had to go to Chios — the Greek island — personally for this. Only the southern part of the island produces it, in a specific combination of soil and microclimate that scientists still argue about. The trees there look ordinary. You would never guess what weeps out of them. Crystallized time, I call it."
+      },
+      {
+        "id": "story_koji",
+        "ingredient": "koji",
+        "text": "Koji is not an ingredient. Koji is a colleague. A very old, very reliable colleague who will do extraordinary things to any substrate you give it. I have seen koji applied to beef, to fish, to fruit, to every grain that grows — and every time, it transforms the thing into something MORE itself, but better. Japan named it the national fungus. That is because Japan understands what matters."
+      },
+      {
+        "id": "story_wasabi",
+        "ingredient": "wasabi_root",
+        "text": "Real wasabi — not the green paste that 95% of the world has eaten their entire life — real wasabi must be grated fresh within fifteen minutes of use or the compounds evaporate. I watched a chef in Shizuoka demonstrate this. He grated it on a shark-skin board, explained the chemistry while grating, and then held the result under my nose. I understood immediately why the fake version was an insult."
+      },
+      {
+        "id": "story_yuzu",
+        "ingredient": "yuzu",
+        "text": "The yuzu? I nearly died getting those across the Kii mountain pass. Not literally — but the road was treacherous and the temperature was wrong and my guide, a very small man with very strong opinions about timing, told me twice that we were probably going to lose the cargo. We did not. The yuzu survived. Worth every hill."
+      },
+      {
+        "id": "story_wattleseed",
+        "ingredient": "wattleseed",
+        "text": "Aboriginal Australians have been eating wattleseed for 6,000 years. Six thousand years before coffee was discovered in Ethiopia. I tasted it for the first time in Darwin and thought immediately: this is coffee-chocolate without the coffee plant, found by people who never needed the coffee plant because they had something better all along. The colonizers nearly erased this knowledge. That some of it survives is a form of grace."
+      },
+      {
+        "id": "story_charcoal",
+        "ingredient": "charcoal",
+        "text": "Charcoal turns drinks to liquid midnight. I once served a charcoal brew to a nobleman who arrived expecting gold and elegance. He saw black water and nearly had me arrested. Then he tasted it. He bought the entire remaining batch at triple price. Lesson: presentation is fleeting; flavor is eternal."
+      }
+    ],
+    "seasonal": [
+      {
+        "id": "econ_honey_rush",
+        "context": "economy_shift",
+        "text": "Everyone is buying honey today. Fools. The smart brewer buys what nobody else wants. When everyone rushes to honey, the other ingredients sit ignored and priced low. I have made more money from ignored ingredients than from popular ones."
+      },
+      {
+        "id": "season_spring",
+        "context": "season_shift",
+        "text": "Ah, spring! The floral ingredients arrive. The flower brewer's season. If you have been waiting for the soft ingredients — the petals, the blossoms, the herbs in their first growth — this is your window. It closes faster than you expect."
+      },
+      {
+        "id": "season_autumn",
+        "context": "season_shift",
+        "text": "Autumn is the brewer's best season. Preserved fruit, dried ingredients, deep ferments — everything that takes time becomes more valuable as the cold comes. What did you put in a barrel two months ago? It is ready now."
+      }
+    ],
+    "relationship_long_term": [
+      {
+        "id": "rel_long_01",
+        "text": "[PLAYER_NAME]. Old friend. I have been looking forward to this stop specifically because of you. The road between here and the eastern market has been dull company. Tell me what you have made since I last came through."
+      },
+      {
+        "id": "rel_long_02",
+        "text": "You know, in fifteen years of wandering, I have had perhaps twelve customers I would call genuine brewmaster-friends. People whose craft I have watched develop over time. You are becoming one of those. I find this remarkable, and I want you to know I find it remarkable."
+      },
+      {
+        "id": "rel_long_03",
+        "text": "I have a confession. The first time you came to my cart, I thought you were a hobbyist. Interested but not serious. I was wrong. I am rarely wrong about people and I was wrong about you. This pleases me."
+      },
+      {
+        "id": "rel_long_07",
+        "text": "My favorite part of this trade route used to be the mountains east of here. Now it is this stop. You have managed, somehow, to become the reason I look forward to this particular road. That is a significant thing to say. I do not say it lightly."
+      }
+    ],
+    "easter_eggs": [
+      {
+        "id": "easter_egg_fermentation_history",
+        "text": "Every great civilization independently discovered fermentation. Egypt, China, Mesopotamia, the Andes, Sub-Saharan Africa — they all figured it out without talking to each other. They figured it out because it was obvious: if you leave things alone long enough in the right conditions, magic happens. The magic had a name eventually: yeast. But the magic came first."
+      },
+      {
+        "id": "easter_egg_umami",
+        "text": "Umami was officially named in 1908 by a Japanese chemist named Kikunae Ikeda who was wondering why his dashi broth tasted so much richer than its ingredients suggested. He isolated glutamate. He named the sensation. The sensation had existed for thousands of years — humans had been pursuing it in fermented fish, aged cheese, dried mushrooms — without being able to name it. Naming it didn't create it. But it helped us find it on purpose."
+      },
+      {
+        "id": "easter_egg_terroir",
+        "text": "The word is 'terroir' — the taste of a place. Wine has it. Olive oil has it. Honey has it. The same ingredient grown in different soil, different altitude, different rain, tastes different. This is why the merchant matters — not just WHAT ingredient, but WHERE it's from. I have three sources for saffron. They taste like three different substances."
+      }
+    ]
+  }
+}

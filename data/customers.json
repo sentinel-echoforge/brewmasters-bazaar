@@ -1,122 +1,162 @@
 [
   {
     "id": "peasant",
-    "name": "Thirsty Peasant",
-    "emoji": "👨‍🌾",
-    "preferences": ["sweet", "warm", "earthy"],
-    "dislikes": ["exotic", "complex"],
-    "tipMultiplier": 0.8,
-    "patience": 30,
+    "name": "Peasant",
+    "emoji": "🟡",
+    "description": "\"Anything, please\" — buys anything, pays little",
+    "preferences": ["sweet", "common", "simple"],
+    "dislikes": ["bitter", "exotic", "intense"],
+    "basePay": "3-8g",
+    "tipMultiplier": 0.5,
+    "patience": 60,
     "dialogue": {
-      "enter": ["A drink, please!", "Something simple for a working man."],
-      "happy": ["That hit the spot!", "I'll tell my friends about this place!"],
-      "neutral": ["It's... fine.", "I've had worse."],
-      "unhappy": ["What IS this?", "I asked for a drink, not a potion."]
+      "happy": "Much obliged, friend. This'll do fine.",
+      "neutral": "It's... alright, I suppose.",
+      "unhappy": "Bah! That's foul!"
     }
   },
   {
-    "id": "merchant_customer",
-    "name": "Traveling Merchant",
-    "emoji": "🧳",
-    "preferences": ["exotic", "complex", "aromatic"],
-    "dislikes": ["neutral", "thin"],
-    "tipMultiplier": 1.5,
-    "patience": 20,
+    "id": "traveler",
+    "name": "Traveler",
+    "emoji": "🟢",
+    "description": "\"Something refreshing\" — wants light, fruity, cool drinks",
+    "preferences": ["bright", "fruity", "citrus", "cool"],
+    "dislikes": ["heavy", "dark", "hot"],
+    "basePay": "8-15g",
+    "tipMultiplier": 1.0,
+    "patience": 45,
     "dialogue": {
-      "enter": ["I've tasted drinks across seven kingdoms.", "Impress me, brewmaster."],
-      "happy": ["Magnificent! Worth every coin.", "I shall speak of this in the next town."],
-      "neutral": ["Passable. I've had better in the east.", "Hmm. Not bad."],
-      "unhappy": ["I've traveled too far for THIS.", "My camel makes better drinks."]
+      "happy": "Ah! Just what I needed after the road. You're a lifesaver.",
+      "neutral": "Not bad. Quenches the thirst.",
+      "unhappy": "I expected better from a brewer of your reputation."
+    }
+  },
+  {
+    "id": "soldier",
+    "name": "Soldier",
+    "emoji": "🔴",
+    "description": "\"Something STRONG\" — wants high-alcohol, aged, intense drinks",
+    "preferences": ["strong", "dark", "spicy", "aged"],
+    "dislikes": ["sweet", "light", "gentle"],
+    "basePay": "10-20g",
+    "tipMultiplier": 1.2,
+    "patience": 30,
+    "dialogue": {
+      "happy": "NOW that's a proper drink! This'll warm the bones.",
+      "neutral": "It'll do. Not what I hoped for, but it'll do.",
+      "unhappy": "This is fit for children, not soldiers!"
     }
   },
   {
     "id": "noble",
-    "name": "Minor Noble",
-    "emoji": "👑",
-    "preferences": ["golden", "perfumy", "luxurious", "smooth"],
-    "dislikes": ["earthy", "smoky", "dark"],
-    "tipMultiplier": 2.0,
-    "patience": 15,
+    "name": "Noble",
+    "emoji": "🟣",
+    "description": "\"Surprise me with your finest\" — wants rare+ recipes, complex flavors",
+    "preferences": ["rare", "complex", "floral", "elegant"],
+    "dislikes": ["common", "simple", "crude"],
+    "basePay": "20-50g",
+    "tipMultiplier": 1.5,
+    "patience": 50,
     "dialogue": {
-      "enter": ["I expect nothing but the finest.", "Do you know who I am?"],
-      "happy": ["Exquisite! You shall be my personal brewmaster.", "Finally, someone with taste."],
-      "neutral": ["It will do. Barely.", "I suppose not everyone can afford saffron."],
-      "unhappy": ["Guards! Seize this... this SWILL.", "I've had servants flogged for less."]
+      "happy": "Exquisite! You have a true craftsperson's touch. Well done.",
+      "neutral": "Adequate. Though I've tasted finer at court.",
+      "unhappy": "I expected better from someone with your reputation."
+    }
+  },
+  {
+    "id": "royal_taster",
+    "name": "Royal Taster",
+    "emoji": "👑",
+    "description": "\"The King sends me\" — wants legendary recipes, pays huge amounts",
+    "preferences": ["legendary", "divine", "otherworldly", "ceremonial"],
+    "dislikes": ["common", "flawed", "mundane"],
+    "basePay": "50-200g",
+    "tipMultiplier": 2.0,
+    "patience": 60,
+    "dialogue": {
+      "happy": "The King will be most pleased. You have our gratitude and our patronage.",
+      "neutral": "Acceptable. The King will drink it. He may not love it.",
+      "unhappy": "The King sent me for excellence. This is not it."
     }
   },
   {
     "id": "scholar",
-    "name": "Curious Scholar",
+    "name": "Scholar",
     "emoji": "📚",
-    "preferences": ["complex", "mysterious", "transformative", "deep"],
-    "dislikes": ["sweet", "simple"],
-    "tipMultiplier": 1.2,
-    "patience": 40,
+    "description": "\"What have you discovered?\" — wants complex, historically interesting brews",
+    "preferences": ["complex", "historical", "umami", "layered"],
+    "dislikes": ["simple", "forgettable", "trendy"],
+    "basePay": "12-25g",
+    "tipMultiplier": 1.3,
+    "patience": 90,
     "dialogue": {
-      "enter": ["I'm researching ancient brewing methods.", "What's your most unusual creation?"],
-      "happy": ["Fascinating composition! May I take notes?", "The flavor profile is... remarkable."],
-      "neutral": ["Interesting, but predictable.", "I've read about better recipes."],
-      "unhappy": ["This contradicts everything I've studied.", "Back to the books, I suppose."]
+      "happy": "Fascinating! The flavor structure suggests... yes, I see it now. Brilliant.",
+      "neutral": "Interesting. Though not quite what I expected.",
+      "unhappy": "I was expecting more sophistication, frankly."
     }
   },
   {
-    "id": "bard",
-    "name": "Wandering Bard",
-    "emoji": "🎵",
-    "preferences": ["floral", "bright", "ethereal", "magical"],
-    "dislikes": ["bitter", "dark", "umami"],
-    "tipMultiplier": 1.0,
-    "patience": 25,
+    "id": "alchemist",
+    "name": "Alchemist",
+    "emoji": "⚗️",
+    "description": "\"Show me something strange\" — wants unusual, unexpected, surprising combinations",
+    "preferences": ["strange", "unexpected", "experimental", "strange"],
+    "dislikes": ["conventional", "expected", "boring"],
+    "basePay": "15-30g",
+    "tipMultiplier": 1.4,
+    "patience": 60,
     "dialogue": {
-      "enter": ["A drink to inspire my next ballad!", "Something with color, please!"],
-      "happy": ["This tastes like a sunset sounds! *strums lute*", "I shall compose an ode to your cauldron!"],
-      "neutral": ["Hmm. Two verses, maybe.", "It lacks... poetry."],
-      "unhappy": ["My lute weeps.", "Even my worst song is better than this drink."]
+      "happy": "Magnificent! I've never experienced anything quite like this. You're a true innovator.",
+      "neutral": "Interesting. Not quite what I hoped for, but novel enough.",
+      "unhappy": "I came for the unexpected, not the mediocre."
+    }
+  },
+  {
+    "id": "dreamer",
+    "name": "Dreamer",
+    "emoji": "✨",
+    "description": "\"Something that feels like magic\" — wants ethereal, floral, otherworldly brews",
+    "preferences": ["ethereal", "floral", "magical", "dreamy"],
+    "dislikes": ["harsh", "heavy", "grounded"],
+    "basePay": "10-18g",
+    "tipMultiplier": 1.2,
+    "patience": 70,
+    "dialogue": {
+      "happy": "Oh... it's beautiful. Like tasting a dream itself.",
+      "neutral": "It's nice. Though I expected to feel more transported.",
+      "unhappy": "This is too heavy. Where is the magic?"
     }
   },
   {
     "id": "warrior",
-    "name": "Retired Warrior",
+    "name": "Warrior",
     "emoji": "⚔️",
-    "preferences": ["fiery", "smoky", "warm", "intense"],
-    "dislikes": ["floral", "delicate", "calming"],
+    "description": "\"Test my mettle\" — wants challenging, intense, fire-inducing brews",
+    "preferences": ["hot", "intense", "challenging", "fiery"],
+    "dislikes": ["timid", "sweet", "gentle"],
+    "basePay": "8-16g",
     "tipMultiplier": 1.3,
-    "patience": 20,
+    "patience": 25,
     "dialogue": {
-      "enter": ["Something STRONG.", "I didn't survive three wars for weak drinks."],
-      "happy": ["NOW that's a drink! *slams table*", "Reminds me of dragon's breath. In a good way."],
-      "neutral": ["It'll do for peacetime.", "Needs more fire."],
-      "unhappy": ["Is this water?", "I've been poisoned in battle. This is worse."]
+      "happy": "HA! That's more like it! Burns right down to the soul!",
+      "neutral": "Decent heat. I've had better though.",
+      "unhappy": "Is this for warriors or for babes?"
     }
   },
   {
-    "id": "herbalist",
-    "name": "Village Herbalist",
+    "id": "healer",
+    "name": "Healer",
     "emoji": "🌿",
-    "preferences": ["herbal", "calming", "aromatic", "fresh"],
-    "dislikes": ["fiery", "volatile", "dramatic"],
+    "description": "\"Something restorative\" — wants herbal, medicinal, nourishing brews",
+    "preferences": ["herbal", "medicinal", "nourishing", "calming"],
+    "dislikes": ["harsh", "toxic", "artificial"],
+    "basePay": "7-14g",
     "tipMultiplier": 1.1,
-    "patience": 35,
+    "patience": 80,
     "dialogue": {
-      "enter": ["Something with healing properties, dear.", "What herbs did you use?"],
-      "happy": ["Beautiful balance! I taste chamomile... and is that elderflower?", "Nature's finest, in a cup."],
-      "neutral": ["Pleasant enough. The proportions need work.", "Almost medicinal. Almost."],
-      "unhappy": ["This would make my patients sicker.", "Too harsh. Nature is gentle."]
-    }
-  },
-  {
-    "id": "food_critic",
-    "name": "Royal Food Critic",
-    "emoji": "🧐",
-    "preferences": ["complex", "rich", "creamy", "intoxicating"],
-    "dislikes": ["neutral", "starchy", "thin"],
-    "tipMultiplier": 2.5,
-    "patience": 10,
-    "dialogue": {
-      "enter": ["I have exactly thirty seconds.", "This review determines your future."],
-      "happy": ["Three stars. Perhaps... three and a half.", "You may quote me: 'transcendent.'"],
-      "neutral": ["One star. Adequate technique, no soul.", "I've had this exact drink. In a better tavern."],
-      "unhappy": ["Zero stars. I'm writing about this.", "The kingdom shall hear of this atrocity."]
+      "happy": "Perfect. This will help my patients recover. You have a gift.",
+      "neutral": "It will do. Somewhat helpful.",
+      "unhappy": "This isn't healing — it's harming."
     }
   }
 ]
