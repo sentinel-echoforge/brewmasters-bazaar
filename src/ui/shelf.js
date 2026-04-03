@@ -1,6 +1,7 @@
 // ═══ INGREDIENT SHELF UI ═══
 
 import state from '../systems/state.js';
+import { openEncyclopedia } from './encyclopedia-ui.js';
 
 const shelfEl = document.getElementById('shelf-panel');
 let onIngredientClick = null;
@@ -39,7 +40,7 @@ export function renderShelf() {
         <button class="ingredient-btn ${inCauldron ? 'disabled' : ''}" 
                 data-id="${ing.id}" 
                 ${inCauldron ? 'disabled' : ''}
-                title="${ing.description}">
+                title="${ing.description} (right-click for encyclopedia)">
           <span>${ing.emoji}</span>
           <span>${ing.name}</span>
           ${cost > 0 ? `<span class="cost">${cost}c</span>` : ''}
@@ -55,6 +56,20 @@ export function renderShelf() {
     btn.addEventListener('click', () => {
       const id = btn.dataset.id;
       if (onIngredientClick) onIngredientClick(id);
+    });
+    
+    // Right-click opens encyclopedia
+    btn.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      openEncyclopedia(btn.dataset.id);
+    });
+  });
+  
+  // Disabled buttons can still open encyclopedia
+  shelfEl.querySelectorAll('.ingredient-btn.disabled').forEach(btn => {
+    btn.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      openEncyclopedia(btn.dataset.id);
     });
   });
 }

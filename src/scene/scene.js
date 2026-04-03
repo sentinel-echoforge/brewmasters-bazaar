@@ -577,6 +577,87 @@ export function spawnSparkles(count = 12) {
   }
 }
 
+// ═══ CART LEVEL VISUALS ═══
+export function updateCartVisuals(level) {
+  if (!cartGroup) return;
+  
+  // Level 2: make cart bigger, add canopy poles
+  if (level >= 2) {
+    // Scale up cart slightly
+    cartGroup.scale.set(1.1, 1.1, 1.1);
+    
+    // Add shelf extensions (visual only)
+    if (!cartGroup.getObjectByName('shelf_ext')) {
+      const extGeo = new THREE.BoxGeometry(0.6, 0.08, 2);
+      const extMat = new THREE.MeshStandardMaterial({ color: COLORS.woodLight, roughness: 0.6 });
+      const ext = new THREE.Mesh(extGeo, extMat);
+      ext.name = 'shelf_ext';
+      ext.position.set(-3.5, 1.5, 0);
+      ext.castShadow = true;
+      cartGroup.add(ext);
+    }
+  }
+  
+  // Level 3: add canopy/cover
+  if (level >= 3) {
+    cartGroup.scale.set(1.2, 1.15, 1.2);
+    
+    if (!cartGroup.getObjectByName('canopy')) {
+      // Canopy poles
+      const poleGeo = new THREE.CylinderGeometry(0.06, 0.06, 2.5, 6);
+      const poleMat = new THREE.MeshStandardMaterial({ color: COLORS.woodDark });
+      
+      for (const pos of [[-3.5, 2.5, -2.2], [-3.5, 2.5, 2.2], [3.5, 2.5, -2.2], [3.5, 2.5, 2.2]]) {
+        const pole = new THREE.Mesh(poleGeo, poleMat);
+        pole.position.set(pos[0], pos[1], pos[2]);
+        pole.castShadow = true;
+        cartGroup.add(pole);
+      }
+      
+      // Canvas roof
+      const roofGeo = new THREE.BoxGeometry(8, 0.1, 5);
+      const roofMat = new THREE.MeshStandardMaterial({ color: COLORS.cloth, roughness: 0.8 });
+      const roof = new THREE.Mesh(roofGeo, roofMat);
+      roof.name = 'canopy';
+      roof.position.set(0, 3.7, 0);
+      roof.castShadow = true;
+      cartGroup.add(roof);
+    }
+  }
+  
+  // Add barrel visuals based on level
+  addBarrelVisuals(level);
+}
+
+function addBarrelVisuals(level) {
+  // Remove old barrels
+  const oldBarrels = scene.children.filter(c => c.name === 'cart_barrel');
+  oldBarrels.forEach(b => scene.remove(b));
+  
+  const barrelCount = { 1: 1, 2: 3, 3: 5, 4: 8, 5: 10 }[level] || 1;
+  const barrelGeo = new THREE.CylinderGeometry(0.35, 0.4, 0.7, 10);
+  const barrelMat = new THREE.MeshStandardMaterial({ color: COLORS.woodDark, roughness: 0.7 });
+  
+  for (let i = 0; i < Math.min(barrelCount, 4); i++) {
+    const barrel = new THREE.Mesh(barrelGeo, barrelMat);
+    barrel.name = 'cart_barrel';
+    barrel.position.set(-2 + i * 0.9, 1.1, -1.8);
+    barrel.castShadow = true;
+    scene.add(barrel);
+  }
+  
+  // Stack extras
+  if (barrelCount > 4) {
+    for (let i = 0; i < Math.min(barrelCount - 4, 3); i++) {
+      const barrel = new THREE.Mesh(barrelGeo, barrelMat);
+      barrel.name = 'cart_barrel';
+      barrel.position.set(-2 + i * 0.9, 1.8, -1.8);
+      barrel.castShadow = true;
+      scene.add(barrel);
+    }
+  }
+}
+
 // NPC "customer" at counter — simple capsule shape
 export function spawnCustomerMesh() {
   const group = new THREE.Group();

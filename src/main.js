@@ -6,7 +6,13 @@ import state from './systems/state.js';
 import { loadGameData } from './systems/data-loader.js';
 import { executeBrew, getBrewCost } from './systems/brewing.js';
 import { spawnCustomer, updateCustomers, serveDrink, getSpawnInterval } from './systems/customers.js';
-import { initScene, setCauldronColor, spawnBubbles, spawnSteam, spawnSparkles, spawnCustomerMesh, removeCustomerMesh } from './scene/scene.js';
+import { detectRegion, getOriginBadge } from './systems/geolocation.js';
+import { initMerchant, checkMerchantRestock, isMerchantAvailable } from './systems/merchant.js';
+import { updateForageNodes, updateGardenPlots } from './systems/garden.js';
+import { updateBarrels } from './systems/barrel-aging.js';
+import { reapplyEquipmentEffects } from './systems/progression.js';
+import { initScene, setCauldronColor, spawnBubbles, spawnSteam, spawnSparkles, spawnCustomerMesh, removeCustomerMesh, updateCartVisuals } from './scene/scene.js';
+import { initForagingScene, updateForagingScene, activateForagingScene, deactivateForagingScene, isForagingActive, resizeForagingScene } from './scene/foraging-scene.js';
 import { showHud, updateHud } from './ui/hud.js';
 import { showShelf, renderShelf, setIngredientClickHandler } from './ui/shelf.js';
 import { showCauldron, renderCauldron, setCauldronHandlers } from './ui/cauldron-ui.js';
@@ -14,6 +20,11 @@ import { showCustomerPanel, renderCustomers, setServeHandler } from './ui/custom
 import { initJournal } from './ui/journal.js';
 import { initResult, showResult } from './ui/result.js';
 import { notify } from './ui/notifications.js';
+import { initMerchantUI, openMerchantUI } from './ui/merchant-ui.js';
+import { initGardenUI, openGardenUI, closeGardenUI, renderGarden } from './ui/garden-ui.js';
+import { initBarrelUI, openBarrelUI, renderBarrels } from './ui/barrel-ui.js';
+import { initEquipmentUI, openEquipmentUI } from './ui/equipment-ui.js';
+import { initEncyclopedia, openEncyclopedia } from './ui/encyclopedia-ui.js';
 
 console.log('🍺 Brewmaster\'s Bazaar loading...');
 
@@ -26,6 +37,7 @@ const introCart = document.getElementById('intro-cart');
 
 let gameStarted = false;
 let customerMeshes = new Map(); // customerId -> THREE mesh
+let forageCanvas = null;
 
 // Load data immediately
 loadGameData().then(() => {
@@ -54,9 +66,23 @@ cartInput.addEventListener('keydown', (e) => {
 });
 
 // ═══ START GAME ═══
-function startGame() {
+async function startGame() {
   introOverlay.style.display = 'none';
   gameStarted = true;
+  
+  // Detect region (async, non-blocking)
+  detectRegion().then(() => {
+    const badge = getOriginBadge();
+    if (badge) notify(`🌍 Origin: ${badge}`);
+    renderShelf(); // Update shelf with regional ingredients
+    renderGarden();
+  });
+  
+  // Initialize merchant
+  initMerchant(state.merchantStockData, state.merchantDialogueData);
+  
+  // Reapply equipment effects
+  reapplyEquipmentEffects();
   
   // Show all UI
   showHud();
@@ -65,6 +91,11 @@ function startGame() {
   showCustomerPanel();
   initJournal();
   initResult();
+  initMerchantUI();
+  initGardenUI();
+  initBarrelUI();
+  initEquipmentUI();
+  initEncyclopedia();
   
   // Set up interaction handlers
   setupHandlers();
@@ -93,6 +124,71 @@ function startGame() {
   renderCauldron();
   
   updateHud();
+}
+
+// ═══ VIEW SWITCHING ═══
+function switchToForaging() {
+  state.currentView = 'foraging';
+  
+  // Hide cart UI panels
+  document.getElementById('shelf-panel').style.display = 'none';
+  document.getElementById('cauldron-panel').style.display = 'none';
+  document.getElementById('customer-panel').style.display = 'none';
+  
+  // Show foraging canvas
+  const mainCanvas = document.getElementById('game-canvas');
+  
+  if (!forageCanvas) {
+    forageCanvas = document.createElement('canvas');
+    forageCanvas.id = 'forage-canvas';
+    forageCanvas.width = mainCanvas.width;
+    forageCanvas.height = mainCanvas.height;
+    forageCanvas.style.cssText = mainCanvas.style.cssText;
+    forageCanvas.style.position = 'fixed';
+    forageCanvas.style.inset = '0';
+    forageCanvas.style.width = '100vw';
+    forageCanvas.style.height = '100vh';
+    forageCanvas.style.zIndex = '0';
+    document.body.insertBefore(forageCanvas, mainCanvas);
+    initForagingScene(forageCanvas);
+  }
+  
+  mainCanvas.style.display = 'none';
+  forageCanvas.style.display = 'block';
+  activateForagingScene();
+  
+  // Show garden UI
+  openGardenUI();
+  
+  // Show back button
+  document.getElementById('back-to-cart-btn').style.display = 'block';
+}
+
+function switchToCart() {
+  state.currentView = 'cart';
+  
+  const mainCanvas = document.getElementById('game-canvas');
+  mainCanvas.style.display = 'block';
+  
+  if (forageCanvas) {
+    forageCanvas.style.display = 'none';
+    deactivateForagingScene();
+  }
+  
+  // Show cart UI panels
+  document.getElementById('shelf-panel').style.display = 'block';
+  document.getElementById('cauldron-panel').style.display = 'block';
+  document.getElementById('customer-panel').style.display = 'block';
+  
+  // Hide garden UI
+  closeGardenUI();
+  
+  // Hide back button
+  document.getElementById('back-to-cart-btn').style.display = 'none';
+  
+  renderShelf();
+  renderCauldron();
+  renderCustomers();
 }
 
 // ═══ HANDLERS ═══
@@ -149,6 +245,32 @@ function setupHandlers() {
   setServeHandler((customerId, drinkIndex) => {
     doServe(customerId, drinkIndex);
   });
+  
+  // HUD buttons
+  document.getElementById('merchant-btn')?.addEventListener('click', () => {
+    openMerchantUI(() => { renderShelf(); updateHud(); });
+  });
+  
+  document.getElementById('garden-btn')?.addEventListener('click', () => {
+    switchToForaging();
+  });
+  
+  document.getElementById('barrel-btn')?.addEventListener('click', () => {
+    openBarrelUI();
+  });
+  
+  document.getElementById('equipment-btn')?.addEventListener('click', () => {
+    openEquipmentUI(() => {
+      updateCartVisuals(state.breweryLevel);
+      renderCauldron();
+      renderShelf();
+      updateHud();
+    });
+  });
+  
+  document.getElementById('back-to-cart-btn')?.addEventListener('click', () => {
+    switchToCart();
+  });
 }
 
 // ═══ BREWING ═══
@@ -167,9 +289,10 @@ function doBrew() {
   state.isBrewing = true;
   renderCauldron();
   
-  // Get brew time from config
+  // Get brew time from config (apply speed multiplier)
   const brewTimes = state.gameConfig?.brewing?.brewTimeSeconds || {};
-  const brewTime = (brewTimes[state.selectedMethod] || 5) * 1000;
+  const baseTime = (brewTimes[state.selectedMethod] || 5) * 1000;
+  const brewTime = Math.round(baseTime * (state.brewSpeedMultiplier || 1.0));
   
   // Show brewing animation
   const brewingOverlay = document.getElementById('brewing-overlay');
@@ -280,32 +403,50 @@ function showServeFeedback(emoji, payment) {
 function gameLoop() {
   if (!gameStarted) return;
   
-  // Update customers
+  // Update customers (even in foraging view — they wait!)
   updateCustomers();
   
-  // Spawn new customers
-  const now = Date.now();
-  const interval = getSpawnInterval();
-  if (now - state.lastCustomerSpawn > interval && state.customerQueue.filter(c => !c.served).length < 3) {
-    const customer = spawnCustomer();
-    if (customer) {
-      state.lastCustomerSpawn = now;
-      const mesh = spawnCustomerMesh();
-      customerMeshes.set(customer.id, mesh);
-    }
+  // Update garden growth timers
+  updateGardenPlots();
+  
+  // Update barrel aging
+  updateBarrels();
+  
+  // Check merchant restock
+  checkMerchantRestock();
+  
+  // Update foraging scene if active
+  if (isForagingActive()) {
+    updateForagingScene(0.016);
+    renderGarden();
   }
   
-  // Clean up meshes for departed customers
-  const activeIds = new Set(state.customerQueue.map(c => c.id));
-  for (const [id, mesh] of customerMeshes) {
-    if (!activeIds.has(id)) {
-      removeCustomerMesh(mesh);
-      customerMeshes.delete(id);
+  // Spawn new customers (only while on cart view)
+  if (state.currentView === 'cart') {
+    const now = Date.now();
+    const interval = getSpawnInterval();
+    if (now - state.lastCustomerSpawn > interval && state.customerQueue.filter(c => !c.served).length < 3) {
+      const customer = spawnCustomer();
+      if (customer) {
+        state.lastCustomerSpawn = now;
+        const mesh = spawnCustomerMesh();
+        customerMeshes.set(customer.id, mesh);
+      }
     }
+    
+    // Clean up meshes for departed customers
+    const activeIds = new Set(state.customerQueue.map(c => c.id));
+    for (const [id, mesh] of customerMeshes) {
+      if (!activeIds.has(id)) {
+        removeCustomerMesh(mesh);
+        customerMeshes.delete(id);
+      }
+    }
+    
+    // Update UI
+    renderCustomers();
   }
   
-  // Update UI
-  renderCustomers();
   updateHud();
   
   // Continue loop

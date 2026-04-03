@@ -4,12 +4,16 @@
 import state from './state.js';
 
 export async function loadGameData() {
-  const [ingredients, recipes, customers, bases, gameConfig] = await Promise.all([
+  const [ingredients, recipes, customers, bases, gameConfig, regions, equipment, merchantStock, merchants] = await Promise.all([
     fetch('/data/ingredients.json').then(r => r.json()),
     fetch('/data/recipes.json').then(r => r.json()),
     fetch('/data/customers.json').then(r => r.json()),
     fetch('/data/bases.json').then(r => r.json()),
     fetch('/data/game-config.json').then(r => r.json()),
+    fetch('/data/regions.json').then(r => r.json()),
+    fetch('/data/equipment.json').then(r => r.json()),
+    fetch('/data/merchant-stock.json').then(r => r.json()),
+    fetch('/data/merchants.json').then(r => r.json()),
   ]);
   
   state.ingredients = ingredients;
@@ -18,6 +22,10 @@ export async function loadGameData() {
   state.bases = bases;
   state.gameConfig = gameConfig;
   state.crowns = gameConfig.economy.startingGold;
+  state.regions = regions.regions || regions;
+  state.equipmentData = equipment;
+  state.merchantStockData = merchantStock;
+  state.merchantDialogueData = merchants;
   
   // Set starter ingredients: tier 1 + basic tier 2
   const starterIds = new Set();
@@ -28,5 +36,5 @@ export async function loadGameData() {
   }
   state.availableIngredients = starterIds;
   
-  console.log(`📦 Loaded: ${ingredients.length} ingredients, ${recipes.length} recipes, ${customers.length} customer types`);
+  console.log(`📦 Loaded: ${ingredients.length} ingredients, ${recipes.length} recipes, ${customers.length} customer types, ${(regions.regions || regions).length} regions, ${equipment.length} equipment`);
 }

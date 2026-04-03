@@ -41,9 +41,40 @@ const state = {
   // Progression
   breweryLevel: 1,
   maxFlavorSlots: 2,
+  equipment: [],       // owned equipment IDs
+  equipmentData: [],   // loaded from equipment.json
+  
+  // Equipment modifiers
+  brewSpeedMultiplier: 1.0,
+  salePriceMultiplier: 1.0,
+  maxServeSlots: 1,
+  hintQualityLevel: 1,
+  ingredientLifespanMultiplier: 1.0,
+  experimentDiscount: 0,
+  merchantDiscount: 1.0,
   
   // Available starter ingredients (tier 1 + 2 basics)
   availableIngredients: new Set(),
+  
+  // Geolocation
+  region: null,        // region ID string
+  regionData: null,    // full region object from regions.json
+  regions: [],         // loaded from regions.json
+  countryCode: null,
+  
+  // Garden / Foraging
+  gardenPlots: [],     // { ingredientId, type: 'wild'|'planted', plantedAt, growthMs, harvestsRemaining, ready }
+  
+  // Barrel Aging
+  agingBarrels: [],    // { id, drink, startedAt, durationMs, done, collected }
+  
+  // Merchant
+  _merchantVisited: false,
+  merchantStockData: null,
+  merchantDialogueData: null,
+  
+  // Scene view management
+  currentView: 'cart', // 'cart' | 'foraging'
   
   // Scene
   scene: null,

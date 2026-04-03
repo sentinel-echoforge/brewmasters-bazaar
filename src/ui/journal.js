@@ -1,6 +1,7 @@
 // ═══ RECIPE JOURNAL UI ═══
 
 import state from '../systems/state.js';
+import { openEncyclopedia } from './encyclopedia-ui.js';
 
 const journalOverlay = document.getElementById('journal-overlay');
 const journalRecipes = document.getElementById('journal-recipes');
@@ -46,7 +47,7 @@ function renderJournal() {
       // Get ingredient names
       const ingNames = recipe.ingredients.map(id => {
         const ing = state.ingredients.find(i => i.id === id);
-        return ing ? `${ing.emoji} ${ing.name}` : id;
+        return ing ? `<span class="journal-ingredient-link" data-ing-id="${id}">${ing.emoji} ${ing.name}</span>` : id;
       });
       const base = state.bases.find(b => b.id === recipe.base);
       
@@ -79,6 +80,17 @@ function renderJournal() {
   }
   
   journalRecipes.innerHTML = html;
+  
+  // Ingredient link clicks → encyclopedia
+  journalRecipes.querySelectorAll('.journal-ingredient-link').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.style.textDecoration = 'underline';
+    el.style.textDecorationColor = '#6b4c2a';
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openEncyclopedia(el.dataset.ingId);
+    });
+  });
 }
 
 /**

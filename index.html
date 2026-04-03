@@ -240,6 +240,157 @@
       100% { opacity: 0; transform: translateY(-60px); }
     }
 
+    /* ═══ MERCHANT PANEL ═══ */
+    #merchant-panel {
+      position: fixed; z-index: 80; display: none;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 420px; max-height: 80vh; overflow-y: auto;
+      background: rgba(30,22,12,0.96); border: 3px solid #d4a44c;
+      border-radius: 12px; padding: 20px;
+      box-shadow: 0 0 40px rgba(212,164,76,0.3);
+    }
+    #merchant-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; text-align: center; }
+    .merchant-dialogue { font-style: italic; color: #a8987a; font-size: 0.9rem; margin-bottom: 10px; padding: 8px; background: rgba(50,38,20,0.6); border-radius: 6px; border-left: 3px solid #6b4c2a; }
+    .merchant-rotation-dialogue { font-style: italic; color: #c8a870; font-size: 0.85rem; margin-bottom: 8px; }
+    .merchant-theme { color: #d4a44c; font-size: 0.85rem; text-align: center; margin-bottom: 4px; }
+    .merchant-timer { color: #7a6b52; font-size: 0.8rem; text-align: center; margin-bottom: 12px; }
+    .merchant-empty { color: #6a5a40; font-style: italic; text-align: center; padding: 20px; }
+    .merchant-stock { display: flex; flex-direction: column; gap: 6px; }
+    .merchant-item { display: flex; justify-content: space-between; align-items: center; padding: 8px; background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 6px; }
+    .merchant-item-name { color: #d8c8a8; font-size: 0.9rem; }
+    .merchant-item-details { color: #7a6b52; font-size: 0.75rem; display: block; }
+    .merchant-item-price { color: #f0d060; font-weight: 600; margin-right: 8px; }
+    .merchant-item-actions { display: flex; align-items: center; }
+    .merchant-buy-btn { background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px; color: #a8d888; padding: 4px 12px; cursor: pointer; font-family: inherit; font-size: 0.85rem; }
+    .merchant-buy-btn:hover { background: rgba(70,100,50,0.6); }
+    .merchant-buy-btn.disabled { opacity: 0.4; cursor: not-allowed; }
+    .merchant-close-btn, .garden-close-btn, .barrel-close-btn, .equipment-close-btn {
+      display: block; margin: 12px auto 0; padding: 8px 24px;
+      background: rgba(60,45,25,0.8); border: 1px solid #6b4c2a; border-radius: 6px;
+      color: #d8c8a8; cursor: pointer; font-family: inherit; font-size: 1rem;
+    }
+
+    /* ═══ GARDEN PANEL ═══ */
+    #garden-panel {
+      position: fixed; z-index: 45; display: none;
+      left: 12px; top: 60px; bottom: 12px; width: 220px;
+      background: rgba(30,22,12,0.92); border: 2px solid #4a3520;
+      border-radius: 8px; padding: 12px; overflow-y: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    #garden-panel h3 { font-family: 'MedievalSharp', cursive; color: #88cc66; margin-bottom: 8px; }
+    .garden-section-label { color: #8a7a60; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 4px; }
+    .garden-plot { padding: 8px; background: rgba(50,58,30,0.6); border: 1px solid #3a4a20; border-radius: 6px; margin-bottom: 4px; }
+    .garden-plot.ready { border-color: #6a9a4a; }
+    .garden-plant-name { color: #d8c8a8; font-size: 0.9rem; display: block; }
+    .garden-harvests { color: #7a6b52; font-size: 0.75rem; }
+    .garden-harvest-btn { display: block; width: 100%; margin-top: 4px; padding: 4px; background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px; color: #a8d888; cursor: pointer; font-family: inherit; font-size: 0.85rem; }
+    .garden-harvest-btn:hover { background: rgba(70,100,50,0.6); }
+    .garden-progress-bar { height: 4px; background: #2a3a1a; border-radius: 2px; margin-top: 4px; overflow: hidden; }
+    .garden-progress-fill { height: 100%; background: linear-gradient(90deg, #4a6a2a, #88cc44); transition: width 1s linear; }
+    .garden-timer { color: #7a8a5a; font-size: 0.75rem; }
+    .garden-empty { color: #6a5a40; font-style: italic; padding: 12px; }
+
+    /* ═══ BARREL PANEL ═══ */
+    #barrel-panel {
+      position: fixed; z-index: 80; display: none;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 380px; max-height: 70vh; overflow-y: auto;
+      background: rgba(30,22,12,0.96); border: 3px solid #8B5E3C;
+      border-radius: 12px; padding: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+    #barrel-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 8px; text-align: center; }
+    .barrel-empty { color: #6a5a40; font-style: italic; text-align: center; padding: 12px; }
+    .barrel-item { padding: 10px; background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 6px; margin-bottom: 6px; }
+    .barrel-item.done { border-color: #d4a44c; }
+    .barrel-drink-name { color: #d8c8a8; font-size: 0.9rem; }
+    .barrel-collect-btn { display: block; width: 100%; margin-top: 6px; padding: 6px; background: linear-gradient(180deg, #6a5a2a, #4a3a1a); border: 1px solid #d4a44c; border-radius: 4px; color: #f0d060; cursor: pointer; font-family: inherit; font-size: 0.9rem; }
+    .barrel-collect-btn:hover { background: linear-gradient(180deg, #8a7a3a, #5a4a2a); }
+    .barrel-progress-bar { height: 6px; background: #2a2a1a; border-radius: 3px; margin-top: 6px; overflow: hidden; }
+    .barrel-progress-fill { height: 100%; background: linear-gradient(90deg, #5A3A22, #d4a44c); transition: width 1s linear; }
+    .barrel-timer { color: #8a7a60; font-size: 0.8rem; }
+    .barrel-add-section { margin-top: 12px; padding-top: 12px; border-top: 1px solid #3a2a18; }
+    .barrel-add-label { color: #8a7a60; font-size: 0.85rem; margin-bottom: 6px; }
+    .barrel-add-btn { display: block; width: 100%; margin-bottom: 4px; padding: 6px; background: rgba(60,45,25,0.6); border: 1px solid #4a3520; border-radius: 4px; color: #d8c8a8; cursor: pointer; font-family: inherit; font-size: 0.85rem; }
+    .barrel-add-btn:hover { border-color: #8a7040; }
+
+    /* ═══ EQUIPMENT PANEL ═══ */
+    #equipment-panel {
+      position: fixed; z-index: 80; display: none;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 440px; max-height: 80vh; overflow-y: auto;
+      background: rgba(30,22,12,0.96); border: 3px solid #6b4c2a;
+      border-radius: 12px; padding: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+    #equipment-panel h3 { font-family: 'MedievalSharp', cursive; color: #d4a44c; margin-bottom: 12px; text-align: center; }
+    .cart-level-section { background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+    .cart-level-name { font-family: 'MedievalSharp', cursive; color: #d4a44c; font-size: 1.2rem; }
+    .cart-level-stats { display: flex; gap: 12px; color: #a08c6a; font-size: 0.85rem; margin-top: 4px; }
+    .cart-next-level { margin-top: 8px; padding-top: 8px; border-top: 1px solid #3a2a18; }
+    .cart-next-label { color: #c8b896; font-weight: 600; }
+    .cart-next-reqs { display: flex; gap: 10px; margin-top: 4px; font-size: 0.85rem; }
+    .cart-next-reqs .met { color: #88cc66; }
+    .cart-next-reqs .unmet { color: #cc6644; }
+    .cart-upgrade-btn { display: block; width: 100%; margin-top: 8px; padding: 8px; background: linear-gradient(180deg, #8b5e2a, #6b3a1f); border: 2px solid #d4a44c; border-radius: 6px; color: #f0e6d0; font-family: 'MedievalSharp', cursive; font-size: 1.1rem; cursor: pointer; }
+    .cart-upgrade-btn:disabled { opacity: 0.4; cursor: not-allowed; font-size: 0.8rem; font-family: inherit; }
+    .cart-max-level { color: #d4a44c; text-align: center; margin-top: 8px; }
+    .equipment-section-label { color: #8a7a60; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 8px 0; }
+    .equipment-list { display: flex; flex-direction: column; gap: 6px; }
+    .equipment-item { display: flex; justify-content: space-between; align-items: center; padding: 8px; background: rgba(50,38,20,0.6); border: 1px solid #3a2a18; border-radius: 6px; }
+    .equipment-item.owned { border-color: #4a6a3a; opacity: 0.7; }
+    .equipment-name { color: #d8c8a8; font-size: 0.9rem; }
+    .equipment-desc { color: #7a6b52; font-size: 0.75rem; display: block; }
+    .equipment-owned-label { color: #88cc66; font-size: 0.8rem; }
+    .equipment-buy-btn { background: rgba(60,80,40,0.6); border: 1px solid #4a6a3a; border-radius: 4px; color: #f0d060; padding: 4px 12px; cursor: pointer; font-family: inherit; font-size: 0.85rem; }
+    .equipment-buy-btn:hover { background: rgba(70,100,50,0.6); }
+    .equipment-buy-btn.disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ═══ ENCYCLOPEDIA OVERLAY ═══ */
+    #encyclopedia-overlay {
+      position: fixed; inset: 0; z-index: 90; display: none;
+      background: rgba(10,8,4,0.85);
+      align-items: center; justify-content: center;
+    }
+    .encyclopedia-card {
+      background: rgba(35,28,15,0.98); border: 3px solid #6b4c2a; border-radius: 12px;
+      padding: 24px 30px; width: 450px; max-height: 80vh; overflow-y: auto;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+    .encyclopedia-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .encyclopedia-emoji { font-size: 2.5rem; }
+    .encyclopedia-name { font-family: 'MedievalSharp', cursive; color: #d4a44c; font-size: 1.4rem; }
+    .encyclopedia-tier { font-size: 0.85rem; }
+    .encyclopedia-lore { font-style: italic; color: #a8987a; font-size: 0.95rem; margin-bottom: 12px; padding: 8px; background: rgba(50,38,20,0.5); border-radius: 6px; }
+    .encyclopedia-section { margin-bottom: 10px; }
+    .encyclopedia-section h4 { color: #c8b896; font-size: 0.9rem; margin-bottom: 4px; }
+    .encyclopedia-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .encyclopedia-tag { background: rgba(80,60,30,0.5); border: 1px solid #4a3520; border-radius: 12px; padding: 2px 10px; color: #c8b896; font-size: 0.8rem; }
+    .encyclopedia-origin { color: #a8987a; font-size: 0.9rem; }
+    .encyclopedia-recipe-item { color: #d8c8a8; font-size: 0.85rem; padding: 2px 0; }
+    .encyclopedia-recipe-unknown { color: #6a5a40; font-style: italic; font-size: 0.85rem; }
+    .encyclopedia-close { display: block; margin: 12px auto 0; padding: 8px 24px; background: rgba(60,45,25,0.8); border: 1px solid #6b4c2a; border-radius: 6px; color: #d8c8a8; cursor: pointer; font-family: inherit; font-size: 1rem; }
+
+    /* ═══ BACK TO CART BUTTON ═══ */
+    #back-to-cart-btn {
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 50;
+      display: none; padding: 10px 30px;
+      background: linear-gradient(180deg, #8b5e2a, #6b3a1f);
+      border: 2px solid #d4a44c; border-radius: 8px;
+      color: #f0e6d0; font-family: 'MedievalSharp', cursive; font-size: 1.2rem;
+      cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    #back-to-cart-btn:hover { background: linear-gradient(180deg, #a0702f, #804520); }
+
+    /* HUD button notification */
+    .hud-btn.has-notification { border-color: #d4a44c; color: #f0d060; animation: hudPulse 1s ease-in-out infinite; }
+    @keyframes hudPulse { 0%,100% { box-shadow: none; } 50% { box-shadow: 0 0 8px rgba(212,164,76,0.5); } }
+
+    /* Origin badge */
+    #origin-badge { font-size: 0.85rem; color: #a08c6a; display: none; }
+    #level-display { font-size: 0.85rem; color: #a08c6a; }
+
     /* Scrollbar styling */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: rgba(30,22,12,0.5); }
@@ -286,7 +437,13 @@
         <span id="streak-display">🔥 Hot Streak!</span>
       </div>
       <div class="hud-section">
+        <span id="origin-badge"></span>
+        <span id="level-display"></span>
         <button class="hud-btn" id="journal-btn">📖 Journal</button>
+        <button class="hud-btn" id="garden-btn">🌿 Forage</button>
+        <button class="hud-btn" id="merchant-btn">🧔 Omar</button>
+        <button class="hud-btn" id="barrel-btn">🪵 Barrels</button>
+        <button class="hud-btn" id="equipment-btn">⚒️ Upgrade</button>
       </div>
     </div>
   </div>
@@ -328,6 +485,26 @@
 
   <!-- NOTIFICATIONS -->
   <div id="notifications"></div>
+
+  <!-- MERCHANT PANEL -->
+  <div id="merchant-panel"></div>
+
+  <!-- GARDEN PANEL -->
+  <div id="garden-panel" class="panel"></div>
+
+  <!-- BARREL PANEL -->
+  <div id="barrel-panel"></div>
+
+  <!-- EQUIPMENT PANEL -->
+  <div id="equipment-panel"></div>
+
+  <!-- ENCYCLOPEDIA -->
+  <div id="encyclopedia-overlay">
+    <div class="encyclopedia-card"></div>
+  </div>
+
+  <!-- BACK TO CART (foraging view) -->
+  <button id="back-to-cart-btn">🍺 Back to Cart</button>
 
   <!-- TOOLTIP -->
   <div id="tooltip"></div>
